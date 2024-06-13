@@ -1,145 +1,824 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<x-guest-layout>
+    <section class="bg-[#131313] w-full h-[900px]  lg:h-[680px] md:h-[600px] sm:h-[500px]  relative z-[1] overflow-hidden">
+        <div class="swiper-container w-full h-full absolute left-0 top-0">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slide-inner slide-bg-image before:absolute before:left-0
+                    before:top-0 before:w-full before:h-full before:bg-[#040128] before:opacity-[0.4] "
+                        data-background="assets/images/slider/slide-4.jpg">
+                        <!-- <div class="gradient-overlay"></div> -->
+                        <div class="wraper">
+                            <div class="relative h-[900px] lg:h-[680px]  md:h-[600px] sm:h-[500px]">
+                                <div
+                                    class="max-w-[720px] lg:w-[600px] md:w-full  absolute top-1/2 left-0 transform  -translate-y-1/2">
 
-        <title>Laravel</title>
+                                    <div data-swiper-parallax="200" class="wpo-hero-title-top">
+                                        <span class="text-[19px] col:text-[16px] text-white font-base-font uppercase
+                                            mb-[30px] font-normal tracking-[2px]">Trusted
+                                            Business Partner.</span>
+                                    </div>
+                                    <div data-swiper-parallax="300" class="slide-title">
+                                        <h2 class="text-[70px] font-black leading-[90px] mt-[10px] mb-[25px]
+                                                lg:text-[50px] md:text-[40px] md:leading-[55px] col:text-[30px]
+                                                col:leading-[35px] text-white col:mb-[20px]">
+                                            The Fastest way to achieve success</h2>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
-        <!-- Styles -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-    <body class="antialiased font-sans">
-        <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-            <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" />
-            <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
-                <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
-                    <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
-                        <div class="flex lg:justify-center lg:col-start-2">
-                            <svg class="h-12 w-auto text-white lg:h-16 lg:text-[#FF2D20]" viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M61.8548 14.6253C61.8778 14.7102 61.8895 14.7978 61.8897 14.8858V28.5615C61.8898 28.737 61.8434 28.9095 61.7554 29.0614C61.6675 29.2132 61.5409 29.3392 61.3887 29.4265L49.9104 36.0351V49.1337C49.9104 49.4902 49.7209 49.8192 49.4118 49.9987L25.4519 63.7916C25.3971 63.8227 25.3372 63.8427 25.2774 63.8639C25.255 63.8714 25.2338 63.8851 25.2101 63.8913C25.0426 63.9354 24.8666 63.9354 24.6991 63.8913C24.6716 63.8838 24.6467 63.8689 24.6205 63.8589C24.5657 63.8389 24.5084 63.8215 24.456 63.7916L0.501061 49.9987C0.348882 49.9113 0.222437 49.7853 0.134469 49.6334C0.0465019 49.4816 0.000120578 49.3092 0 49.1337L0 8.10652C0 8.01678 0.0124642 7.92953 0.0348998 7.84477C0.0423783 7.8161 0.0598282 7.78993 0.0697995 7.76126C0.0884958 7.70891 0.105946 7.65531 0.133367 7.6067C0.152063 7.5743 0.179485 7.54812 0.20192 7.51821C0.230588 7.47832 0.256763 7.43719 0.290416 7.40229C0.319084 7.37362 0.356476 7.35243 0.388883 7.32751C0.425029 7.29759 0.457436 7.26518 0.498568 7.2415L12.4779 0.345059C12.6296 0.257786 12.8015 0.211853 12.9765 0.211853C13.1515 0.211853 13.3234 0.257786 13.475 0.345059L25.4531 7.2415H25.4556C25.4955 7.26643 25.5292 7.29759 25.5653 7.32626C25.5977 7.35119 25.6339 7.37362 25.6625 7.40104C25.6974 7.43719 25.7224 7.47832 25.7523 7.51821C25.7735 7.54812 25.8021 7.5743 25.8196 7.6067C25.8483 7.65656 25.8645 7.70891 25.8844 7.76126C25.8944 7.78993 25.9118 7.8161 25.9193 7.84602C25.9423 7.93096 25.954 8.01853 25.9542 8.10652V33.7317L35.9355 27.9844V14.8846C35.9355 14.7973 35.948 14.7088 35.9704 14.6253C35.9792 14.5954 35.9954 14.5692 36.0053 14.5405C36.0253 14.4882 36.0427 14.4346 36.0702 14.386C36.0888 14.3536 36.1163 14.3274 36.1375 14.2975C36.1674 14.2576 36.1923 14.2165 36.2272 14.1816C36.2559 14.1529 36.292 14.1317 36.3244 14.1068C36.3618 14.0769 36.3942 14.0445 36.4341 14.0208L48.4147 7.12434C48.5663 7.03694 48.7383 6.99094 48.9133 6.99094C49.0883 6.99094 49.2602 7.03694 49.4118 7.12434L61.3899 14.0208C61.4323 14.0457 61.4647 14.0769 61.5021 14.1055C61.5333 14.1305 61.5694 14.1529 61.5981 14.1803C61.633 14.2165 61.6579 14.2576 61.6878 14.2975C61.7103 14.3274 61.7377 14.3536 61.7551 14.386C61.7838 14.4346 61.8 14.4882 61.8199 14.5405C61.8312 14.5692 61.8474 14.5954 61.8548 14.6253ZM59.893 27.9844V16.6121L55.7013 19.0252L49.9104 22.3593V33.7317L59.8942 27.9844H59.893ZM47.9149 48.5566V37.1768L42.2187 40.4299L25.953 49.7133V61.2003L47.9149 48.5566ZM1.99677 9.83281V48.5566L23.9562 61.199V49.7145L12.4841 43.2219L12.4804 43.2194L12.4754 43.2169C12.4368 43.1945 12.4044 43.1621 12.3682 43.1347C12.3371 43.1097 12.3009 43.0898 12.2735 43.0624L12.271 43.0586C12.2386 43.0275 12.2162 42.9888 12.1887 42.9539C12.1638 42.9203 12.1339 42.8916 12.114 42.8567L12.1127 42.853C12.0903 42.8156 12.0766 42.7707 12.0604 42.7283C12.0442 42.6909 12.023 42.656 12.013 42.6161C12.0005 42.5688 11.998 42.5177 11.9931 42.4691C11.9881 42.4317 11.9781 42.3943 11.9781 42.3569V15.5801L6.18848 12.2446L1.99677 9.83281ZM12.9777 2.36177L2.99764 8.10652L12.9752 13.8513L22.9541 8.10527L12.9752 2.36177H12.9777ZM18.1678 38.2138L23.9574 34.8809V9.83281L19.7657 12.2459L13.9749 15.5801V40.6281L18.1678 38.2138ZM48.9133 9.14105L38.9344 14.8858L48.9133 20.6305L58.8909 14.8846L48.9133 9.14105ZM47.9149 22.3593L42.124 19.0252L37.9323 16.6121V27.9844L43.7219 31.3174L47.9149 33.7317V22.3593ZM24.9533 47.987L39.59 39.631L46.9065 35.4555L36.9352 29.7145L25.4544 36.3242L14.9907 42.3482L24.9533 47.987Z" fill="currentColor"/></svg>
-                        </div>
-                        @if (Route::has('login'))
-                            <livewire:welcome.navigation />
-                        @endif
-                    </header>
-
-                    <main class="mt-6">
-                        <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
-                            <a
-                                href="https://laravel.com/docs"
-                                id="docs-card"
-                                class="flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] md:row-span-3 lg:p-10 lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div id="screenshot-container" class="relative flex w-full flex-1 items-stretch">
-                                    <img
-                                        src="https://laravel.com/assets/img/welcome/docs-light.svg"
-                                        alt="Laravel documentation screenshot"
-                                        class="aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.06)] dark:hidden"
-                                        onerror="
-                                            document.getElementById('screenshot-container').classList.add('!hidden');
-                                            document.getElementById('docs-card').classList.add('!row-span-1');
-                                            document.getElementById('docs-card-content').classList.add('!flex-row');
-                                            document.getElementById('background').classList.add('!hidden');
-                                        "
-                                    />
-                                    <img
-                                        src="https://laravel.com/assets/img/welcome/docs-dark.svg"
-                                        alt="Laravel documentation screenshot"
-                                        class="hidden aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.25)] dark:block"
-                                    />
-                                    <div
-                                        class="absolute -bottom-16 -left-16 h-40 w-[calc(100%+8rem)] bg-gradient-to-b from-transparent via-white to-white dark:via-zinc-900 dark:to-zinc-900"
-                                    ></div>
-                                </div>
-
-                                <div class="relative flex items-center gap-6 lg:items-end">
-                                    <div id="docs-card-content" class="flex items-start gap-6 lg:flex-col">
-                                        <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                            <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="#FF2D20" d="M23 4a1 1 0 0 0-1.447-.894L12.224 7.77a.5.5 0 0 1-.448 0L2.447 3.106A1 1 0 0 0 1 4v13.382a1.99 1.99 0 0 0 1.105 1.79l9.448 4.728c.14.065.293.1.447.1.154-.005.306-.04.447-.105l9.453-4.724a1.99 1.99 0 0 0 1.1-1.789V4ZM3 6.023a.25.25 0 0 1 .362-.223l7.5 3.75a.251.251 0 0 1 .138.223v11.2a.25.25 0 0 1-.362.224l-7.5-3.75a.25.25 0 0 1-.138-.22V6.023Zm18 11.2a.25.25 0 0 1-.138.224l-7.5 3.75a.249.249 0 0 1-.329-.099.249.249 0 0 1-.033-.12V9.772a.251.251 0 0 1 .138-.224l7.5-3.75a.25.25 0 0 1 .362.224v11.2Z"/><path fill="#FF2D20" d="m3.55 1.893 8 4.048a1.008 1.008 0 0 0 .9 0l8-4.048a1 1 0 0 0-.9-1.785l-7.322 3.706a.506.506 0 0 1-.452 0L4.454.108a1 1 0 0 0-.9 1.785H3.55Z"/></svg>
-                                        </div>
-
-                                        <div class="pt-3 sm:pt-5 lg:pt-0">
-                                            <h2 class="text-xl font-semibold text-black dark:text-white">Documentation</h2>
-
-                                            <p class="mt-4 text-sm/relaxed">
-                                                Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.
-                                            </p>
-                                        </div>
+                                    </div>
+                                    <div data-swiper-parallax="400" class="slide-text">
+                                        <p class="text-[22px] text-[#e2e2e2] font-base-font
+                                            leading-[35px]
+                                                mb-[40px]
+                                            md:text-[18px] col:leading-[25px]
+                                            col:mb-[30px]">
+                                            It was popularised in the 1960s with the release sheets.
+                                            We bring the right people together.</p>
                                     </div>
 
-                                    <svg class="size-6 shrink-0 stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                                </div>
-                            </a>
-
-                            <a
-                                href="https://laracasts.com"
-                                class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g fill="#FF2D20"><path d="M24 8.25a.5.5 0 0 0-.5-.5H.5a.5.5 0 0 0-.5.5v12a2.5 2.5 0 0 0 2.5 2.5h19a2.5 2.5 0 0 0 2.5-2.5v-12Zm-7.765 5.868a1.221 1.221 0 0 1 0 2.264l-6.626 2.776A1.153 1.153 0 0 1 8 18.123v-5.746a1.151 1.151 0 0 1 1.609-1.035l6.626 2.776ZM19.564 1.677a.25.25 0 0 0-.177-.427H15.6a.106.106 0 0 0-.072.03l-4.54 4.543a.25.25 0 0 0 .177.427h3.783c.027 0 .054-.01.073-.03l4.543-4.543ZM22.071 1.318a.047.047 0 0 0-.045.013l-4.492 4.492a.249.249 0 0 0 .038.385.25.25 0 0 0 .14.042h5.784a.5.5 0 0 0 .5-.5v-2a2.5 2.5 0 0 0-1.925-2.432ZM13.014 1.677a.25.25 0 0 0-.178-.427H9.101a.106.106 0 0 0-.073.03l-4.54 4.543a.25.25 0 0 0 .177.427H8.4a.106.106 0 0 0 .073-.03l4.54-4.543ZM6.513 1.677a.25.25 0 0 0-.177-.427H2.5A2.5 2.5 0 0 0 0 3.75v2a.5.5 0 0 0 .5.5h1.4a.106.106 0 0 0 .073-.03l4.54-4.543Z"/></g></svg>
-                                </div>
-
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Laracasts</h2>
-
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                    </p>
-                                </div>
-
-                                <svg class="size-6 shrink-0 self-center stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                            </a>
-
-                            <a
-                                href="https://laravel-news.com"
-                                class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g fill="#FF2D20"><path d="M8.75 4.5H5.5c-.69 0-1.25.56-1.25 1.25v4.75c0 .69.56 1.25 1.25 1.25h3.25c.69 0 1.25-.56 1.25-1.25V5.75c0-.69-.56-1.25-1.25-1.25Z"/><path d="M24 10a3 3 0 0 0-3-3h-2V2.5a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2V20a3.5 3.5 0 0 0 3.5 3.5h17A3.5 3.5 0 0 0 24 20V10ZM3.5 21.5A1.5 1.5 0 0 1 2 20V3a.5.5 0 0 1 .5-.5h14a.5.5 0 0 1 .5.5v17c0 .295.037.588.11.874a.5.5 0 0 1-.484.625L3.5 21.5ZM22 20a1.5 1.5 0 1 1-3 0V9.5a.5.5 0 0 1 .5-.5H21a1 1 0 0 1 1 1v10Z"/><path d="M12.751 6.047h2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-2A.75.75 0 0 1 12 7.3v-.5a.75.75 0 0 1 .751-.753ZM12.751 10.047h2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-2A.75.75 0 0 1 12 11.3v-.5a.75.75 0 0 1 .751-.753ZM4.751 14.047h10a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-10A.75.75 0 0 1 4 15.3v-.5a.75.75 0 0 1 .751-.753ZM4.75 18.047h7.5a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-7.5A.75.75 0 0 1 4 19.3v-.5a.75.75 0 0 1 .75-.753Z"/></g></svg>
-                                </div>
-
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Laravel News</h2>
-
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                    </p>
-                                </div>
-
-                                <svg class="size-6 shrink-0 self-center stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                            </a>
-
-                            <div class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800">
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                        <g fill="#FF2D20">
-                                            <path
-                                                d="M16.597 12.635a.247.247 0 0 0-.08-.237 2.234 2.234 0 0 1-.769-1.68c.001-.195.03-.39.084-.578a.25.25 0 0 0-.09-.267 8.8 8.8 0 0 0-4.826-1.66.25.25 0 0 0-.268.181 2.5 2.5 0 0 1-2.4 1.824.045.045 0 0 0-.045.037 12.255 12.255 0 0 0-.093 3.86.251.251 0 0 0 .208.214c2.22.366 4.367 1.08 6.362 2.118a.252.252 0 0 0 .32-.079 10.09 10.09 0 0 0 1.597-3.733ZM13.616 17.968a.25.25 0 0 0-.063-.407A19.697 19.697 0 0 0 8.91 15.98a.25.25 0 0 0-.287.325c.151.455.334.898.548 1.328.437.827.981 1.594 1.619 2.28a.249.249 0 0 0 .32.044 29.13 29.13 0 0 0 2.506-1.99ZM6.303 14.105a.25.25 0 0 0 .265-.274 13.048 13.048 0 0 1 .205-4.045.062.062 0 0 0-.022-.07 2.5 2.5 0 0 1-.777-.982.25.25 0 0 0-.271-.149 11 11 0 0 0-5.6 2.815.255.255 0 0 0-.075.163c-.008.135-.02.27-.02.406.002.8.084 1.598.246 2.381a.25.25 0 0 0 .303.193 19.924 19.924 0 0 1 5.746-.438ZM9.228 20.914a.25.25 0 0 0 .1-.393 11.53 11.53 0 0 1-1.5-2.22 12.238 12.238 0 0 1-.91-2.465.248.248 0 0 0-.22-.187 18.876 18.876 0 0 0-5.69.33.249.249 0 0 0-.179.336c.838 2.142 2.272 4 4.132 5.353a.254.254 0 0 0 .15.048c1.41-.01 2.807-.282 4.117-.802ZM18.93 12.957l-.005-.008a.25.25 0 0 0-.268-.082 2.21 2.21 0 0 1-.41.081.25.25 0 0 0-.217.2c-.582 2.66-2.127 5.35-5.75 7.843a.248.248 0 0 0-.09.299.25.25 0 0 0 .065.091 28.703 28.703 0 0 0 2.662 2.12.246.246 0 0 0 .209.037c2.579-.701 4.85-2.242 6.456-4.378a.25.25 0 0 0 .048-.189 13.51 13.51 0 0 0-2.7-6.014ZM5.702 7.058a.254.254 0 0 0 .2-.165A2.488 2.488 0 0 1 7.98 5.245a.093.093 0 0 0 .078-.062 19.734 19.734 0 0 1 3.055-4.74.25.25 0 0 0-.21-.41 12.009 12.009 0 0 0-10.4 8.558.25.25 0 0 0 .373.281 12.912 12.912 0 0 1 4.826-1.814ZM10.773 22.052a.25.25 0 0 0-.28-.046c-.758.356-1.55.635-2.365.833a.25.25 0 0 0-.022.48c1.252.43 2.568.65 3.893.65.1 0 .2 0 .3-.008a.25.25 0 0 0 .147-.444c-.526-.424-1.1-.917-1.673-1.465ZM18.744 8.436a.249.249 0 0 0 .15.228 2.246 2.246 0 0 1 1.352 2.054c0 .337-.08.67-.23.972a.25.25 0 0 0 .042.28l.007.009a15.016 15.016 0 0 1 2.52 4.6.25.25 0 0 0 .37.132.25.25 0 0 0 .096-.114c.623-1.464.944-3.039.945-4.63a12.005 12.005 0 0 0-5.78-10.258.25.25 0 0 0-.373.274c.547 2.109.85 4.274.901 6.453ZM9.61 5.38a.25.25 0 0 0 .08.31c.34.24.616.561.8.935a.25.25 0 0 0 .3.127.631.631 0 0 1 .206-.034c2.054.078 4.036.772 5.69 1.991a.251.251 0 0 0 .267.024c.046-.024.093-.047.141-.067a.25.25 0 0 0 .151-.23A29.98 29.98 0 0 0 15.957.764a.25.25 0 0 0-.16-.164 11.924 11.924 0 0 0-2.21-.518.252.252 0 0 0-.215.076A22.456 22.456 0 0 0 9.61 5.38Z"
-                                            />
-                                        </g>
-                                    </svg>
-                                </div>
-
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Vibrant Ecosystem</h2>
-
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white dark:focus-visible:ring-[#FF2D20]">Forge</a>, <a href="https://vapor.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Vapor</a>, <a href="https://nova.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Nova</a>, <a href="https://envoyer.io" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Envoyer</a>, and <a href="https://herd.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Herd</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Echo</a>, <a href="https://laravel.com/docs/horizon" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Telescope</a>, and more.
-                                    </p>
+                                    <div data-swiper-parallax="500" class="slide-btn">
+                                        <a href="about.html" class="btn theme-btn rounded-none">
+                                            Explore more</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </main>
+                    </div> <!-- end slide-inner -->
+                </div> <!-- end swiper-slide -->
+                <div class="swiper-slide">
+                    <div class="slide-inner slide-bg-image before:absolute before:left-0
+                    before:top-0 before:w-full before:h-full before:bg-[#040128] before:opacity-[0.4]"
+                        data-background="assets/images/slider/slide-5.jpg">
+                        <!-- <div class="gradient-overlay"></div> -->
+                        <div class="wraper">
+                            <div class="relative h-[900px] lg:h-[680px]  md:h-[600px] sm:h-[500px]">
+                                <div
+                                    class="max-w-[720px] lg:w-[600px] md:w-full  absolute top-1/2 left-0 transform  -translate-y-1/2">
 
-                    <footer class="py-16 text-center text-sm text-black dark:text-white/70">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </footer>
+                                    <div data-swiper-parallax="200" class="wpo-hero-title-top">
+                                        <span class="text-[19px] col:text-[16px] text-white font-base-font uppercase
+                                            mb-[30px] font-normal tracking-[2px]">Trusted
+                                            Business Partner.</span>
+                                    </div>
+                                    <div data-swiper-parallax="300" class="slide-title">
+                                        <h2
+                                            class="text-[70px] font-black leading-[90px] mt-[10px] mb-[25px]
+                                                lg:text-[50px] md:text-[40px] md:leading-[55px] col:text-[30px] col:leading-[35px] text-white col:mb-[20px]">
+                                            The Fastest way to achieve success</h2>
+
+                                    </div>
+                                    <div data-swiper-parallax="400" class="slide-text">
+                                        <p class="text-[22px] text-[#e2e2e2] font-base-font
+                                            leading-[35px]
+                                                mb-[40px]
+                                            md:text-[18px] col:leading-[25px]
+                                            col:mb-[30px]">
+                                            It was popularised in the 1960s with the release sheets.
+                                            We bring the right people together.</p>
+                                    </div>
+
+                                    <div data-swiper-parallax="500" class="slide-btn">
+                                        <a href="about.html" class="btn theme-btn rounded-none">
+                                            Explore more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end slide-inner -->
+                </div> <!-- end swiper-slide -->
+            </div>
+            <!-- end swiper-wrapper -->
+
+            <!-- swipper controls -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <section class="section-wrap">
+        <div class="wraper">
+            <div class="grid grid-cols-12 gap-x-3  items-center">
+                <div class="col-span-6 md:col-span-12 sm:col-span-12 ">
+                    <div class="relative z-[1] text-center max-w-[570px] sm:w-full rounded-[6px]
+                     before:absolute before:left-0 before:top-0 before:w-full before:h-full
+                     before:bg-[rgba(20,33,43,.25)] before:rounded-[6px] ">
+                        <img class="w-full rounded-[6px]" src="assets/images/about/3.jpg" alt="">
+                        <div class="absolute left-[-70px] bottom-[100px] z-[1]
+                             animate-[bounceTop_3s_linear_infinite] col:left-0">
+                            <img src="assets/images/ab-shape-1.png" alt="">
+                        </div>
+                        <div class="absolute right-[35px] top-[35px] animate-[bounceTop_3s_linear_infinite]">
+                            <img src="assets/images/ab-shape-2.png" alt="">
+                        </div>
+                        <div class="absolute right-[50px] bottom-[50px] rounded-[50%] border-[5px]
+                            animate-[spineer_2s_infinite]">
+                            <img src="assets/images/about/4.jpg" alt="" class="rounded-[50%] col:max-w-[100px]">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-6 md:col-span-12 sm:col-span-12">
+                    <div class="max-w-[600px] sm:w-full relative pl-[40px] md:pl-0 md:pt-[70px]">
+                        <h4
+                            class="text-[21px] text-[#ff4a17] font-base-font font-bold lg:text-[18px] col:text-[14px]">
+                            Welcome
+                            To Consoel Consultancy Comapny</h4>
+                        <h2 class="text-[60px] leading-[70px] my-[30px] text-[#0a272c] font-normal font-heading-font
+                            xl:text-[55px] lg:text-[36px] lg:leading-[50px] lg:my-[20px] col:text-[26px]
+                            col:leading-[36px] col:my-[15px]">
+                            We are
+                            trusted consulting company,
+                            <b class="text-[#14212b]">with <span class="text-[#ff4a17]">28+ years</span> of
+                                experience.</b>
+                        </h2>
+                        <p class="text-[18px] mb-[35px] col:text-[16px] col:mb-[20px]">Lorem Ipsum is simply dummy
+                            text of the printing and typesetting’s
+                            the industrey's standard dummy text ever since the 1500 when printed
+                            galley of type and scrambled type specimen book. One way to categorize the activities is
+                            in terms of the professional’s area of expertise such as competitive analysis, corporate
+                            strategy.</p>
+                        <a class="theme-btn" href="about.html">More About Us</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+    </section>
+
+    <section class="section-wrap bg-[#14212b] overflow-hidden relative z-[1]
+         before:absolute before:left-0 before:top-0 before:w-full before:h-full
+         before:bg-[url(../images/service/shape-1.png)] before:bg-no-repeat before:bg-cover before:bg-center">
+        <div class="wraper">
+            <div class="mb-[75px] sm:mb-[40px] text-center">
+                <span class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17]
+                    font-base-font">Our Services</span>
+                <h2 class="text-[55px] md:text-[35px] sm:text-[32px] col:text-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px]
+                    mt-[10px] relative capitalize font-heading-font font-bold
+                    text-[#fff]">All Consoel Solution</h2>
+            </div>
+            <div class="wpo-service-slider owl-carousel">
+                <div class="relative mb-[30px] z-[1]">
+                    <div class="relative rounded-[6px] overflow-hidden group
+                    before:absolute before:left-0 before:top-0 before:w-full before:h-full
+                    before:bg-[rgba(20,33,43,0.8)] before:z-[11] ">
+                        <img class="w-full rounded-[6px]" src="assets/images/service/1.jpg" alt="">
+                        <div class="absolute left-0 bottom-0 p-[50px] z-[19] md:p-[30px]">
+                            <h2
+                                class="text-white text-[30px] font-bold font-heading-font mb-[20px] col:text-[25px]">
+                                Financial Advices</h2>
+                            <p class="text-[#e1e1e1] font-base-font">Lorem Ipsum is simply dummy text of the
+                                the industrey's standard dummy text ever
+                                scrambled type specimen book.</p>
+                            <a href="service-single.html"
+                                class="inline-block font-base-font
+                            p-[10px_45px] pr-[45px] text-white border-white border-[1px]
+                            relative rounded-[6px] mt-[10px] max-w-[150px] before:absolute
+                            before:right-[20px] before:top-[51%]
+                            before:content-['\f103'] before:font-['Flaticon'] before:translate-y-[-50%]">Details</a>
+
+                        </div>
+                        <div class="absolute left-0 bottom-0 p-[50px] w-full h-full bg-[#ff4a17]
+                    flex justify-center flex-col rounded-[6px] translate-y-[100%]
+                        transition-all duration-300 ease-in-out
+                    overflow-hidden z-[20] md:p-[30px] group-hover:translate-y-[0]">
+                            <h2
+                                class="text-white text-[30px]  font-heading-font font-bold mb-[20px] col:text-[25px]">
+                                Financial Advices</h2>
+                            <p class="text-white font-base-font">Lorem Ipsum is simply dummy text of the
+                                the industrey's standard dummy text ever
+                                scrambled type specimen book.</p>
+                            <a href="service-single.html" class="inline-block font-base-font transition-all duration-300 ease-in-out
+                            p-[10px_45px] pr-[45px] text-white border-white border-[1px]
+                            relative rounded-[6px] mt-[10px] max-w-[150px] before:absolute
+                            before:right-[20px] before:top-[51%]
+                            before:content-['\f103'] before:font-['Flaticon'] before:translate-y-[-50%]
+                            hover:bg-white hover:text-[#ff4a17]">Details</a>
+                            <div class="t">
+                                <div class="absolute left-[-180px] top-[-180px] w-[360px] h-[360px]
+                                    bg-[rgba(255,255,255,.09)] rounded-[50%]">
+                                </div>
+                                <div class="absolute left-[-210px] top-[-210px] w-[420px] h-[420px]
+                                    bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
+                                <div class="absolute left-[-241px] top-[-241px] w-[482px] h-[482px]
+                                    bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
+                            </div>
+                            <div class="b">
+                                <div class="absolute right-[-180px] bottom-[-180px] w-[360px] h-[360px]
+                                    bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
+                                <div class="absolute right-[-210px] bottom-[-210px] w-[420px] h-[420px]
+                                    bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
+                                <div class="absolute right-[-241px] bottom-[-241px] w-[482px] h-[482px]
+                                    bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative mb-[30px] z-[1]">
+                    <div class="relative rounded-[6px] overflow-hidden group
+                        before:absolute before:left-0 before:top-0 before:w-full before:h-full
+                        before:bg-[rgba(20,33,43,0.8)] before:z-[11] ">
+                        <img class="w-full rounded-[6px]" src="assets/images/service/2.jpg" alt="">
+                        <div class="absolute left-0 bottom-0 p-[50px] z-[19] md:p-[30px]">
+                            <h2 class="text-white text-[30px] font-bold font-heading-font mb-[20px]
+                                    col:text-[25px]">
+                                Risk Management</h2>
+                            <p class="text-[#e1e1e1] font-base-font">Lorem Ipsum is simply dummy text of the
+                                the industrey's standard dummy text ever
+                                scrambled type specimen book.</p>
+                            <a href="service-single.html"
+                                class="inline-block font-base-font
+                                p-[10px_45px] pr-[45px] text-white border-white border-[1px]
+                                relative rounded-[6px] mt-[10px] max-w-[150px] before:absolute
+                                before:right-[20px] before:top-[51%]
+                                before:content-['\f103'] before:font-['Flaticon'] before:translate-y-[-50%]">Details</a>
+                        </div>
+                        <div class="absolute left-0 bottom-0 p-[50px] w-full h-full bg-[#ff4a17]
+                        flex justify-center flex-col rounded-[6px] translate-y-[100%] transition-all duration-300
+                        ease-in-out
+                        overflow-hidden z-[20] md:p-[30px] group-hover:translate-y-[0]">
+                            <h2
+                                class="text-white text-[30px]  font-heading-font font-bold mb-[20px] col:text-[25px]">
+                                Risk Management</h2>
+                            <p class="text-white font-base-font">Lorem Ipsum is simply dummy text of the
+                                the industrey's standard dummy text ever
+                                scrambled type specimen book.</p>
+                            <a href="service-single.html" class="inline-block font-base-font
+                                p-[10px_45px] pr-[45px] text-white border-white border-[1px]
+                                relative rounded-[6px] mt-[10px] max-w-[150px] before:absolute
+                                before:right-[20px] before:top-[51%] transition-all duration-300 ease-in-out
+                                before:content-['\f103'] before:font-['Flaticon'] before:translate-y-[-50%]
+                                hover:bg-white hover:text-[#ff4a17]">Details</a>
+                            <div class="t">
+                                <div class="absolute left-[-180px] top-[-180px] w-[360px] h-[360px]
+                                        bg-[rgba(255,255,255,.09)] rounded-[50%]">
+                                </div>
+                                <div class="absolute left-[-210px] top-[-210px] w-[420px] h-[420px]
+                                        bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
+                                <div class="absolute left-[-241px] top-[-241px] w-[482px] h-[482px]
+                                        bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
+                            </div>
+                            <div class="b">
+                                <div class="absolute right-[-180px] bottom-[-180px] w-[360px] h-[360px]
+                                        bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
+                                <div class="absolute right-[-210px] bottom-[-210px] w-[420px] h-[420px]
+                                        bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
+                                <div class="absolute right-[-241px] bottom-[-241px] w-[482px] h-[482px]
+                                        bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative mb-[30px] z-[1]">
+                    <div class="relative rounded-[6px] overflow-hidden group
+                        before:absolute before:left-0 before:top-0 before:w-full before:h-full
+                        before:bg-[rgba(20,33,43,0.8)] before:z-[11] ">
+                        <img class="w-full rounded-[6px]" src="assets/images/service/3.jpg" alt="">
+                        <div class="absolute left-0 bottom-0 p-[50px] z-[19] md:p-[30px]">
+                            <h2
+                                class="text-white text-[30px] font-bold font-heading-font mb-[20px] col:text-[25px]">
+                                Tax Management</h2>
+                            <p class="text-[#e1e1e1] font-base-font">Lorem Ipsum is simply dummy text of the
+                                the industrey's standard dummy text ever
+                                scrambled type specimen book.</p>
+                            <a href="service-single.html"
+                                class="inline-block font-base-font
+                                p-[10px_45px] pr-[45px] text-white border-white border-[1px]
+                                relative rounded-[6px] mt-[10px] max-w-[150px] before:absolute
+                                before:right-[20px] before:top-[51%]
+                                before:content-['\f103'] before:font-['Flaticon'] before:translate-y-[-50%]">Details</a>
+                        </div>
+                        <div class="absolute left-0 bottom-0 p-[50px] w-full h-full bg-[#ff4a17]
+                        flex justify-center flex-col rounded-[6px] translate-y-[100%] transition-all duration-300
+                        ease-in-out
+                        overflow-hidden z-[20] md:p-[30px] group-hover:translate-y-[0]">
+                            <h2
+                                class="text-white text-[30px]  font-heading-font font-bold mb-[20px] col:text-[25px]">
+                                Tax Management</h2>
+                            <p class="text-white font-base-font">Lorem Ipsum is simply dummy text of the
+                                the industrey's standard dummy text ever
+                                scrambled type specimen book.</p>
+                            <a href="service-single.html" class="inline-block font-base-font
+                                p-[10px_45px] pr-[45px] text-white border-white border-[1px]
+                                relative rounded-[6px] mt-[10px] max-w-[150px] before:absolute
+                                before:right-[20px] before:top-[51%] transition-all duration-300 ease-in-out
+                                before:content-['\f103'] before:font-['Flaticon'] before:translate-y-[-50%]
+                                hover:bg-white hover:text-[#ff4a17]">Details</a>
+                            <div class="t">
+                                <div class="absolute left-[-180px] top-[-180px] w-[360px] h-[360px]
+                                        bg-[rgba(255,255,255,.09)] rounded-[50%]">
+                                </div>
+                                <div class="absolute left-[-210px] top-[-210px] w-[420px] h-[420px]
+                                        bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
+                                <div class="absolute left-[-241px] top-[-241px] w-[482px] h-[482px]
+                                        bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
+                            </div>
+                            <div class="b">
+                                <div class="absolute right-[-180px] bottom-[-180px] w-[360px] h-[360px]
+                                        bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
+                                <div class="absolute right-[-210px] bottom-[-210px] w-[420px] h-[420px]
+                                        bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
+                                <div class="absolute right-[-241px] bottom-[-241px] w-[482px] h-[482px]
+                                        bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="pt-[120px] md:pt-[90px] sm:pt-[80px]">
+        <div class="wraper">
+            <div class="grid grid-cols-12 items-center ">
+                <div class="col-span-5 md:col-span-12 ">
+                    <div class="md:mb-[30px]">
+                        <h5 class="text-[21px] text-[#ff4a17] font-heading-font font-semibold sm:text-[18px]">Our
+                            Professional
+                            Skill’s</h5>
+                        <h2 class="text-[60px] leading-[70px] mb-[30px] mt-[15px] text-[#0a272c] font-heading-font font-semibold
+                        xl:text-[50px] xl:leading-[60px] xl:mb-[20px] xl:mt-[10px] lg:text-[45px] lg:leading-[50px]
+                        sm:text-[35px] sm:leading-[50px]">
+                            Professional Skill of <span class="text-[#ff4a17]">Consoel.</span></h2>
+                        <p class="text-[#687693] text-[16px] leading-[25px]">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt
+                            ut labore et dolore <br> <br> magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="col-span-7 md:col-span-12">
+                    <div
+                        class="ml-[70px] xl:ml-[50px] lg:ml-[30px] md:ml-0 p-[80px_70px] shadow-[0px_0px_35px_0px_rgba(20,33,43,0.1)] xl:p-[60px_50px] lg:p-[40px_30px]">
+                        <div class="mb-[30px] relative">
+                            <h5
+                                class="text-[22px] sm:text-[18px] mb-[10px] font-heading-font text-[#0a272c] font-semibold">
+                                Financial Investment</h5>
+                            <div class="h-[6px] w-full bg-[#f3f4f4] relative rounded-[10px] overflow-hidden">
+                                <div class="wow fadeInLeft h-[6px]  bg-[#ff4a17]" style="width: 75%"
+                                    data-wow-duration="0.5s" data-wow-delay=".3s" role="progressbar"
+                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="90">
+                                </div>
+                            </div>
+                            <span
+                                class="absolute right-0 top-[-10px] text-[22px] font-heading-font text-[#14212b] font-bold sm:text-[18px] sm:top-0">75%</span>
+                        </div>
+                        <div class="mb-[30px] relative">
+                            <h5
+                                class="text-[22px] sm:text-[18px] mb-[10px] font-heading-font text-[#0a272c] font-semibold">
+                                Business Analysis</h5>
+                            <div class="h-[6px] w-full bg-[#f3f4f4] relative rounded-[10px] overflow-hidden">
+                                <div class="wow fadeInLeft h-[6px]  bg-[#ff4a17]" style="width: 80%"
+                                    data-wow-duration="0.7s" data-wow-delay=".3s" role="progressbar"
+                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                            <span
+                                class="absolute right-0 top-[-10px] text-[22px] font-heading-font text-[#14212b] font-bold sm:text-[18px] sm:top-0">80%</span>
+                        </div>
+                        <div class="mb-[30px] relative">
+                            <h5
+                                class="text-[22px] sm:text-[18px] mb-[10px] font-heading-font text-[#0a272c] font-semibold">
+                                Tax Management</h5>
+                            <div class="h-[6px] w-full bg-[#f3f4f4] relative rounded-[10px] overflow-hidden">
+                                <div class="wow fadeInLeft h-[6px]  bg-[#ff4a17]" style="width: 85%"
+                                    data-wow-duration="0.9s" data-wow-delay=".3s" role="progressbar"
+                                    aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                            <span
+                                class="absolute right-0 top-[-10px] text-[22px] font-heading-font text-[#14212b] font-bold sm:text-[18px] sm:top-0">85%</span>
+                        </div>
+                        <div class="relative">
+                            <h5
+                                class="text-[22px] sm:text-[18px] mb-[10px] font-heading-font text-[#0a272c] font-semibold">
+                                Financial Advices</h5>
+                            <div class="h-[6px] w-full bg-[#f3f4f4] relative rounded-[10px] overflow-hidden">
+                                <div class="wow fadeInLeft h-[6px]  bg-[#ff4a17]" style="width: 95%"
+                                    data-wow-duration="1.1s" data-wow-delay=".3s" role="progressbar"
+                                    aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                            <span
+                                class="absolute right-0 top-[-10px] text-[22px] font-heading-font text-[#14212b] font-bold sm:text-[18px] sm:top-0">95%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-wrap">
+        <div class="wraper">
+            <div class="mb-[75px] sm:mb-[40px] text-center">
+                <span class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17]
+                 font-base-font">HONORABLE CUSTOMER</span>
+                <h2 class="text-[55px] md:text-[35px] sm:text-[32px] col:text-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px]
+                 mt-[10px] relative capitalize font-heading-font font-bold
+                 text-[#14212b]">We are work with top brand</h2>
+            </div>
+            <div class="flex flex-wrap">
+                <div class="basis-[25%] text-center border-[#eeeeee] border-[1px] mt-[-1px] ml-[-1px]
+                p-[35px] flex justify-center flex-col md:p-[20px] sm:basis-[50%] sm:p-[30px_40px] col:p-[20px]">
+                    <img src="assets/images/partners/img-1.png" alt=""
+                        class="inline-block max-w-[70%] mx-auto md:w-[100%]">
+                </div>
+                <div class="basis-[25%] text-center border-[#eeeeee] border-[1px] mt-[-1px] ml-[-1px]
+                p-[35px] flex justify-center flex-col md:p-[20px] sm:basis-[50%] sm:p-[30px_40px] col:p-[20px]">
+                    <img src="assets/images/partners/img-2.png" alt=""
+                        class="inline-block max-w-[70%] mx-auto md:w-[100%]">
+                </div>
+                <div class="basis-[25%] text-center border-[#eeeeee] border-[1px] mt-[-1px] ml-[-1px]
+                p-[35px] flex justify-center flex-col md:p-[20px] sm:basis-[50%] sm:p-[30px_40px] col:p-[20px]">
+                    <img src="assets/images/partners/img-3.png" alt=""
+                        class="inline-block max-w-[70%] mx-auto md:w-[100%]">
+                </div>
+                <div class="basis-[25%] text-center border-[#eeeeee] border-[1px] mt-[-1px] ml-[-1px]
+                p-[35px] flex justify-center flex-col md:p-[20px] sm:basis-[50%] sm:p-[30px_40px] col:p-[20px]">
+                    <img src="assets/images/partners/img-4.png" alt=""
+                        class="inline-block max-w-[70%] mx-auto md:w-[100%]">
+                </div>
+                <div class="basis-[25%] text-center border-[#eeeeee] border-[1px] mt-[-1px] ml-[-1px]
+                p-[35px] flex justify-center flex-col md:p-[20px] sm:basis-[50%] sm:p-[30px_40px] col:p-[20px]">
+                    <img src="assets/images/partners/img-5.png" alt=""
+                        class="inline-block max-w-[70%] mx-auto md:w-[100%]">
+                </div>
+                <div class="basis-[25%] text-center border-[#eeeeee] border-[1px] mt-[-1px] ml-[-1px]
+                p-[35px] flex justify-center flex-col md:p-[20px] sm:basis-[50%] sm:p-[30px_40px] col:p-[20px]">
+                    <img src="assets/images/partners/img-8.png" alt=""
+                        class="inline-block max-w-[70%] mx-auto md:w-[100%]">
+                </div>
+                <div class="basis-[25%] text-center border-[#eeeeee] border-[1px] mt-[-1px] ml-[-1px]
+                p-[35px] flex justify-center flex-col md:p-[20px] sm:basis-[50%] sm:p-[30px_40px] col:p-[20px]">
+                    <img src="assets/images/partners/img-6.png" alt=""
+                        class="inline-block max-w-[70%] mx-auto md:w-[100%]">
+                </div>
+                <div class="basis-[25%] text-center border-[#eeeeee] border-[1px] mt-[-1px] ml-[-1px]
+                p-[35px] flex justify-center flex-col md:p-[20px] sm:basis-[50%] sm:p-[30px_40px] col:p-[20px]">
+                    <img src="assets/images/partners/img-7.png" alt=""
+                        class="inline-block max-w-[70%] mx-auto md:w-[100%]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-wrap bg-[#18252f]">
+        <div class="wraper">
+            <div class="mb-[75px] sm:mb-[40px] text-center">
+                <span class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17]
+                 font-base-font">CLIENT TESTIMONIAL</span>
+                <h2 class="text-[55px] md:text-[35px] sm:text-[32px] text-white col:text-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px]
+                 mt-[10px] relative capitalize font-heading-font font-bold
+                 text-[#14212b]">Best Word Our Clients</h2>
+            </div>
+            <div class="max-w-[1000px] mx-auto text-center relative z-[1]">
+                <div
+                    class="w-[100px] h-[100px] leading-[100px] bg-white
+                     shadow-[0px_0px_35px_0px_rgba(20,33,43,0.1)] mx-auto rounded-[50%] mb-[-50px] relative z-[11] ">
+                    <i class="fi flaticon-left-quote text-[50px] text-[#ff4a17]"></i>
+                </div>
+                <div class="wpo-testimonial-slide bg-white shadow-[0px_0px_35px_0px_rgba(20,33,43,0.1)]">
+                    <div
+                        class="p-[70px_130px] pt-[100px] bg-none sm:p-[40px] sm:pt-[80px] col:p-[30px_20px] col:pt-[60px]">
+                        <div class="wpo-testimonial-text">
+                            <p class="text-[18px] col:text-[15px] mb-[20px]">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry has
+                                text ever since the 1500s, when an unknown printer took a galley of type and
+                                scrambled make
+                                survived not only five centuries, but also the leap into electronic typesetting.
+                            </p>
+                            <div class="wpo-testimonial-text-btm">
+                                <h3 class="text-[32px] font-semibold mt-[5px] col:text-[25px] mb-[15px]">Cathi
+                                    Falcon</h3>
+                                <span
+                                    class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17] col:text-[14px]">Founder</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="p-[70px_130px] pt-[100px] bg-none sm:p-[40px] sm:pt-[80px] col:p-[30px_20px] col:pt-[60px]">
+                        <div class="wpo-testimonial-text">
+                            <p class="text-[18px] col:text-[15px] mb-[20px]">Lorem Ipsum is simply dummy text of the
+                                printing and typesetting industry has
+                                text ever since the 1500s, when an unknown printer took a galley of type and
+                                scrambled make
+                                survived not only five centuries, but also the leap into electronic typesetting.
+                            </p>
+                            <div class="wpo-testimonial-text-btm">
+                                <h3 class="text-[32px] font-semibold mt-[5px] col:text-[25px] mb-[15px]">Harry
+                                    Abraham</h3>
+                                <span
+                                    class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17] col:text-[14px]">SCG
+                                    First Company</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="p-[70px_130px] pt-[100px] bg-none sm:p-[40px] sm:pt-[80px] col:p-[30px_20px] col:pt-[60px]">
+                        <div class="wpo-testimonial-text">
+                            <p class="text-[18px] col:text-[15px] mb-[20px]">Lorem Ipsum is simply dummy text of the
+                                printing and typesetting industry has
+                                text ever since the 1500s, when an unknown printer took a galley of type and
+                                scrambled make
+                                survived not only five centuries, but also the leap into electronic typesetting.
+                            </p>
+                            <div class="wpo-testimonial-text-btm">
+                                <h3 class="text-[32px] font-semibold mt-[5px] col:text-[25px] mb-[15px]">Benjir
+                                    Walton</h3>
+                                <span
+                                    class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17] col:text-[14px]">Merketer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute right-0 top-[50px] sm:hidden">
+                    <svg width="152.000000pt" height="137.000000pt" viewBox="0 0 152.000000 137.000000"
+                        fill="#ff4a17" preserveAspectRatio="xMidYMid meet">
+                        <g transform="translate(0.000000,137.000000) scale(0.100000,-0.100000)" stroke="none">
+                            <path
+                                d="M101 1288 c171 -466 515 -851 954 -1070 126 -63 240 -107 373 -142 l92 -25 0 660 0 659 -725 0 -724 0 30 -82z" />
+                        </g>
+                    </svg>
+                </div>
+                <div class="absolute left-0 bottom-0 sm:hidden">
+                    <svg width="186.000000pt" height="202.000000pt" viewBox="0 0 186.000000 202.000000"
+                        fill="#ff4a17" preserveAspectRatio="xMidYMid meet">
+                        <g transform="translate(0.000000,202.000000) scale(0.100000,-0.100000)" stroke="none">
+                            <path
+                                d="M0 965 l0 -965 870 0 871 0 19 45 c67 157 56 324 -29 448 -87 127 -229 238 -648 507 -158 102 -337 220 -398 264 -238 170 -473 391 -609 574 -38 50 -71 92 -73 92 -1 0 -3 -434 -3 -965z" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#f3f4f4] section-wrap">
+        <div class="wraper">
+            <div class="mb-[75px] sm:mb-[40px] text-center">
+                <span class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17]
+                 font-base-font">BLOG POST</span>
+                <h2 class="text-[55px] md:text-[35px] sm:text-[32px] col:text-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px]
+                 mt-[10px] relative capitalize font-heading-font font-bold
+                 text-[#14212b]">Latest News From Blog</h2>
+            </div>
+            <div>
+                <div class="grid grid-cols-12 gap-x-4">
+                    <div class="col-span-6 lg:col-span-12">
+                        <div class="relative group">
+                            <div class="relative overflow-hidden rounded-[8px]
+                                    before:absolute before:left-0 before:bottom-0 before:w-full before:h-full
+                                    before:bg-[linear-gradient(180deg,_rgba(20,33,43,0.98)_20%,_rgba(20,33,43,0)_50%)]
+                                    before:rotate-[-180deg] before:z-[1] before:rounded-[8px] before:transition
+                                    before:duration-300 ">
+                                <img src="assets/images/blog/img-1.jpg" alt=""
+                                    class="scale-[1] rounded-[8px] transition-all duration-500 group-hover:scale-[1.2]">
+                            </div>
+                            <div class="p-[50px] absolute left-0 bottom-0  z-[11] col:p-[30px]
+                                duration-500  lg:p-[20px] lg:pb-[0]">
+                                <h2
+                                    class="text-[30px] leading-[32px] mt-[10px] mb-[30px] col:text-[22px] col:mb-[15px] col:leading-[30px]">
+                                    <a href="blog-single.html"
+                                        class="text-white transition-all duration-500 hover:text-[#ff4a17]">
+                                        We provide advanced solutions growin your online business.</a>
+                                </h2>
+                                <ul class="flex col:block">
+                                    <li class="text-white text-[14px] uppercase">
+                                        <a href="blog-single.html" class="text-[#ff4a17]">25 Dec, 2020</a>
+                                    </li>
+                                    <li class="pl-[20px] relative col:pl-0 col:mt-[5px] text-white text-[14px] uppercase before:absolute before:left-[10px] before:top-[50%]
+                                     before:-translate-y-1/2 before:content-['-'] col:before:hidden">by: Marilou
+                                        Kelleher</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-6 lg:col-span-12">
+                        <div class="pl-[40px] lg:pl-0 lg:mt-[40px]">
+                            <div
+                                class="mb-[15px] lg:mb-[30px] overflow-hidden lg:flex lg:items-center col:flex-wrap col:justify-center col:text-center group transition-all duration-500">
+                                <div
+                                    class="relative overflow-hidden rounded-[8px] float-left mr-[20px] transition-all duration-500">
+                                    <img class="scale-[1] rounded-[8px] col:mb-[20px] transition-all duration-500 group-hover:scale-[1.2]"
+                                        src="assets/images/blog/img-2.jpg" alt="">
+                                </div>
+                                <div class="z-[11] overflow-hidden">
+                                    <h2
+                                        class="text-[23px] mb-[15px] leading-[30px] xl:text-[20px] xl:mb-[10px] xl:leading-[28px] transition-all duration-500 font-semibold">
+                                        <a href="blog-single.html" class="text-[#0a272c] transition-all duration-500
+                                            hover:text-[#ff4a17]">We provide advanced
+                                            solutions growin your online
+                                            business</a>
+                                    </h2>
+                                    <ul class="flex col:block col:text-center">
+                                        <li class="text-[14px] uppercase text-[#6e6e6e] ">
+                                            <a href="blog-single.html" class="text-[#ff4a17]">25 Dec, 2020</a>
+
+                                        </li>
+                                        <li
+                                            class="text-[14px] uppercase text-[#6e6e6e] pl-[20px] relative col:pl-0 col:mt-[5px]">
+                                            by: Marilou Kelleher
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div
+                                class="mb-[15px] lg:mb-[30px] overflow-hidden lg:flex lg:items-center col:flex-wrap col:justify-center col:text-center group transition-all duration-500">
+                                <div
+                                    class="relative overflow-hidden rounded-[8px] float-left mr-[20px] transition-all duration-500">
+                                    <img class="scale-[1] rounded-[8px] col:mb-[20px] transition-all duration-500 group-hover:scale-[1.2]"
+                                        src="assets/images/blog/img-3.jpg" alt="">
+                                </div>
+                                <div class="z-[11] overflow-hidden">
+                                    <h2
+                                        class="text-[23px] mb-[15px] leading-[30px] xl:text-[20px] xl:mb-[10px] xl:leading-[28px] transition-all duration-500 font-semibold">
+                                        <a href="blog-single.html" class="text-[#0a272c] transition-all duration-500
+                                            hover:text-[#ff4a17]">Many desktop publishing packag and web page
+                                            editors use.</a>
+                                    </h2>
+                                    <ul class="flex col:block col:text-center">
+                                        <li class="text-[14px] uppercase text-[#6e6e6e] ">
+                                            <a href="blog-single.html" class="text-[#ff4a17]">25 Dec, 2020</a>
+
+                                        </li>
+                                        <li
+                                            class="text-[14px] uppercase text-[#6e6e6e] pl-[20px] relative col:pl-0 col:mt-[5px]">
+                                            by: Marilou Kelleher
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div
+                                class="mb-[15px] lg:mb-[30px] overflow-hidden lg:flex lg:items-center col:flex-wrap col:justify-center col:text-center group transition-all duration-500">
+                                <div
+                                    class="relative overflow-hidden rounded-[8px] float-left mr-[20px] transition-all duration-500">
+                                    <img class="scale-[1] rounded-[8px] col:mb-[20px] transition-all duration-500 group-hover:scale-[1.2]"
+                                        src="assets/images/blog/img-4.jpg" alt="">
+                                </div>
+                                <div class="z-[11] overflow-hidden">
+                                    <h2
+                                        class="text-[23px] mb-[15px] leading-[30px] xl:text-[20px] xl:mb-[10px] xl:leading-[28px] transition-all duration-500 font-semibold">
+                                        <a href="blog-single.html" class="text-[#0a272c] transition-all duration-500
+                                            hover:text-[#ff4a17]">Consulting Can be your best solution and a search
+                                            for over</a>
+                                    </h2>
+                                    <ul class="flex col:block col:text-center">
+                                        <li class="text-[14px] uppercase text-[#6e6e6e] ">
+                                            <a href="blog-single.html" class="text-[#ff4a17]">25 Dec, 2020</a>
+
+                                        </li>
+                                        <li
+                                            class="text-[14px] uppercase text-[#6e6e6e] pl-[20px] relative col:pl-0 col:mt-[5px]">
+                                            by: Marilou Kelleher
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div
+                                class="mb-[15px] lg:mb-[30px] overflow-hidden lg:flex lg:items-center col:flex-wrap col:justify-center col:text-center group transition-all duration-500">
+                                <div
+                                    class="relative overflow-hidden rounded-[8px] float-left mr-[20px] transition-all duration-500">
+                                    <img class="scale-[1] rounded-[8px] col:mb-[20px] transition-all duration-500 group-hover:scale-[1.2]"
+                                        src="assets/images/blog/img-5.jpg" alt="">
+                                </div>
+                                <div class="z-[11] overflow-hidden">
+                                    <h2
+                                        class="text-[23px] mb-[15px] leading-[30px] xl:text-[20px] xl:mb-[10px] xl:leading-[28px] transition-all duration-500 font-semibold">
+                                        <a href="blog-single.html" class="text-[#0a272c] transition-all duration-500
+                                            hover:text-[#ff4a17]">Many web sites still their infancy versions have
+                                            evolved accident</a>
+                                    </h2>
+                                    <ul class="flex col:block col:text-center">
+                                        <li class="text-[14px] uppercase text-[#6e6e6e] ">
+                                            <a href="blog-single.html" class="text-[#ff4a17]">25 Dec, 2020</a>
+
+                                        </li>
+                                        <li
+                                            class="text-[14px] uppercase text-[#6e6e6e] pl-[20px] relative col:pl-0 col:mt-[5px]">
+                                            by: Marilou Kelleher
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div
+                                class="overflow-hidden lg:flex lg:items-center col:flex-wrap col:justify-center col:text-center group transition-all duration-500">
+                                <div
+                                    class="relative overflow-hidden rounded-[8px] float-left mr-[20px] transition-all duration-500">
+                                    <img class="scale-[1] rounded-[8px] col:mb-[20px] transition-all duration-500 group-hover:scale-[1.2]"
+                                        src="assets/images/blog/img-6.jpg" alt="">
+                                </div>
+                                <div class="z-[11] overflow-hidden">
+                                    <h2
+                                        class="text-[23px] mb-[15px] leading-[30px] xl:text-[20px] xl:mb-[10px] xl:leading-[28px] transition-all duration-500 font-semibold">
+                                        <a href="blog-single.html" class="text-[#0a272c] transition-all duration-500
+                                            hover:text-[#ff4a17]">3 of the Worst Ways Small Businesses Waste Money
+                                            on Marketing</a>
+                                    </h2>
+                                    <ul class="flex col:block col:text-center">
+                                        <li class="text-[14px] uppercase text-[#6e6e6e] ">
+                                            <a href="blog-single.html" class="text-[#ff4a17]">25 Dec, 2020</a>
+
+                                        </li>
+                                        <li
+                                            class="text-[14px] uppercase text-[#6e6e6e] pl-[20px] relative col:pl-0 col:mt-[5px]">
+                                            by: Marilou Kelleher
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-wrap bg-[#18252f] overflow-hidden">
+        <h2 class="hidden">contact</h2>
+        <div class="wraper">
+            <div class="grid grid-cols-12 mx-[-40px] xl:mx-[-20px] lg:mx-[-15px]">
+                <div class="col-span-4 lg:col-span-6 md:col-span-6 sm:col-span-12
+                     px-[40px] xl:px-[20px] lg:px-[15px]">
+                    <div class="lg:mb-[30px] text-center p-[60px_40px] border-[1px] border-[#ff4a17]
+                    rounded-[15px] bg-[#18252f] md:p-[40px] col:p-[30px]">
+                        <div class="mb-[30px] col:mb-[20px]">
+                            <i class="fi flaticon-place text-[#ff4a17] text-[55px] col:text-[40px]"></i>
+                        </div>
+                        <p class="text-[22px] leading-[32px] font-medium text-white font-heading-font">1489 Langley
+                            Ave <br>
+                            Grand Forks Afb, North.</p>
+                        <span class="text-[14px] text-[#ff4a17] uppercase block mt-[30px] tracking-[3px]">USA,
+                            Office AddRESS</span>
+                    </div>
+                </div>
+                <div class="col-span-4 lg:col-span-6 md:col-span-6 sm:col-span-12
+                     px-[40px] xl:px-[20px] lg:px-[15px]">
+                    <div class="lg:mb-[30px] text-center p-[60px_40px] border-[1px] border-[#ff4a17]
+                    rounded-[15px] bg-[#ff4a17] md:p-[40px] col:p-[30px]">
+                        <div class="mb-[30px] col:mb-[20px]">
+                            <i class="fi flaticon-phone-call text-white text-[55px] col:text-[40px]"></i>
+                        </div>
+                        <p class="text-[22px] leading-[32px] font-medium text-white font-heading-font">+1 800 123
+                            456 789</p>
+                        <p class="text-[22px] leading-[32px] font-medium text-white font-heading-font">+1 800 123
+                            654 987</p>
+                        <span class="text-[14px] text-white uppercase block mt-[30px] tracking-[3px]">CALL US
+                            TODAY</span>
+                    </div>
+                </div>
+                <div class="col-span-4 lg:col-span-6 md:col-span-6 sm:col-span-12
+                     px-[40px] xl:px-[20px] lg:px-[15px]">
+                    <div class=" text-center p-[60px_40px] border-[1px] border-[#ff4a17]
+                    rounded-[15px] bg-[#18252f] md:p-[40px] col:p-[30px]">
+                        <div class="mb-[30px] col:mb-[20px]">
+                            <i class="fi flaticon-email text-[#ff4a17] text-[55px] col:text-[40px]"></i>
+                        </div>
+                        <p class="text-[22px] leading-[32px] font-medium text-white font-heading-font">
+                            consoel@gmail.com</p>
+                        <p class="text-[22px] leading-[32px] font-medium text-white font-heading-font">
+                            info724@gmail.com</p>
+                        <span class="text-[14px] text-[#ff4a17] uppercase block mt-[30px] tracking-[3px]">EMAIL
+                            ADDRESS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute left-[-3%] top-[-20%] z-[-1]">
+            <img src="assets/images/ct-shape.png" alt="shape">
+        </div>
+    </section>
+
+    <section class="section-wrap">
+        <div class="wraper">
+            <div class="p-[80px_85px] bg-[url(../images/cta-bg.jpg)] bg-no-repeat bg-center rounded-[6px]
+            md:p-[40px_35px] col:p-[10px]">
+                <div
+                    class="p-[100px_80px] bg-[rgba(20,33,43,0.9)] flex items-center relative z-[1] rounded-[6px] overflow-hidden lg:flex-wrap lg:justify-center lg:text-center col:p-[20px_15px]">
+                    <div class="mr-[80px] basis-[80%] lg:basis-full lg:mr-0">
+                        <span
+                            class="uppercase text-[16px] font-base-font font-bold tracking-[3px] text-[#ff4a17]">WE
+                            ARE
+                            HERE</span>
+                        <h2 class="text-[45px] text-white mt-[20px]
+                             lg:text-[40px] lg:mb-[20px] font-heading-font font-semibold leading-[1.2]
+                             sm:text-[30px]">Tell us about your business,
+                            we are ready to solve.</h2>
+                    </div>
+                    <div class="basis-[20%] lg:basis-[100%]">
+                        <a href="contact.html" class="inline-block p-[15px_35px] pr-[45px] text-white relative rounded-[6px] mt-[10px] max-w-[150px] uppercase bg-[#ff4a17] md:border-white md:border-[1px]  transition-all
+                             before:absolute before:right-[20px] before:top-[51%] before:content-['\f103'] font-base-font
+                             before:font-['Flaticon'] before:-translate-y-1/2
+                             hover:bg-[#ed3400] hover:text-white ">Call us</a>
+                    </div>
+                    <div class="absolute left-[-1px] bottom-0 z-[-1] ">
+                        <svg width="325.000000pt" height="267.000000pt" viewBox="0 0 325.000000 267.000000"
+                            fill="#ff4a17" preserveAspectRatio="xMidYMid meet">
+                            <g transform="translate(0.000000,267.000000) scale(0.100000,-0.100000)" stroke="none">
+                                <path
+                                    d="M0 1332 l0 -1332 920 0 919 0 39 53 c213 291 233 519 64 720 -101 119 -201 194 -617 462 -344 222 -452 297 -605 426 -320 268 -528 547 -676 906 -20 48 -38 90 -40 92 -2 2 -4 -595 -4 -1327z" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</x-guest-layout>

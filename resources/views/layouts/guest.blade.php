@@ -11,20 +11,63 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-    <body class="font-sans text-gray-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-            <div>
-                <a href="/" wire:navigate>
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-                </a>
-            </div>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="wpOceans">
+        <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
 
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-                {{ $slot }}
-            </div>
+        <!-- Scripts -->
+        {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
+
+        <link href="assets/css/themify-icons.css" rel="stylesheet">
+        <link href="assets/css/flaticon.css" rel="stylesheet">
+        <link href="assets/css/magnific-popup.css" rel="stylesheet">
+        <link href="assets/css/animate.css" rel="stylesheet">
+        <link href="assets/css/owl.carousel.css" rel="stylesheet">
+        <link href="assets/css/owl.theme.css" rel="stylesheet">
+        <link href="assets/css/slick.css" rel="stylesheet">
+        <link href="assets/css/slick-theme.css" rel="stylesheet">
+        <link href="assets/css/swiper.min.css" rel="stylesheet">
+        <link href="assets/css/owl.transitions.css" rel="stylesheet">
+        <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
+        <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
+        <link href="assets/css/global.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+
+    </head>
+    <body class="font-sans antialiased">
+
+        <div class="page-wrapper">
+            <!-- start preloader -->
+            {{-- <div class="preloader">
+                <div class="vertical-centered-box">
+                    <div class="content">
+                        <div class="loader-circle"></div>
+                        <div class="loader-line-mask">
+                            <div class="loader-line"></div>
+                        </div>
+                        <img src="assets/images/preloader.png" alt="">
+                    </div>
+                </div>
+            </div> --}}
+
+            @include('layouts.partials.header')
+
+            {{ $slot }}
+
+            @include('layouts.partials.footer')
+
         </div>
+
+
+        <script src="/assets/js/jquery.min.js"></script>
+        <!-- Plugins for this template -->
+        <script src="/assets/js/modernizr.custom.js"></script>
+        <script src="/assets/js/jquery-plugin-collection.js"></script>
+        <script src="/assets/js/tw-elements.umd.min.js"></script>
+        <script src="/assets/js/moving-animation.js"></script>
+        <!-- Custom script for this template -->
+        <script src="/assets/js/script.js"></script>
     </body>
 </html>
