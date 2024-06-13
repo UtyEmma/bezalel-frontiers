@@ -18,4 +18,8 @@ class PageController extends Controller {
         return view('contact');
     }
 
+    function faqs(){
+        return view('faqs');
+    }
+
 }
