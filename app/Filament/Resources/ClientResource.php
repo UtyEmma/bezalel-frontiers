@@ -2,13 +2,11 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ServiceResource\Pages;
-use App\Filament\Resources\ServiceResource\RelationManagers;
-use App\Forms\Components\SelectStatus;
-use App\Models\Service;
+use App\Filament\Resources\ClientResource\Pages;
+use App\Filament\Resources\ClientResource\RelationManagers;
+use App\Models\Client;
 use Filament\Forms;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
-use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -16,9 +14,9 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class ServiceResource extends Resource
+class ClientResource extends Resource
 {
-    protected static ?string $model = Service::class;
+    protected static ?string $model = Client::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -26,27 +24,19 @@ class ServiceResource extends Resource
     {
         return $form
             ->schema([
-                SpatieMediaLibraryFileUpload::make('image')
-                    ->image()
-                    ->collection('services')
-                    ->required(),
                 Forms\Components\TextInput::make('name')
                     ->required()
-                    ->columnSpanFull()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('slug')
+                SpatieMediaLibraryFileUpload::make('logo')
                     ->required()
-                    ->columnSpanFull()
+                    ->collection('clients'),
+                Forms\Components\TextInput::make('website')
+                    ->maxLength(255)
+                    ->default(null),
+                Forms\Components\Toggle::make('featured'),
+                Forms\Components\TextInput::make('status')
+                    ->required()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('description')
-                    ->columnSpanFull(),
-                Forms\Components\RichEditor::make('content')
-                    ->columnSpanFull()
-                    ->required(),
-                Toggle::make('featured')
-                    ->default(true),
-                SelectStatus::make('status')
-                    ->required(),
             ]);
     }
 
@@ -56,9 +46,18 @@ class ServiceResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\TextColumn::make('logo')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('website')
+                    ->searchable(),
+                Tables\Columns\IconColumn::make('featured')
+                    ->boolean(),
                 Tables\Columns\TextColumn::make('status')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('deleted_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -92,10 +91,10 @@ class ServiceResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListServices::route('/'),
-            'create' => Pages\CreateService::route('/create'),
-            'view' => Pages\ViewService::route('/{record}'),
-            'edit' => Pages\EditService::route('/{record}/edit'),
+            'index' => Pages\ListClients::route('/'),
+            'create' => Pages\CreateClient::route('/create'),
+            'view' => Pages\ViewClient::route('/{record}'),
+            'edit' => Pages\EditClient::route('/{record}/edit'),
         ];
     }
 }

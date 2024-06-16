@@ -2,13 +2,12 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ServiceResource\Pages;
-use App\Filament\Resources\ServiceResource\RelationManagers;
+use App\Filament\Resources\TestimonialResource\Pages;
+use App\Filament\Resources\TestimonialResource\RelationManagers;
 use App\Forms\Components\SelectStatus;
-use App\Models\Service;
+use App\Models\Testimonial;
+use App\Tables\Columns\StatusColumn;
 use Filament\Forms;
-use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
-use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -16,9 +15,9 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class ServiceResource extends Resource
+class TestimonialResource extends Resource
 {
-    protected static ?string $model = Service::class;
+    protected static ?string $model = Testimonial::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -26,27 +25,22 @@ class ServiceResource extends Resource
     {
         return $form
             ->schema([
-                SpatieMediaLibraryFileUpload::make('image')
-                    ->image()
-                    ->collection('services')
-                    ->required(),
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->columnSpanFull()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('slug')
+                Forms\Components\TextInput::make('company')
+                    ->maxLength(255)
+                    ->default(null),
+                Forms\Components\TextInput::make('role')
+                    ->maxLength(255)
+                    ->default(null),
+                Forms\Components\Textarea::make('message')
                     ->required()
-                    ->columnSpanFull()
-                    ->maxLength(255),
-                Forms\Components\Textarea::make('description')
                     ->columnSpanFull(),
-                Forms\Components\RichEditor::make('content')
-                    ->columnSpanFull()
-                    ->required(),
-                Toggle::make('featured')
-                    ->default(true),
-                SelectStatus::make('status')
-                    ->required(),
+                SelectStatus::make('status'),
+                Forms\Components\Toggle::make('featured')
+                    ->label('Featured Testimonial'),
             ]);
     }
 
@@ -56,9 +50,17 @@ class ServiceResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\ImageColumn::make('image'),
-                Tables\Columns\TextColumn::make('status')
+                Tables\Columns\TextColumn::make('company')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('role')
+                    ->searchable(),
+                Tables\Columns\IconColumn::make('featured')
+                    ->boolean(),
+                StatusColumn::make('status'),
+                Tables\Columns\TextColumn::make('deleted_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -92,10 +94,10 @@ class ServiceResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListServices::route('/'),
-            'create' => Pages\CreateService::route('/create'),
-            'view' => Pages\ViewService::route('/{record}'),
-            'edit' => Pages\EditService::route('/{record}/edit'),
+            'index' => Pages\ListTestimonials::route('/'),
+            'create' => Pages\CreateTestimonial::route('/create'),
+            'view' => Pages\ViewTestimonial::route('/{record}'),
+            'edit' => Pages\EditTestimonial::route('/{record}/edit'),
         ];
     }
 }

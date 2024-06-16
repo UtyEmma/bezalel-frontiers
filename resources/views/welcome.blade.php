@@ -1,98 +1,5 @@
 <x-guest-layout>
-    <section class="bg-[#131313] w-full h-[900px]  lg:h-[680px] md:h-[600px] sm:h-[500px]  relative z-[1] overflow-hidden">
-        <div class="swiper-container w-full h-full absolute left-0 top-0">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="slide-inner slide-bg-image before:absolute before:left-0
-                    before:top-0 before:w-full before:h-full before:bg-[#040128] before:opacity-[0.4] "
-                        data-background="assets/images/slider/slide-4.jpg">
-                        <!-- <div class="gradient-overlay"></div> -->
-                        <div class="wraper">
-                            <div class="relative h-[900px] lg:h-[680px]  md:h-[600px] sm:h-[500px]">
-                                <div
-                                    class="max-w-[720px] lg:w-[600px] md:w-full  absolute top-1/2 left-0 transform  -translate-y-1/2">
-
-                                    <div data-swiper-parallax="200" class="wpo-hero-title-top">
-                                        <span class="text-[19px] col:text-[16px] text-white font-base-font uppercase
-                                            mb-[30px] font-normal tracking-[2px]">Trusted
-                                            Business Partner.</span>
-                                    </div>
-                                    <div data-swiper-parallax="300" class="slide-title">
-                                        <h2 class="text-[70px] font-black leading-[90px] mt-[10px] mb-[25px]
-                                                lg:text-[50px] md:text-[40px] md:leading-[55px] col:text-[30px]
-                                                col:leading-[35px] text-white col:mb-[20px]">
-                                            The Fastest way to achieve success</h2>
-
-                                    </div>
-                                    <div data-swiper-parallax="400" class="slide-text">
-                                        <p class="text-[22px] text-[#e2e2e2] font-base-font
-                                            leading-[35px]
-                                                mb-[40px]
-                                            md:text-[18px] col:leading-[25px]
-                                            col:mb-[30px]">
-                                            It was popularised in the 1960s with the release sheets.
-                                            We bring the right people together.</p>
-                                    </div>
-
-                                    <div data-swiper-parallax="500" class="slide-btn">
-                                        <a href="about.html" class="btn theme-btn rounded-none">
-                                            Explore more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- end slide-inner -->
-                </div> <!-- end swiper-slide -->
-                <div class="swiper-slide">
-                    <div class="slide-inner slide-bg-image before:absolute before:left-0
-                    before:top-0 before:w-full before:h-full before:bg-[#040128] before:opacity-[0.4]"
-                        data-background="assets/images/slider/slide-5.jpg">
-                        <!-- <div class="gradient-overlay"></div> -->
-                        <div class="wraper">
-                            <div class="relative h-[900px] lg:h-[680px]  md:h-[600px] sm:h-[500px]">
-                                <div
-                                    class="max-w-[720px] lg:w-[600px] md:w-full  absolute top-1/2 left-0 transform  -translate-y-1/2">
-
-                                    <div data-swiper-parallax="200" class="wpo-hero-title-top">
-                                        <span class="text-[19px] col:text-[16px] text-white font-base-font uppercase
-                                            mb-[30px] font-normal tracking-[2px]">Trusted
-                                            Business Partner.</span>
-                                    </div>
-                                    <div data-swiper-parallax="300" class="slide-title">
-                                        <h2
-                                            class="text-[70px] font-black leading-[90px] mt-[10px] mb-[25px]
-                                                lg:text-[50px] md:text-[40px] md:leading-[55px] col:text-[30px] col:leading-[35px] text-white col:mb-[20px]">
-                                            The Fastest way to achieve success</h2>
-
-                                    </div>
-                                    <div data-swiper-parallax="400" class="slide-text">
-                                        <p class="text-[22px] text-[#e2e2e2] font-base-font
-                                            leading-[35px]
-                                                mb-[40px]
-                                            md:text-[18px] col:leading-[25px]
-                                            col:mb-[30px]">
-                                            It was popularised in the 1960s with the release sheets.
-                                            We bring the right people together.</p>
-                                    </div>
-
-                                    <div data-swiper-parallax="500" class="slide-btn">
-                                        <a href="about.html" class="btn theme-btn rounded-none">
-                                            Explore more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- end slide-inner -->
-                </div> <!-- end swiper-slide -->
-            </div>
-            <!-- end swiper-wrapper -->
-
-            <!-- swipper controls -->
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-    </section>
+    @include('partials.home.banner')
 
     <section class="section-wrap">
         <div class="wraper">
@@ -119,8 +26,7 @@
                     <div class="max-w-[600px] sm:w-full relative pl-[40px] md:pl-0 md:pt-[70px]">
                         <h4
                             class="text-[21px] text-[#ff4a17] font-base-font font-bold lg:text-[18px] col:text-[14px]">
-                            Welcome
-                            To Consoel Consultancy Comapny</h4>
+                            Welcome to {{$settings->company_name}}</h4>
                         <h2 class="text-[60px] leading-[70px] my-[30px] text-[#0a272c] font-normal font-heading-font
                             xl:text-[55px] lg:text-[36px] lg:leading-[50px] lg:my-[20px] col:text-[26px]
                             col:leading-[36px] col:my-[15px]">
@@ -129,12 +35,7 @@
                             <b class="text-[#14212b]">with <span class="text-[#ff4a17]">28+ years</span> of
                                 experience.</b>
                         </h2>
-                        <p class="text-[18px] mb-[35px] col:text-[16px] col:mb-[20px]">Lorem Ipsum is simply dummy
-                            text of the printing and typesetting’s
-                            the industrey's standard dummy text ever since the 1500 when printed
-                            galley of type and scrambled type specimen book. One way to categorize the activities is
-                            in terms of the professional’s area of expertise such as competitive analysis, corporate
-                            strategy.</p>
+                        <p class="text-[18px] mb-[35px] col:text-[16px] col:mb-[20px]">At <span class="text-[#ff4a17]">{{$settings->company_name}}</span>, we provide actionable insights that inform, inspire, and empower minds and organizations for success. Discover how our data-driven and research-based management consulting can transform your business.</p>
                         <a class="theme-btn" href="about.html">More About Us</a>
                     </div>
                 </div>
@@ -142,188 +43,82 @@
         </div>
     </section>
 
-    <section class="section-wrap bg-[#14212b] overflow-hidden relative z-[1]
-         before:absolute before:left-0 before:top-0 before:w-full before:h-full
-         before:bg-[url(../images/service/shape-1.png)] before:bg-no-repeat before:bg-cover before:bg-center">
-        <div class="wraper">
-            <div class="mb-[75px] sm:mb-[40px] text-center">
-                <span class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17]
-                    font-base-font">Our Services</span>
-                <h2 class="text-[55px] md:text-[35px] sm:text-[32px] col:text-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px]
-                    mt-[10px] relative capitalize font-heading-font font-bold
-                    text-[#fff]">All Consoel Solution</h2>
-            </div>
-            <div class="wpo-service-slider owl-carousel">
-                <div class="relative mb-[30px] z-[1]">
-                    <div class="relative rounded-[6px] overflow-hidden group
-                    before:absolute before:left-0 before:top-0 before:w-full before:h-full
-                    before:bg-[rgba(20,33,43,0.8)] before:z-[11] ">
-                        <img class="w-full rounded-[6px]" src="assets/images/service/1.jpg" alt="">
-                        <div class="absolute left-0 bottom-0 p-[50px] z-[19] md:p-[30px]">
-                            <h2
-                                class="text-white text-[30px] font-bold font-heading-font mb-[20px] col:text-[25px]">
-                                Financial Advices</h2>
-                            <p class="text-[#e1e1e1] font-base-font">Lorem Ipsum is simply dummy text of the
-                                the industrey's standard dummy text ever
-                                scrambled type specimen book.</p>
-                            <a href="service-single.html"
-                                class="inline-block font-base-font
-                            p-[10px_45px] pr-[45px] text-white border-white border-[1px]
-                            relative rounded-[6px] mt-[10px] max-w-[150px] before:absolute
-                            before:right-[20px] before:top-[51%]
-                            before:content-['\f103'] before:font-['Flaticon'] before:translate-y-[-50%]">Details</a>
+    @if ($services->count() > 0)
+        <section class="section-wrap bg-[#14212b] overflow-hidden relative z-[1]
+            before:absolute before:left-0 before:top-0 before:w-full before:h-full
+            before:bg-[url(../images/service/shape-1.png)] before:bg-no-repeat before:bg-cover before:bg-center">
+            <div class="wraper">
+                <div class="mb-[75px] sm:mb-[40px] text-center">
+                    <span class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17]
+                        font-base-font">Our Services</span>
+                    <h2 class="text-[55px] md:text-[35px] sm:text-[32px] col:text-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px]
+                        mt-[10px] relative capitalize font-heading-font font-bold
+                        text-[#fff]">All Consoel Solution</h2>
+                </div>
+                <div class="wpo-service-slider owl-carousel">
+                    @forelse ($services as $service)
+                        <div class="relative mb-[30px] z-[1]">
+                            <div class="relative rounded-[6px] overflow-hidden group
+                            before:absolute before:left-0 before:top-0 before:w-full before:h-full
+                            before:bg-[rgba(20,33,43,0.8)] before:z-[11] ">
+                                <img class="w-full rounded-[6px]" src="{{$service->image}}" alt="">
+                                <div class="absolute left-0 bottom-0 p-[50px] z-[19] md:p-[30px]">
+                                    <h2
+                                        class="text-white text-[30px] font-bold font-heading-font mb-[20px] col:text-[25px]">
+                                        {{$service->name}}</h2>
+                                    <p class="text-[#e1e1e1] font-base-font">{{$service->description}}</p>
+                                    <a href="{{route('services.details', ['service' => $service->id])}}"
+                                        class="inline-block font-base-font
+                                    p-[10px_45px] pr-[45px] text-white border-white border-[1px]
+                                    relative rounded-[6px] mt-[10px] max-w-[150px] before:absolute
+                                    before:right-[20px] before:top-[51%]
+                                    before:content-['\f103'] before:font-['Flaticon'] before:translate-y-[-50%]">Details</a>
 
-                        </div>
-                        <div class="absolute left-0 bottom-0 p-[50px] w-full h-full bg-[#ff4a17]
-                    flex justify-center flex-col rounded-[6px] translate-y-[100%]
-                        transition-all duration-300 ease-in-out
-                    overflow-hidden z-[20] md:p-[30px] group-hover:translate-y-[0]">
-                            <h2
-                                class="text-white text-[30px]  font-heading-font font-bold mb-[20px] col:text-[25px]">
-                                Financial Advices</h2>
-                            <p class="text-white font-base-font">Lorem Ipsum is simply dummy text of the
-                                the industrey's standard dummy text ever
-                                scrambled type specimen book.</p>
-                            <a href="service-single.html" class="inline-block font-base-font transition-all duration-300 ease-in-out
-                            p-[10px_45px] pr-[45px] text-white border-white border-[1px]
-                            relative rounded-[6px] mt-[10px] max-w-[150px] before:absolute
-                            before:right-[20px] before:top-[51%]
-                            before:content-['\f103'] before:font-['Flaticon'] before:translate-y-[-50%]
-                            hover:bg-white hover:text-[#ff4a17]">Details</a>
-                            <div class="t">
-                                <div class="absolute left-[-180px] top-[-180px] w-[360px] h-[360px]
-                                    bg-[rgba(255,255,255,.09)] rounded-[50%]">
                                 </div>
-                                <div class="absolute left-[-210px] top-[-210px] w-[420px] h-[420px]
-                                    bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
-                                <div class="absolute left-[-241px] top-[-241px] w-[482px] h-[482px]
-                                    bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
-                            </div>
-                            <div class="b">
-                                <div class="absolute right-[-180px] bottom-[-180px] w-[360px] h-[360px]
-                                    bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
-                                <div class="absolute right-[-210px] bottom-[-210px] w-[420px] h-[420px]
-                                    bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
-                                <div class="absolute right-[-241px] bottom-[-241px] w-[482px] h-[482px]
-                                    bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative mb-[30px] z-[1]">
-                    <div class="relative rounded-[6px] overflow-hidden group
-                        before:absolute before:left-0 before:top-0 before:w-full before:h-full
-                        before:bg-[rgba(20,33,43,0.8)] before:z-[11] ">
-                        <img class="w-full rounded-[6px]" src="assets/images/service/2.jpg" alt="">
-                        <div class="absolute left-0 bottom-0 p-[50px] z-[19] md:p-[30px]">
-                            <h2 class="text-white text-[30px] font-bold font-heading-font mb-[20px]
-                                    col:text-[25px]">
-                                Risk Management</h2>
-                            <p class="text-[#e1e1e1] font-base-font">Lorem Ipsum is simply dummy text of the
-                                the industrey's standard dummy text ever
-                                scrambled type specimen book.</p>
-                            <a href="service-single.html"
-                                class="inline-block font-base-font
-                                p-[10px_45px] pr-[45px] text-white border-white border-[1px]
-                                relative rounded-[6px] mt-[10px] max-w-[150px] before:absolute
-                                before:right-[20px] before:top-[51%]
-                                before:content-['\f103'] before:font-['Flaticon'] before:translate-y-[-50%]">Details</a>
-                        </div>
-                        <div class="absolute left-0 bottom-0 p-[50px] w-full h-full bg-[#ff4a17]
-                        flex justify-center flex-col rounded-[6px] translate-y-[100%] transition-all duration-300
-                        ease-in-out
-                        overflow-hidden z-[20] md:p-[30px] group-hover:translate-y-[0]">
-                            <h2
-                                class="text-white text-[30px]  font-heading-font font-bold mb-[20px] col:text-[25px]">
-                                Risk Management</h2>
-                            <p class="text-white font-base-font">Lorem Ipsum is simply dummy text of the
-                                the industrey's standard dummy text ever
-                                scrambled type specimen book.</p>
-                            <a href="service-single.html" class="inline-block font-base-font
-                                p-[10px_45px] pr-[45px] text-white border-white border-[1px]
-                                relative rounded-[6px] mt-[10px] max-w-[150px] before:absolute
-                                before:right-[20px] before:top-[51%] transition-all duration-300 ease-in-out
-                                before:content-['\f103'] before:font-['Flaticon'] before:translate-y-[-50%]
-                                hover:bg-white hover:text-[#ff4a17]">Details</a>
-                            <div class="t">
-                                <div class="absolute left-[-180px] top-[-180px] w-[360px] h-[360px]
-                                        bg-[rgba(255,255,255,.09)] rounded-[50%]">
+                                <div class="absolute left-0 bottom-0 p-[50px] w-full h-full bg-[#ff4a17]
+                            flex justify-center flex-col rounded-[6px] translate-y-[100%]
+                                transition-all duration-300 ease-in-out
+                            overflow-hidden z-[20] md:p-[30px] group-hover:translate-y-[0]">
+                                    <h2
+                                        class="text-white text-[30px]  font-heading-font font-bold mb-[20px] col:text-[25px]">
+                                        Financial Advices</h2>
+                                    <p class="text-white font-base-font">Lorem Ipsum is simply dummy text of the
+                                        the industrey's standard dummy text ever
+                                        scrambled type specimen book.</p>
+                                    <a href="service-single.html" class="inline-block font-base-font transition-all duration-300 ease-in-out
+                                    p-[10px_45px] pr-[45px] text-white border-white border-[1px]
+                                    relative rounded-[6px] mt-[10px] max-w-[150px] before:absolute
+                                    before:right-[20px] before:top-[51%]
+                                    before:content-['\f103'] before:font-['Flaticon'] before:translate-y-[-50%]
+                                    hover:bg-white hover:text-[#ff4a17]">Details</a>
+                                    <div class="t">
+                                        <div class="absolute left-[-180px] top-[-180px] w-[360px] h-[360px]
+                                            bg-[rgba(255,255,255,.09)] rounded-[50%]">
+                                        </div>
+                                        <div class="absolute left-[-210px] top-[-210px] w-[420px] h-[420px]
+                                            bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
+                                        <div class="absolute left-[-241px] top-[-241px] w-[482px] h-[482px]
+                                            bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
+                                    </div>
+                                    <div class="b">
+                                        <div class="absolute right-[-180px] bottom-[-180px] w-[360px] h-[360px]
+                                            bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
+                                        <div class="absolute right-[-210px] bottom-[-210px] w-[420px] h-[420px]
+                                            bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
+                                        <div class="absolute right-[-241px] bottom-[-241px] w-[482px] h-[482px]
+                                            bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
+                                    </div>
                                 </div>
-                                <div class="absolute left-[-210px] top-[-210px] w-[420px] h-[420px]
-                                        bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
-                                <div class="absolute left-[-241px] top-[-241px] w-[482px] h-[482px]
-                                        bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
-                            </div>
-                            <div class="b">
-                                <div class="absolute right-[-180px] bottom-[-180px] w-[360px] h-[360px]
-                                        bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
-                                <div class="absolute right-[-210px] bottom-[-210px] w-[420px] h-[420px]
-                                        bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
-                                <div class="absolute right-[-241px] bottom-[-241px] w-[482px] h-[482px]
-                                        bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="relative mb-[30px] z-[1]">
-                    <div class="relative rounded-[6px] overflow-hidden group
-                        before:absolute before:left-0 before:top-0 before:w-full before:h-full
-                        before:bg-[rgba(20,33,43,0.8)] before:z-[11] ">
-                        <img class="w-full rounded-[6px]" src="assets/images/service/3.jpg" alt="">
-                        <div class="absolute left-0 bottom-0 p-[50px] z-[19] md:p-[30px]">
-                            <h2
-                                class="text-white text-[30px] font-bold font-heading-font mb-[20px] col:text-[25px]">
-                                Tax Management</h2>
-                            <p class="text-[#e1e1e1] font-base-font">Lorem Ipsum is simply dummy text of the
-                                the industrey's standard dummy text ever
-                                scrambled type specimen book.</p>
-                            <a href="service-single.html"
-                                class="inline-block font-base-font
-                                p-[10px_45px] pr-[45px] text-white border-white border-[1px]
-                                relative rounded-[6px] mt-[10px] max-w-[150px] before:absolute
-                                before:right-[20px] before:top-[51%]
-                                before:content-['\f103'] before:font-['Flaticon'] before:translate-y-[-50%]">Details</a>
-                        </div>
-                        <div class="absolute left-0 bottom-0 p-[50px] w-full h-full bg-[#ff4a17]
-                        flex justify-center flex-col rounded-[6px] translate-y-[100%] transition-all duration-300
-                        ease-in-out
-                        overflow-hidden z-[20] md:p-[30px] group-hover:translate-y-[0]">
-                            <h2
-                                class="text-white text-[30px]  font-heading-font font-bold mb-[20px] col:text-[25px]">
-                                Tax Management</h2>
-                            <p class="text-white font-base-font">Lorem Ipsum is simply dummy text of the
-                                the industrey's standard dummy text ever
-                                scrambled type specimen book.</p>
-                            <a href="service-single.html" class="inline-block font-base-font
-                                p-[10px_45px] pr-[45px] text-white border-white border-[1px]
-                                relative rounded-[6px] mt-[10px] max-w-[150px] before:absolute
-                                before:right-[20px] before:top-[51%] transition-all duration-300 ease-in-out
-                                before:content-['\f103'] before:font-['Flaticon'] before:translate-y-[-50%]
-                                hover:bg-white hover:text-[#ff4a17]">Details</a>
-                            <div class="t">
-                                <div class="absolute left-[-180px] top-[-180px] w-[360px] h-[360px]
-                                        bg-[rgba(255,255,255,.09)] rounded-[50%]">
-                                </div>
-                                <div class="absolute left-[-210px] top-[-210px] w-[420px] h-[420px]
-                                        bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
-                                <div class="absolute left-[-241px] top-[-241px] w-[482px] h-[482px]
-                                        bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
-                            </div>
-                            <div class="b">
-                                <div class="absolute right-[-180px] bottom-[-180px] w-[360px] h-[360px]
-                                        bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
-                                <div class="absolute right-[-210px] bottom-[-210px] w-[420px] h-[420px]
-                                        bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
-                                <div class="absolute right-[-241px] bottom-[-241px] w-[482px] h-[482px]
-                                        bg-[rgba(255,255,255,.09)] rounded-[50%]"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    @empty
 
-        </div>
-    </section>
+                    @endforelse
+                </div>
+
+            </div>
+        </section>
+    @endif
 
     <section class="pt-[120px] md:pt-[90px] sm:pt-[80px]">
         <div class="wraper">

@@ -7,6 +7,11 @@ return [
         'value' => 'Bezalel Frontiers'
     ],
 
+    'company_name' => [
+        'name' => 'Company Name',
+        'value' => 'Bezalel Frontiers'
+    ],
+
     'site_name' => [
         'slug' => 'site_name',
         'name' => 'Site Name',

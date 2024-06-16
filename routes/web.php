@@ -23,5 +23,3 @@ Route::prefix('services')->group(function(){
         Route::get('', [ServiceController::class, 'show'])->name('services.details');
     });
 });
-
-require __DIR__.'/auth.php';

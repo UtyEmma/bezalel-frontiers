@@ -2,50 +2,54 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ServiceResource\Pages;
-use App\Filament\Resources\ServiceResource\RelationManagers;
+use App\Filament\Resources\SliderResource\Pages;
+use App\Filament\Resources\SliderResource\RelationManagers;
+use App\Forms\Components\SelectRoute;
 use App\Forms\Components\SelectStatus;
-use App\Models\Service;
+use App\Models\Slider;
 use Filament\Forms;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
-use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Route;
 
-class ServiceResource extends Resource
+class SliderResource extends Resource
 {
-    protected static ?string $model = Service::class;
+    protected static ?string $model = Slider::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationLabel = 'Banners';
 
-    public static function form(Form $form): Form
-    {
+    public static function form(Form $form): Form {
         return $form
             ->schema([
                 SpatieMediaLibraryFileUpload::make('image')
                     ->image()
-                    ->collection('services')
+                    ->collection('sliders')
                     ->required(),
-                Forms\Components\TextInput::make('name')
+                Forms\Components\TextInput::make('title')
                     ->required()
                     ->columnSpanFull()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('slug')
+                Forms\Components\TextInput::make('heading')
                     ->required()
                     ->columnSpanFull()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('description')
+                Forms\Components\Textarea::make('subheading')
+                    ->required()
                     ->columnSpanFull(),
-                Forms\Components\RichEditor::make('content')
-                    ->columnSpanFull()
-                    ->required(),
-                Toggle::make('featured')
-                    ->default(true),
+                Forms\Components\TextInput::make('action')
+                    ->required()
+                    ->maxLength(255),
+                SelectRoute::make('link')
+                    ->native(false)
+                    ->label('Target Page'),
                 SelectStatus::make('status')
+                    ->native(false)
                     ->required(),
             ]);
     }
@@ -54,7 +58,13 @@ class ServiceResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
+                Tables\Columns\TextColumn::make('heading')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('action')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('link')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('title')
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('status')
@@ -92,10 +102,10 @@ class ServiceResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListServices::route('/'),
-            'create' => Pages\CreateService::route('/create'),
-            'view' => Pages\ViewService::route('/{record}'),
-            'edit' => Pages\EditService::route('/{record}/edit'),
+            'index' => Pages\ListSliders::route('/'),
+            'create' => Pages\CreateSlider::route('/create'),
+            'view' => Pages\ViewSlider::route('/{record}'),
+            'edit' => Pages\EditSlider::route('/{record}/edit'),
         ];
     }
 }

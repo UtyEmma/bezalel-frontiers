@@ -2,12 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\Status;
+use App\Models\Post;
+use App\Models\Service;
+use App\Models\Slider;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
 class PageController extends Controller {
 
     function index(){
-        return view('welcome');
+        $services = Service::isFeatured()->status(Status::ACTIVE)->latest()->get();
+        $testimonials = Testimonial::whereFeatured(true)->status(Status::ACTIVE)->latest()->get();
+        $posts = Post::status(Status::ACTIVE)->latest()->get();
+        $sliders = Slider::status(Status::ACTIVE)->get();
+
+        return view('welcome', compact('services', 'testimonials', 'posts', 'sliders'));
     }
 
     function about(){

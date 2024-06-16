@@ -11,16 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('teams', function (Blueprint $table) {
+        Schema::create('testimonials', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('role');
-            $table->string('image');
-            $table->text('bio')->nullable();
-            $table->string('instagram');
-            $table->string('facebook');
-            $table->string('linkedin');
-            $table->string('twitter');
+            $table->string('company')->nullable();
+            $table->string('role')->nullable();
+            $table->text('message');
+            $table->boolean('featured')->nullable();
             $table->string('status');
             $table->softDeletes();
             $table->timestamps();
@@ -32,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('teams');
+        Schema::dropIfExists('testimonials');
     }
 };
