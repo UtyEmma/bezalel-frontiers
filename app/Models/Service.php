@@ -28,7 +28,7 @@ class Service extends Model implements HasMedia {
     }
 
     function getImageAttribute(){
-        return $this->getFirstMediaUrl();
+        return $this->getFirstMediaUrl('services');
     }
 
 }

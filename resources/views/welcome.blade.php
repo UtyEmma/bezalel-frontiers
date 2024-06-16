@@ -61,13 +61,13 @@
                             <div class="relative rounded-[6px] overflow-hidden group
                             before:absolute before:left-0 before:top-0 before:w-full before:h-full
                             before:bg-[rgba(20,33,43,0.8)] before:z-[11] ">
-                                <img class="w-full rounded-[6px]" src="{{$service->image}}" alt="">
+                                <img class="w-full rounded-[6px]" style="height: 450px; object-fit: cover;" src="{{$service->image}}" alt="">
                                 <div class="absolute left-0 bottom-0 p-[50px] z-[19] md:p-[30px]">
                                     <h2
                                         class="text-white text-[30px] font-bold font-heading-font mb-[20px] col:text-[25px]">
                                         {{$service->name}}</h2>
                                     <p class="text-[#e1e1e1] font-base-font">{{$service->description}}</p>
-                                    <a href="{{route('services.details', ['service' => $service->id])}}"
+                                    <a href="{{route('services.details', ['service' => $service->slug])}}"
                                         class="inline-block font-base-font
                                     p-[10px_45px] pr-[45px] text-white border-white border-[1px]
                                     relative rounded-[6px] mt-[10px] max-w-[150px] before:absolute
@@ -81,11 +81,9 @@
                             overflow-hidden z-[20] md:p-[30px] group-hover:translate-y-[0]">
                                     <h2
                                         class="text-white text-[30px]  font-heading-font font-bold mb-[20px] col:text-[25px]">
-                                        Financial Advices</h2>
-                                    <p class="text-white font-base-font">Lorem Ipsum is simply dummy text of the
-                                        the industrey's standard dummy text ever
-                                        scrambled type specimen book.</p>
-                                    <a href="service-single.html" class="inline-block font-base-font transition-all duration-300 ease-in-out
+                                        {{$service->name}}</h2>
+                                    <p class="text-white font-base-font">{{$service->description}}</p>
+                                    <a href="{{route('services.details', ['service' => $service->slug])}}" class="inline-block font-base-font transition-all duration-300 ease-in-out
                                     p-[10px_45px] pr-[45px] text-white border-white border-[1px]
                                     relative rounded-[6px] mt-[10px] max-w-[150px] before:absolute
                                     before:right-[20px] before:top-[51%]
