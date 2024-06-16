@@ -7,6 +7,7 @@ namespace App\Models;
 use App\Enums\Roles;
 use App\Enums\Status;
 use Filament\Models\Contracts\FilamentUser;
+use Filament\Models\Contracts\HasName;
 use Filament\Panel;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -14,8 +15,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable implements FilamentUser{
-    use HasFactory, Notifiable, HasRoles;
+class User extends Authenticatable implements FilamentUser, HasName{
+    use HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -48,8 +49,19 @@ class User extends Authenticatable implements FilamentUser{
         ];
     }
 
+    function scopeCanPublish(Builder $query) {
+        $query->where('role', Roles::ADMIN)
+                ->orWhere('role', Roles::SUPERADMIN)
+                ->orWhere('role', Roles::AUTHOR)
+                ->orWhere('role', Roles::EDITOR);
+    }
+
     public function canAccessPanel(Panel $panel): bool {
         return in_array($this->role, [Roles::ADMIN, Roles::SUPERADMIN, Roles::EDITOR, Roles::AUTHOR]);
+    }
+
+    function getFilamentName(): string {
+        return $this->name;
     }
 
 }

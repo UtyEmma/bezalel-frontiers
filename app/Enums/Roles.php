@@ -10,4 +10,14 @@ enum Roles:string {
     case AUTHOR = 'author';
     case SUBSCRIBER = 'subscriber';
 
+    function label(){
+        return match($this) {
+            static::ADMIN => 'Administrator',
+            static::SUPERADMIN => 'Super Administrator',
+            static::AUTHOR => 'Author',
+            static::EDITOR => 'Editor',
+            static::SUBSCRIBER => 'Subscriber',
+        };
+    }
+
 }

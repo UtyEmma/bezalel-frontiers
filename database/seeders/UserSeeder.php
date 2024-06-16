@@ -17,14 +17,13 @@ class UserSeeder extends Seeder
     public function run(): void {
 
         $user = new User([
-            'name' => '',
+            'name' => 'Bezalel Frontiers',
             'email' => 'admin@localhost.com',
             'password' => Hash::make('1234567890'),
             'status' => Status::ACTIVE,
+            'role' => Roles::SUPERADMIN
         ]);
 
-        $user->assignRole(Roles::SUPERADMIN);
         $user->save();
-
     }
 }
