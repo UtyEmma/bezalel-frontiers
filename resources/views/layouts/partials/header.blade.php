@@ -128,7 +128,7 @@
                        before:absolute before:left-0 before:top-0 before:w-full before:h-[4px]
                        before:bg-[#ff4a17] before:content
                        before:opacity-0 before:invisible before:transition-all before:rounded-[3px]
-                       hover:before:opacity-100 hover:before:visible">Services</a>
+                       hover:before:opacity-100 hover:before:visible">What We do</a>
                 </li>
                 <li class="relative inline-block group">
                     <a href="{{route('faqs')}}" class="relative text-[16px] lg:text-[17px] py-[35px]

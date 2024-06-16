@@ -3,24 +3,26 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use App\Enums\Roles;
+use App\Enums\Status;
+use Filament\Models\Contracts\FilamentUser;
+use Filament\Panel;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable
-{
-    use HasFactory, Notifiable;
+class User extends Authenticatable implements FilamentUser{
+    use HasFactory, Notifiable, HasRoles;
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    protected $fillable = ['name', 'email', 'password', 'status', 'avatar', 'role'];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -37,11 +39,17 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
-    protected function casts(): array
-    {
+    protected function casts(): array {
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'status' => Status::class,
+            'role' => Roles::class
         ];
     }
+
+    public function canAccessPanel(Panel $panel): bool {
+        return in_array($this->role, [Roles::ADMIN, Roles::SUPERADMIN, Roles::EDITOR, Roles::AUTHOR]);
+    }
+
 }
