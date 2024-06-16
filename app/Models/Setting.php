@@ -12,7 +12,7 @@ class Setting extends Model {
 
     function __get($key) {
         if(property_exists($this, $key)) return $this[$key];
-        if($setting = $this->where('slug', $key)->first()) return $setting;
+        if($setting = $this->where('slug', $key)->first()) return $setting->value;
         return parent::__get($key);
     }
 

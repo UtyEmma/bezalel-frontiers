@@ -43,7 +43,7 @@ return [
 
     'seo_tags' => [
         'name' => 'Site Meta Tags',
-        'value' => []
+        'value' => ''
     ],
 
     'twitter_link' => [
