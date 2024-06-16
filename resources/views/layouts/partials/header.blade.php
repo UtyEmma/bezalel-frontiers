@@ -77,11 +77,10 @@
                     <li><a href="{{route('about')}}">About US</a></li>
                     <li><a href="{{route('services')}}">Services</a>
                         <ul class="dl-submenu">
-                            <li><a href="service.html">Services Style 1</a></li>
-                            <li><a href="service-s2.html">Services Style 2</a></li>
-                            <li><a href="service-s3.html">Services Style 3</a></li>
-                            <li><a href="service-s4.html">Services Style 4</a></li>
-                            <li><a href="service-single.html">Services Single</a></li>
+                            @forelse ($services_menu as $service)
+                                <li><a href="{{route('services.details', ['service' => $service->slug])}}">{{$service->name}}</a></li>
+                            @empty
+                            @endforelse
                         </ul>
                     </li>
                     <li>
@@ -131,42 +130,16 @@
                        hover:before:opacity-100 hover:before:visible">What We do</a>
                        <ul class="absolute w-[240px]  left-0 top-[110%] pt-[20px] pb-[15px] px-[7px] z-[111]  bg-[#fff] shadow-[0px_2px_20px_0px_rgba(62,65,159,0.09);]  transition-all  opacity-0 invisible
                                     group-hover:opacity-100 group-hover:top-full group-hover:visible ">
-                            <li>
-                                <a href="service.html" class="text-[16px] lg:text-[16px] inline-block  px-[15px] capitalize
-                                    text-[#0a272c] group relative overflow-hidden font-bold transition-all
-                                    after:absolute after:left-[15px] after:bottom-0 after:w-0 after:h-[2px]
-                                    after:content after:bg-[#ff4a17] after:transition-all font-base-font
-                                    hover:after:w-[50%]">Services Style 1</a>
-                            </li>
-                            <li>
-                                <a href="service-s2.html" class="text-[16px] lg:text-[16px] inline-block  px-[15px] capitalize
-                                    text-[#0a272c] group relative overflow-hidden font-bold transition-all
-                                    after:absolute after:left-[15px] after:bottom-0 after:w-0 after:h-[2px]
-                                    after:content after:bg-[#ff4a17] after:transition-all font-base-font
-                                    hover:after:w-[50%]">Services Style 2</a>
-                            </li>
-                            <li>
-                                <a href="service-s3.html" class="text-[16px] lg:text-[16px] inline-block  px-[15px] capitalize
-                                    text-[#0a272c] group relative overflow-hidden font-bold transition-all
-                                    after:absolute after:left-[15px] after:bottom-0 after:w-0 after:h-[2px]
-                                    after:content after:bg-[#ff4a17] after:transition-all font-base-font
-                                    hover:after:w-[50%]">Services Style 3</a>
-                            </li>
-                            <li>
-                                <a href="service-s4.html" class="text-[16px] lg:text-[16px] inline-block  px-[15px] capitalize
-                                    text-[#0a272c] group relative overflow-hidden font-bold transition-all
-                                    after:absolute after:left-[15px] after:bottom-0 after:w-0 after:h-[2px]
-                                    after:content after:bg-[#ff4a17] after:transition-all font-base-font
-                                    hover:after:w-[50%]">Services Style 4</a>
-                            </li>
-                            <li>
-                                <a href="service-single.html" class="text-[16px] lg:text-[16px] inline-block  px-[15px] capitalize
-                                    text-[#0a272c] group relative overflow-hidden font-bold transition-all
-                                    after:absolute after:left-[15px] after:bottom-0 after:w-[50%] after:h-[2px]
-                                    after:content after:bg-[#ff4a17] after:transition-all font-base-font after:opacity-100 after:visible
-                                    hover:after:w-[50%]">Services single</a>
-                            </li>
-
+                                @forelse ($services_menu as $service)
+                                    <li>
+                                        <a href="{{route('services.details', ['service' => $service->slug])}}" class="text-[16px] lg:text-[16px] inline-block  px-[15px] capitalize
+                                            text-[#0a272c] group relative overflow-hidden font-bold transition-all
+                                            after:absolute after:left-[15px] after:bottom-0 after:w-0 after:h-[2px]
+                                            after:content after:bg-[#ff4a17] after:transition-all font-base-font
+                                            hover:after:w-[50%]">{{$service->name}}</a>
+                                    </li>
+                                @empty
+                                @endforelse
                         </ul>
                 </li>
                 <li class="relative inline-block group">

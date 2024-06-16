@@ -14,8 +14,9 @@ class SettingSeeder extends Seeder
     public function run(): void {
         $settings = config('settings');
 
-        foreach ($settings as $setting) {
-            if(!Setting::where('slug', $setting['slug'])->exists()){
+        foreach ($settings as $key => $setting) {
+            if(!Setting::where('slug', $key)->exists()){
+                $setting['slug'] = $key;
                 Setting::create($setting);
             }
         }

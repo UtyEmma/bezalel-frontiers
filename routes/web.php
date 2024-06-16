@@ -19,7 +19,7 @@ Route::prefix('blog')->group(function(){
 
 Route::prefix('services')->group(function(){
     Route::get('', [ServiceController::class, 'index'])->name('services');
-    Route::prefix('{service}')->group(function(){
+    Route::prefix('{service:slug}')->group(function(){
         Route::get('', [ServiceController::class, 'show'])->name('services.details');
     });
 });

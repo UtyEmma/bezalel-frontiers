@@ -36,7 +36,7 @@
                                 experience.</b>
                         </h2>
                         <p class="text-[18px] mb-[35px] col:text-[16px] col:mb-[20px]">At <span class="text-[#ff4a17]">{{$settings->company_name}}</span>, we provide actionable insights that inform, inspire, and empower minds and organizations for success. Discover how our data-driven and research-based management consulting can transform your business.</p>
-                        <a class="theme-btn" href="about.html">More About Us</a>
+                        <a class="theme-btn" href="{{route('about')}}">Learn More</a>
                     </div>
                 </div>
             </div>
