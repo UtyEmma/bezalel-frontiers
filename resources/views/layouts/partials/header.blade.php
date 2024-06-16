@@ -75,7 +75,7 @@
                         <a href="{{route('home')}}">Home</a>
                     </li>
                     <li><a href="{{route('about')}}">About US</a></li>
-                    <li><a href="#">Services</a>
+                    <li><a href="{{route('services')}}">Services</a>
                         <ul class="dl-submenu">
                             <li><a href="service.html">Services Style 1</a></li>
                             <li><a href="service-s2.html">Services Style 2</a></li>
@@ -85,7 +85,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="http://google.com/">Blog</a>
+                        <a href="{{route('posts')}}">Blog</a>
                     </li>
                     <li><a href="{{route('contact')}}">Contact</a></li>
                 </ul>
@@ -120,7 +120,7 @@
                     ">About Us</a>
                 </li>
                 <li class="relative inline-block group">
-                    <a href="#" class="relative text-[16px] lg:text-[17px] py-[35px]
+                    <a href="{{route('services')}}" class="relative text-[16px] lg:text-[17px] py-[35px]
                      xl:py-[30px] px-[20px] xl:px-[6px]
                         text-[#14212b] block capitalize
                         font-base-font font-bold transition-all
@@ -129,6 +129,45 @@
                        before:bg-[#ff4a17] before:content
                        before:opacity-0 before:invisible before:transition-all before:rounded-[3px]
                        hover:before:opacity-100 hover:before:visible">What We do</a>
+                       <ul class="absolute w-[240px]  left-0 top-[110%] pt-[20px] pb-[15px] px-[7px] z-[111]  bg-[#fff] shadow-[0px_2px_20px_0px_rgba(62,65,159,0.09);]  transition-all  opacity-0 invisible
+                                    group-hover:opacity-100 group-hover:top-full group-hover:visible ">
+                            <li>
+                                <a href="service.html" class="text-[16px] lg:text-[16px] inline-block  px-[15px] capitalize
+                                    text-[#0a272c] group relative overflow-hidden font-bold transition-all
+                                    after:absolute after:left-[15px] after:bottom-0 after:w-0 after:h-[2px]
+                                    after:content after:bg-[#ff4a17] after:transition-all font-base-font
+                                    hover:after:w-[50%]">Services Style 1</a>
+                            </li>
+                            <li>
+                                <a href="service-s2.html" class="text-[16px] lg:text-[16px] inline-block  px-[15px] capitalize
+                                    text-[#0a272c] group relative overflow-hidden font-bold transition-all
+                                    after:absolute after:left-[15px] after:bottom-0 after:w-0 after:h-[2px]
+                                    after:content after:bg-[#ff4a17] after:transition-all font-base-font
+                                    hover:after:w-[50%]">Services Style 2</a>
+                            </li>
+                            <li>
+                                <a href="service-s3.html" class="text-[16px] lg:text-[16px] inline-block  px-[15px] capitalize
+                                    text-[#0a272c] group relative overflow-hidden font-bold transition-all
+                                    after:absolute after:left-[15px] after:bottom-0 after:w-0 after:h-[2px]
+                                    after:content after:bg-[#ff4a17] after:transition-all font-base-font
+                                    hover:after:w-[50%]">Services Style 3</a>
+                            </li>
+                            <li>
+                                <a href="service-s4.html" class="text-[16px] lg:text-[16px] inline-block  px-[15px] capitalize
+                                    text-[#0a272c] group relative overflow-hidden font-bold transition-all
+                                    after:absolute after:left-[15px] after:bottom-0 after:w-0 after:h-[2px]
+                                    after:content after:bg-[#ff4a17] after:transition-all font-base-font
+                                    hover:after:w-[50%]">Services Style 4</a>
+                            </li>
+                            <li>
+                                <a href="service-single.html" class="text-[16px] lg:text-[16px] inline-block  px-[15px] capitalize
+                                    text-[#0a272c] group relative overflow-hidden font-bold transition-all
+                                    after:absolute after:left-[15px] after:bottom-0 after:w-[50%] after:h-[2px]
+                                    after:content after:bg-[#ff4a17] after:transition-all font-base-font after:opacity-100 after:visible
+                                    hover:after:w-[50%]">Services single</a>
+                            </li>
+
+                        </ul>
                 </li>
                 <li class="relative inline-block group">
                     <a href="{{route('faqs')}}" class="relative text-[16px] lg:text-[17px] py-[35px]
@@ -189,7 +228,7 @@
                         </div>
                     </div>
                 </div>
-                <a class="theme-btn py-[10px] px-[25px] pr-[50px] md:hidden" href="contact.html">Contact Us</a>
+                <a class="theme-btn py-[10px] px-[25px] pr-[50px] md:hidden" href="contact.html">Get in touch</a>
             </div>
         </div>
     </div>
