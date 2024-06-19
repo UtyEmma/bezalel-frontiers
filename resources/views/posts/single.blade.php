@@ -94,90 +94,18 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- end tag-share -->
-                    <div class="mt-[35px] mb-[60px]">
-                        <div class="float-left sm:float-none">
-                            <a href="#" target="_blank">
-                                <img class="rounded-[50%]" src="assets/images/blog-details/author.jpg" alt></a>
-                        </div>
-                        <div class="block overflow-hidden pl-[25px] sm:pl-0 sm:mt-[15px]">
-                            <a href="#" class="font-heading-font text-[24px] font-semibold inline-block mb-[10px] text-[#232f4b]">Author: {{$post->author->name}}</a>
-                            
-                            <p class="text-[#687693] leading-[24px] text-[16px] mb-[20px]">{{$post->author->bio}}</p>
-
-                            <ul class="inline-block list-none">
-                                <li class="float-left mr-[12px]">
-                                    <a href="#" class="block text-[13px] text-[#060530] transition-all hover:text-[#ff4a17]">
-                                        <i class="ti-facebook"></i>
-                                    </a>
-                                </li>
-
-                                <li class="float-left mr-[12px]">
-                                    <a href="#" class="block text-[13px] text-[#060530] transition-all hover:text-[#ff4a17]">
-                                        <i class="ti-twitter-alt"></i>
-                                    </a>
-                                </li>
-
-                                <li class="float-left mr-[12px]">
-                                    <a href="#" class="block text-[13px] text-[#060530] transition-all hover:text-[#ff4a17]">
-                                        <i class="ti-linkedin"></i>
-                                    </a>
-                                </li>
-
-                                <li class="float-left mr-[12px]">
-                                    <a href="#" class="block text-[13px] text-[#060530] transition-all hover:text-[#ff4a17]">
-                                        <i class="ti-instagram"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- end author-box -->
-                    <div class="overflow-hidden border border-[#d8e0f1] px-[25px]">
-                        <div
-                            class="py-[40px] pr-[15px] pl-[5px] sm:py-[25px] sm:px-[15px] w-[50%] float-left sm:w-full sm:float-none text-left group">
-                            <a href="blog.html" class="inline-block">
-                                <span class="pl-[25px] sm:pl-0 tracking-[2px] text-[15px] relative transition-all group-hover:text-[#ff4a17] text-[#6e6e6e] uppercase  font-semibold block
-                                before:font-['themify'] before:content-['\e629'] before:transition-all  before:absolute before:left-0 before:top-0 sm:before:hidden group-hover:before:text-[#ff4a17]
-                                ">Previous Post</span>
-                                <span class="font-base-font text-[18px] font-normal text-[#232f4b] mt-[15px]
-                                        block">At
-                                    vero eos et accusamus et iusto odio dignissimos
-                                    ducimus qui blanditiis praesentium.</span>
-                            </a>
-                        </div>
-                        <div
-                            class="py-[40px] pl-[15px] pr-[5px] sm:py-[25px] sm:px-[15px] w-[50%] float-left sm:w-full sm:float-none text-right sm:text-left  group border-l border-[#d8e0f1] sm:border-l-transparent sm:border-t">
-
-                            <a href="blog-left-sidebar.html" class="inline-block transition-all group">
-                                <span
-                                    class="pr-[25px] sm:pr-0 tracking-[2px] text-[15px] relative transition-all group-hover:text-[#ff4a17] text-[#6e6e6e] uppercase   font-semibold block
-                                before:font-['themify'] before:content-['\e628'] before:transition-all  before:absolute before:left-[95%] before:top-0 sm:before:hidden group-hover:before:text-[#ff4a17] ">Next
-                                    Post</span>
-                                <span class="font-base-font text-[18px] font-normal text-[#232f4b] mt-[15px]
-                                        block">Dignissimos
-                                    ducimus qui blanditiis praesentiu deleniti
-                                    atque corrupti quos dolores</span>
-                            </a>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="col-span-4 md:col-span-12">
                     <div class="pl-[45px] lg:pl-[35px] md:pl-0 md:mt-[80px] sm:mt-[70px] md:max-w-[400px]">
                         <div class="text-center bg-[#F3F3F3] p-[45px] relative z-30">
-                            <div class="mb-[25px]">
+                            {{-- <div class="mb-[25px]">
                                 <img class="rounded-[50%] w-full max-w-[200px] mx-auto"
                                     src="assets/images/blog/about-widget.jpg" alt>
-                            </div>
-                            <h4
-                                class="text-[#232f4b] text-[25px] font-bold mb-[15px] font-heading-font-s2 capitalize">
-                                Jenny
-                                Watson</h4>
-                            <p class=" text-[#666] text-[15px] mb-[18px]">Hi! beautiful people. I`m an
-                                authtor of
-                                this blog. Read our post - stay with us</p>
-                            <ul class="flex justify-center">
+                            </div> --}}
+                            <h4 class="text-[#232f4b] text-[25px] font-bold mb-[15px] font-heading-font-s2 capitalize">{{$post->author->name}}</h4>
+                            <p class=" text-[#666] text-[15px] mb-[18px]">{{$post->author->bio}}</p>
+                            {{-- <ul class="flex justify-center">
                                 <li class="mr-[10px]"><a href="#" class="block text-[#323232] w-[40px] h-[40px] leading-[40px] bg-[#fff]
                                         rounded-[50%] transition-all hover:text-[#ff4a17]"><i
                                             class="ti-facebook"></i></a></li>
@@ -190,7 +118,7 @@
                                 <li><a href="#"
                                         class="block text-[#323232] w-[40px] h-[40px] leading-[40px] bg-[#fff] rounded-[50%] transition-all hover:text-[#ff4a17]"><i
                                             class="ti-pinterest"></i></a></li>
-                            </ul>
+                            </ul> --}}
                         </div>
 
                         <div class="mt-[65px] bg-[#f5f5f5] p-[40px] lg:p-[30px_20px] rounded-[5px]">

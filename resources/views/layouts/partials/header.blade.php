@@ -3,21 +3,27 @@
         <div class="flex justify-between flex-wrap">
             <div>
                 <ul class="h-full">
-                    <li class="text-[16px] xl:text-[14px] lg:text-[12px] float-left col:float-none
-                    col:text-center p-[10px] col:p-[4px] text-[#5d5d5d]">
-                        <i class="fi flaticon-phone-call-1 text-[#5d5d5d] inline-block pr-[5px]"></i>
-                        (00) 0431 275 490
-                    </li>
-                    <li class="text-[16px] xl:text-[14px] lg:text-[12px] float-left col:float-none
-                    col:text-center p-[10px] col:p-[4px] text-[#5d5d5d]">
-                        <i class="fi flaticon-email-1 text-[#5d5d5d] inline-block pr-[5px]"></i>
-                        support24@gmail.com
-                    </li>
-                    <li class="text-[16px] xl:text-[14px] lg:text-[12px] float-left col:float-none
-                    col:text-center p-[10px] col:p-[4px] text-[#5d5d5d]">
-                        <i class="fi flaticon-location text-[#5d5d5d] inline-block pr-[5px]"></i>
-                        Roberts Avenue, Chattanooga.
-                    </li>
+                    @if ($settings->contact_phone)
+                        <li class="text-[16px] xl:text-[14px] lg:text-[12px] float-left col:float-none
+                        col:text-center p-[10px] col:p-[4px] text-[#5d5d5d]">
+                            <i class="fi flaticon-phone-call-1 text-[#5d5d5d] inline-block pr-[5px]"></i>
+                            {{$settings->contact_phone}}
+                        </li>
+                    @endif
+                    @if ($settings->site_email)
+                        <li class="text-[16px] xl:text-[14px] lg:text-[12px] float-left col:float-none
+                        col:text-center p-[10px] col:p-[4px] text-[#5d5d5d]">
+                            <i class="fi flaticon-email-1 text-[#5d5d5d] inline-block pr-[5px]"></i>
+                            {{$settings->site_email}}
+                        </li>
+                    @endif
+                    @if ($settings->contact_address)
+                        <li class="text-[16px] xl:text-[14px] lg:text-[12px] float-left col:float-none
+                        col:text-center p-[10px] col:p-[4px] text-[#5d5d5d]">
+                            <i class="fi flaticon-location text-[#5d5d5d] inline-block pr-[5px]"></i>
+                            {{$settings->contact_address}}
+                        </li>
+                    @endif
                 </ul>
             </div>
             <div class="">

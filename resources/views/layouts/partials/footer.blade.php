@@ -56,16 +56,16 @@
                                 before:top-[50%] before:-translate-y-1/2 before:-z-[1] before:w-[5px]
                                 before:h-[2px] before:bg-[#cbcbcb] before:transition-all before:duration-300
                                 hover:before:bg-[#ff4a17] group">
-                                <a href="about.html" class="text-[16px] transition-all text-[#cbcbcb]
+                                <a href="{{route('about')}}" class="text-[16px] transition-all text-[#cbcbcb]
                                    duration-300 group-hover:text-[#ff4a17]">
-                                    About company
+                                    About Us
                                 </a>
                             </li>
                             <li class="relative z-[1] py-[6px] pl-[15px] before:absolute before:left-0
                                 before:top-[50%] before:-translate-y-1/2 before:-z-[1] before:w-[5px]
                                 before:h-[2px] before:bg-[#cbcbcb] before:transition-all before:duration-300
                                 hover:before:bg-[#ff4a17] group">
-                                <a href="about.html" class="text-[16px] transition-all text-[#cbcbcb]
+                                <a href="{{route('services')}}" class="text-[16px] transition-all text-[#cbcbcb]
                                    duration-300 group-hover:text-[#ff4a17]">
                                     Our services
                                 </a>
@@ -74,16 +74,7 @@
                                 before:top-[50%] before:-translate-y-1/2 before:-z-[1] before:w-[5px]
                                 before:h-[2px] before:bg-[#cbcbcb] before:transition-all before:duration-300
                                 hover:before:bg-[#ff4a17] group">
-                                <a href="about.html" class="text-[16px] transition-all text-[#cbcbcb]
-                                   duration-300 group-hover:text-[#ff4a17]">
-                                    Job opportunities
-                                </a>
-                            </li>
-                            <li class="relative z-[1] py-[6px] pl-[15px] before:absolute before:left-0
-                                before:top-[50%] before:-translate-y-1/2 before:-z-[1] before:w-[5px]
-                                before:h-[2px] before:bg-[#cbcbcb] before:transition-all before:duration-300
-                                hover:before:bg-[#ff4a17] group">
-                                <a href="about.html" class="text-[16px] transition-all text-[#cbcbcb]
+                                <a href="{{route('contact')}}" class="text-[16px] transition-all text-[#cbcbcb]
                                    duration-300 group-hover:text-[#ff4a17]">
                                     Contact us
                                 </a>
@@ -92,9 +83,9 @@
                                 before:top-[50%] before:-translate-y-1/2 before:-z-[1] before:w-[5px]
                                 before:h-[2px] before:bg-[#cbcbcb] before:transition-all before:duration-300
                                 hover:before:bg-[#ff4a17] group">
-                                <a href="about.html" class="text-[16px] transition-all text-[#cbcbcb]
+                                <a href="{{route('faqs')}}" class="text-[16px] transition-all text-[#cbcbcb]
                                    duration-300 group-hover:text-[#ff4a17]">
-                                    Vision & Values
+                                    Frequently Asked Questions
                                 </a>
                             </li>
                         </ul>

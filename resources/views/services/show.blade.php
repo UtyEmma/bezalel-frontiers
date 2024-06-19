@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <section class="bg-[url({{$service->image}})] bg-center bg-cover bg-no-repeat w-full h-[480px] text-center relative z-[1] flex justify-center flex-col md:h-[400px] before:w-full before:h-full before:absolute before:left-0 before:top-0 before:bg-[#14212b] before:opacity-[0.5] before:-[-1]">
+    <section class="bg-[url('{{$service->image}}')] bg-center bg-cover bg-no-repeat w-full h-[480px] text-center relative z-[1] flex justify-center flex-col md:h-[400px] before:w-full before:h-full before:absolute before:left-0 before:top-0 before:bg-[#14212b] before:opacity-[0.5] before:-[-1]">
         <div class="overflow-hidden relative w-full h-full">
             <div class="wraper">
                 <div class="flex items-center justify-center h-[480px] md:h-[400px]">
@@ -35,123 +35,30 @@
         <div class="wraper">
             <div class="grid grid-cols-12 gap-3">
                 <div class="col-span-8 md:col-span-12">
-                    <img class="mb-7" src="assets/images/service-single/1.jpg" alt="">
-                    <h3 class="font-medium font-heading-font text-[#0a272c] text-[35px] leading-[130.5%] mb-[20px]
-                        md:text-[25px] ">
-                        Financial Management</h3>
-                    <p class="text-[16px] leading-[26px] font-normal text-[#687693] mb-[20px]">Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit. Metus dis posuere amet
-                        tincidunt commodo, velit. Ipsum, hac nibh fermentum nisi, platea condimentum cursus
-                        velit dui. Massa volutpat odio facilisis purus sit elementum. Non, sed velit dictum
-                        quam. Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt. Id aliquet duis
-                        sollicitudin diam, elit sit. Et nisi in libero facilisis sed est. Elit curabitur
-                        amet risus bibendum. Posuere et eget orci, tempor enim.</p>
-                    <p class="text-[16px] leading-[26px] font-normal text-[#687693] mb-[20px]">Hac nibh fermentum
-                        nisi, platea condimentum cursus velit dui. Massa volutpat odio
-                        facilisis purus sit elementum. Non, sed velit dictum quam. Id risus pharetra est, at
-                        rhoncus, nec ullamcorper tincidunt. Id aliquet duis sollicitudin diam, elit sit.</p>
-                    <div class="grid grid-cols-12 gap-3 mt-3">
-                        <div class="col-span-6 col:col-span-12">
-                            <img class="w-full" src="assets/images/service-single/2.jpg" alt="">
-                        </div>
-                        <div class="col-span-6 col:col-span-12">
-                            <img class="w-full" src="assets/images/service-single/3.jpg" alt="">
-                        </div>
+                    <div class="h-80 md:h-[450px] rounded-md mb-7 overflow-hidden">
+                        <img class="object-cover" src="{{$service->image}}" alt="">
                     </div>
-                    <div class="max-w-[590px] mt-[40px]">
-                        <h3 class="font-medium font-heading-font text-[#0a272c] text-[35px] leading-[130.5%]
-                            mb-[20px] md:text-[25px]">
-                            Our Capabilities</h3>
-                        <p class="text-[16px] leading-[26px] font-normal text-[#687693] mb-[20px]">Massa volutpat
-                            odio facilisis purus sit elementum. Non, sed velit dictum quam. Id
-                            risus pharetra est, at rhoncus, nec ullamcorper tincidunt. Id aliquet duis
-                            sollicitudin diam.</p>
-                        <ul>
-                            <li
-                                class="py-[10px] text-[#687693] pl-[35px] relative before:absolute before:left-0 before:top-1/2 before:transform before:w-[25px] before:h-[25px] before:leading-[25px] before:rounded-[50%] before:text-center before:text-[14px] before:text-[#ff4a17] before:bg-[rgba(255,74,23,0.1)] before:-translate-y-1/2 before:font-['themify'] before:content-['\e64c']">
-                                Non saed velit dictum quam risus pharetra esta.</li>
-                            <li
-                                class="py-[10px] text-[#687693] pl-[35px] relative before:absolute before:left-0 before:top-1/2 before:transform before:w-[25px] before:h-[25px] before:leading-[25px] before:rounded-[50%] before:text-center before:text-[14px] before:text-[#ff4a17] before:bg-[rgba(255,74,23,0.1)] before:-translate-y-1/2 before:font-['themify'] before:content-['\e64c']">
-                                Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt.</li>
-                            <li
-                                class="py-[10px] text-[#687693] pl-[35px] relative before:absolute before:left-0 before:top-1/2 before:transform before:w-[25px] before:h-[25px] before:leading-[25px] before:rounded-[50%] before:text-center before:text-[14px] before:text-[#ff4a17] before:bg-[rgba(255,74,23,0.1)] before:-translate-y-1/2 before:font-['themify'] before:content-['\e64c']">
-                                Hac nibh fermentum nisi, platea condimentum cursus.</li>
-                            <li
-                                class="py-[10px] text-[#687693] pl-[35px] relative before:absolute before:left-0 before:top-1/2 before:transform before:w-[25px] before:h-[25px] before:leading-[25px] before:rounded-[50%] before:text-center before:text-[14px] before:text-[#ff4a17] before:bg-[rgba(255,74,23,0.1)] before:-translate-y-1/2 before:font-['themify'] before:content-['\e64c']">
-                                Massa volutpat odio facilisis purus sit elementum.</li>
-                            <li
-                                class="py-[10px] text-[#687693] pl-[35px] relative before:absolute before:left-0 before:top-1/2 before:transform before:w-[25px] before:h-[25px] before:leading-[25px] before:rounded-[50%] before:text-center before:text-[14px] before:text-[#ff4a17] before:bg-[rgba(255,74,23,0.1)] before:-translate-y-1/2 before:font-['themify'] before:content-['\e64c']">
-                                Elit curabitur amet risus bibendum.</li>
-                        </ul>
-                    </div>
-                    <h3 class="font-medium mt-[40px] font-heading-font text-[#0a272c] text-[35px] leading-[130.5%]
-                        mb-[20px] md:text-[25px] ">
-                        Our approach</h3>
-                    <p class="text-[16px] leading-[26px] font-normal text-[#687693] mb-[20px]">Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit. Consequat suspendisse aenean
-                        tellus augue morbi risus. Sit morbi vitae morbi sed urna sed purus. Orci facilisi
-                        eros sed pellentesque. Risus id sed tortor sed scelerisque. Vestibulum elit
-                        elementum, magna id viverra non, velit. Pretium, eros, porttitor fusce auctor vitae
-                        id. Phasellus scelerisque nibh eleifend vel enim mauris purus. Rutrum vel sem
-                        adipiscing nisi vulputate molestie scelerisque molestie ultrices. Eu, fusce
-                        vulputate diam interdum morbi ac a.</p>
-                    <div class="max-w-[590px] mt-[40px]">
-                        <h3 class="font-medium font-heading-font text-[#0a272c] text-[35px] leading-[130.5%]
-                            mb-[20px] md:text-[25px]">
-                            Our Work Process</h3>
-                        <ul>
-                            <li
-                                class="py-[10px] text-[#687693] pl-[35px] relative before:absolute before:left-0 before:top-1/2 before:transform before:w-[25px] before:h-[25px] before:leading-[25px] before:rounded-[50%] before:text-center before:text-[14px] before:text-[#ff4a17] before:bg-[rgba(255,74,23,0.1)] before:-translate-y-1/2 before:font-['themify'] before:content-['\e64c']">
-                                Non saed velit dictum quam risus pharetra esta.</li>
-                            <li
-                                class="py-[10px] text-[#687693] pl-[35px] relative before:absolute before:left-0 before:top-1/2 before:transform before:w-[25px] before:h-[25px] before:leading-[25px] before:rounded-[50%] before:text-center before:text-[14px] before:text-[#ff4a17] before:bg-[rgba(255,74,23,0.1)] before:-translate-y-1/2 before:font-['themify'] before:content-['\e64c']">
-                                Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt.</li>
-                            <li
-                                class="py-[10px] text-[#687693] pl-[35px] relative before:absolute before:left-0 before:top-1/2 before:transform before:w-[25px] before:h-[25px] before:leading-[25px] before:rounded-[50%] before:text-center before:text-[14px] before:text-[#ff4a17] before:bg-[rgba(255,74,23,0.1)] before:-translate-y-1/2 before:font-['themify'] before:content-['\e64c']">
-                                Hac nibh fermentum nisi, platea condimentum cursus.</li>
-                            <li
-                                class="py-[10px] text-[#687693] pl-[35px] relative before:absolute before:left-0 before:top-1/2 before:transform before:w-[25px] before:h-[25px] before:leading-[25px] before:rounded-[50%] before:text-center before:text-[14px] before:text-[#ff4a17] before:bg-[rgba(255,74,23,0.1)] before:-translate-y-1/2 before:font-['themify'] before:content-['\e64c']">
-                                Massa volutpat odio facilisis purus sit elementum.</li>
-                        </ul>
-                    </div>
-                    <h3 class="font-medium font-heading-font mt-[40px] text-[#0a272c] text-[35px] leading-[130.5%]
-                        mb-[20px] md:text-[25px]">
-                        Related Service</h3>
-                    <div class="grid grid-cols-12 gap-3 items-center">
-                        <div class="col-span-4 md:col-span-6 sm:col-span-12">
-                            <div
-                                class="p-[20px] lg:py-[20px] lg:px-[10px] shadow-[0px_0px_20px_0px_rgba(20,33,43,0.1)]">
-                                <i class="fi flaticon-taxes text-[40px] text-[#ff4a17]"></i>
-                                <h2
-                                    class="font-semibold font-heading-font text-[#0a272c] text-[22px] mt-[10px]  mb-[12px] md:text-[20px]">
-                                    Tax Management</h2>
-                                <p class="text-[16px] sm:text-[15px] leading-[26px] font-normal text-[#687693]">
-                                    Lacus, etiam sed est eu tempus need Temer diam congue laoret .</p>
-                            </div>
+                    <h3 class="font-medium font-heading-font text-[#0a272c] text-[35px] leading-[130.5%] mb-[20px] md:text-[25px] ">{{$service->name}}</h3>
+
+                    <div class="text-[16px] leading-[26px] font-normal text-[#687693] mb-[20px]">{!! $service->content !!}</div>
+
+
+                    @if ($services->count() > 0)
+                        <h3 class="font-medium font-heading-font mt-[40px] text-[#0a272c] text-[35px] leading-[130.5%] mb-[20px] md:text-[25px]">Related Service</h3>
+                        <div class="grid grid-cols-12 gap-3 items-center">
+                            @forelse ($services as $service)
+                                <div class="col-span-4 md:col-span-6 h-full sm:col-span-12">
+                                    <div class="p-[20px] lg:py-[20px] h-full lg:px-[10px] shadow-[0px_0px_20px_0px_rgba(20,33,43,0.1)]">
+                                        <a href="{{route('services.details', ['service' => $service->slug])}}">
+                                            <h2 class="font-semibold font-heading-font text-[22px] mt-[10px]  mb-[12px] text-main md:text-[20px]">{{$service->name}}</h2>
+                                        </a>
+                                        <p class="text-[16px] sm:text-[15px] leading-[26px] font-normal text-[#687693] line-clamp-2">{{$service->description}}</p>
+                                    </div>
+                                </div>
+                            @empty
+                            @endforelse
                         </div>
-                        <div class="col-span-4 md:col-span-6 sm:col-span-12">
-                            <div class="p-[20px] lg:py-[20px] lg:px-[10px]
-                                shadow-[0px_0px_20px_0px_rgba(20,33,43,0.1)]">
-                                <i class="fi flaticon-advisor text-[40px] text-[#ff4a17]"></i>
-                                <h2
-                                    class="font-semibold font-heading-font text-[#0a272c] text-[22px] mt-[10px]  mb-[12px] md:text-[20px]">
-                                    Financial Advices</h2>
-                                <p class="text-[16px] sm:text-[15px] leading-[26px] font-normal text-[#687693]">
-                                    Lacus, etiam sed est eu tempus need Temer diam congue laoret .</p>
-                            </div>
-                        </div>
-                        <div class="col-span-4 md:col-span-6 sm:col-span-12">
-                            <div class="p-[20px] lg:py-[20px] lg:px-[10px]
-                                shadow-[0px_0px_20px_0px_rgba(20,33,43,0.1)]">
-                                <i class="fi flaticon-team text-[40px] text-[#ff4a17]"></i>
-                                <h2
-                                    class="font-semibold font-heading-font text-[#0a272c] text-[22px] mt-[10px]  mb-[12px] md:text-[20px]">
-                                    Risk Management</h2>
-                                <p class="text-[16px] sm:text-[15px] leading-[26px] font-normal text-[#687693]">
-                                    Lacus, etiam sed est eu tempus need Temer diam congue laoret .</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endif
                     <div
                         class="p-[30px] lg:p-[30px_20px] rounded-[20px] shadow-[0px_2px_8px_2px_rgba(22,14,71,0.1)] mt-[40px]">
                         <div class="mb-[30px]">

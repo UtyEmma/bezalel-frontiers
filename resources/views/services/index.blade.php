@@ -39,70 +39,32 @@
                 <span class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17]
                     font-base-font">Our Services</span>
                 <h2 class="text-[55px] md:text-[35px] sm:text-[32px] col:text-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px]
-                    mt-[10px] relative capitalize font-heading-font font-bold
-                    text-[#14212b]">All Consoel Solution</h2>
+                    mt-[10px] relative capitalize font-heading-font font-bold text-[#14212b]">Amazing Solutions that grow your business</h2>
             </div>
             <div class="grid grid-cols-12 gap-4">
-                <div class="col-span-4 md:col-span-6 sm:col-span-12">
-                    <div class="p-[50px] col:p-[30px_25px] shadow-[0px_0px_20px_0px_rgba(20,33,43,0.1)]">
-                        <div class="text-center">
-                            <div
-                                class="w-[120px] h-[120px] leading-[120px] bg-[#f5f5f5] text-center mx-auto mb-[30px] text-[50px] rounded-[50%]">
-                                <i class="fi flaticon-advisor"></i>
+                @forelse ($services as $service)
+                    <div class="col-span-4 md:col-span-6 sm:col-span-12">
+                        <div class="p-5 h-full col:p-[30px_25px] shadow-[0px_0px_20px_0px_rgba(20,33,43,0.1)]">
+                            <div class="flex flex-col">
+                                <div class="w-full rounded-md overflow-hidden h-48 mb-[20px]">
+                                    <img src="{{$service->image}}" class="object-cover" alt="">
+                                </div>
+
+                                <div class="">
+                                    <h2 class="text-[#14212b] text-xl font-bold mb-[10px] ">{{$service->name}}</h2>
+
+                                    <p class=" text-[#6e6e6e] line-clamp-3">{{$service->description}}</p>
+                                    <a href="{{route('services.details', ['service' => $service->slug])}}" class="inline-block transition-all duration-300 p-[10px_35px] pr-[45px] text-[#ff4a17] border-[1px] border-[#ff4a17]
+                                        relative rounded-[6px] mt-[20px] uppercase before:absolute before:right-[20px]
+                                        before:top-[51%] before:content-['\f103'] before:font-['Flaticon']
+                                        before:-translate-y-1/2 hover:bg-[#ff4a17] hover:text-white">Learn More</a>
+                                </div>
                             </div>
-                            <h2
-                                class="text-[#14212b] text-[30px] font-bold mb-[20px] xl:text-[25px] col:text-[25px]">
-                                Financial Advices</h2>
-                            <p class=" text-[#6e6e6e]">Lorem Ipsum is simply dummy text
-                                the industrey's standard dummy text ever
-                                scrambled type specimen</p>
-                            <a href="service-single.html" class="inline-block transition-all duration-300 p-[10px_35px] pr-[45px] text-[#ff4a17] border-[1px] border-[#ff4a17]
-                                relative rounded-[6px] mt-[20px] uppercase before:absolute before:right-[20px]
-                                before:top-[51%] before:content-['\f103'] before:font-['Flaticon']
-                                before:-translate-y-1/2 hover:bg-[#ff4a17] hover:text-white">Details</a>
                         </div>
                     </div>
-                </div>
-                <div class="col-span-4 md:col-span-6 sm:col-span-12">
-                    <div class="p-[50px] col:p-[30px_25px] shadow-[0px_0px_20px_0px_rgba(20,33,43,0.1)]">
-                        <div class="text-center">
-                            <div
-                                class="w-[120px] h-[120px] leading-[120px] bg-[#f5f5f5] text-center mx-auto mb-[30px] text-[50px] rounded-[50%]">
-                                <i class="fi flaticon-team"></i>
-                            </div>
-                            <h2
-                                class="text-[#14212b] text-[30px] font-bold mb-[20px] xl:text-[25px] col:text-[25px]">
-                                Risk Management</h2>
-                            <p class=" text-[#6e6e6e]">Lorem Ipsum is simply dummy text
-                                the industrey's standard dummy text ever
-                                scrambled type specimen</p>
-                            <a href="service-single.html" class="inline-block transition-all duration-300 p-[10px_35px] pr-[45px] text-[#ff4a17] border-[1px] border-[#ff4a17]
-                                relative rounded-[6px] mt-[20px] uppercase before:absolute before:right-[20px]
-                                before:top-[51%] before:content-['\f103'] before:font-['Flaticon']
-                                before:-translate-y-1/2 hover:bg-[#ff4a17] hover:text-white">Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-span-4 md:col-span-6 sm:col-span-12">
-                    <div class="p-[50px] col:p-[30px_25px] shadow-[0px_0px_20px_0px_rgba(20,33,43,0.1)]">
-                        <div class="text-center">
-                            <div
-                                class="w-[120px] h-[120px] leading-[120px] bg-[#f5f5f5] text-center mx-auto mb-[30px] text-[50px] rounded-[50%]">
-                                <i class="fi flaticon-taxes"></i>
-                            </div>
-                            <h2
-                                class="text-[#14212b] text-[30px] font-bold mb-[20px] xl:text-[25px] col:text-[25px]">
-                                Tax Management</h2>
-                            <p class=" text-[#6e6e6e]">Lorem Ipsum is simply dummy text
-                                the industrey's standard dummy text ever
-                                scrambled type specimen</p>
-                            <a href="service-single.html" class="inline-block transition-all duration-300 p-[10px_35px] pr-[45px] text-[#ff4a17] border-[1px] border-[#ff4a17]
-                                relative rounded-[6px] mt-[20px] uppercase before:absolute before:right-[20px]
-                                before:top-[51%] before:content-['\f103'] before:font-['Flaticon']
-                                before:-translate-y-1/2 hover:bg-[#ff4a17] hover:text-white">Details</a>
-                        </div>
-                    </div>
-                </div>
+                @empty
+
+                @endforelse
             </div>
         </div>
     </section>
