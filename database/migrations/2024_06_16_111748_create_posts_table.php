@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('author_id');
             $table->longText('content');
             $table->string('published_at')->nullable();
-            $table->string('image');
             $table->text('excerpt')->nullable();
             $table->mediumText('tags')->nullable();
             $table->text('description')->nullable();

@@ -12,7 +12,7 @@ Route::get('/faqs', [PageController::class, 'faqs'])->name('faqs');
 
 Route::prefix('blog')->group(function(){
     Route::get('', [PostController::class, 'index'])->name('posts');
-    Route::prefix('{post}')->group(function(){
+    Route::prefix('{post:slug}')->group(function(){
         Route::get('', [PostController::class, 'show'])->name('posts.details');
     });
 });

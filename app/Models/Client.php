@@ -14,14 +14,13 @@ class Client extends Model implements HasMedia {
     use HasFactory, HasStatus, SoftDeletes, InteractsWithMedia;
 
     protected $fillable = ['name', 'website', 'status', 'featured'];
-
     protected $casts = [
-        'status' => Status::ACTIVE,
+        'status' => Status::class,
         'featured' => 'boolean'
     ];
 
     function getLogoAttribute(){
-        return $this->getFirstMediaUrl();
+        return $this->getFirstMediaUrl('clients');
     }
 
 }

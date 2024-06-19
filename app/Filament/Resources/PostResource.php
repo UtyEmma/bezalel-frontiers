@@ -29,6 +29,7 @@ class PostResource extends Resource
             ->schema([
                 Forms\Components\SpatieMediaLibraryFileUpload::make('image')
                     ->label('Featured Image')
+                    ->collection('posts')
                     ->image()
                     ->required(),
                 Forms\Components\TextInput::make('title')

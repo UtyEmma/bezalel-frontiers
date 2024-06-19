@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Enums\Status;
+use App\Models\Client;
 use App\Models\Post;
 use App\Models\Service;
 use App\Models\Slider;
@@ -16,8 +17,9 @@ class PageController extends Controller {
         $testimonials = Testimonial::whereFeatured(true)->status(Status::ACTIVE)->latest()->get();
         $posts = Post::status(Status::ACTIVE)->latest()->get();
         $sliders = Slider::status(Status::ACTIVE)->get();
+        $clients = Client::status(Status::ACTIVE)->whereFeatured(true)->get();
 
-        return view('welcome', compact('services', 'testimonials', 'posts', 'sliders'));
+        return view('welcome', compact('services', 'testimonials', 'posts', 'sliders', 'clients'));
     }
 
     function about(){

@@ -183,8 +183,8 @@
             <div class="grid grid-cols-12 gap-4">
                 <div class="col-span-6 md:col-span-12">
                     <p class="text-[15px] text-white text-left md:text-center">
-                        Copyright &copy; 2023 // All Right Reserved by
-                        <a href="index.html" class="text-[#ff4a17]">Consoel.</a>
+                        Copyright &copy; {{now()->format('Y')}} // All Right Reserved by
+                        <a href="{{route('home')}}" class="text-[#ff4a17]">{{$settings->company_name}}</a>
                     </p>
                 </div>
                 <div class="col-span-6 md:col-span-12">

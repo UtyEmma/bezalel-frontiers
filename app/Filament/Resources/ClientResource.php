@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ClientResource\Pages;
 use App\Filament\Resources\ClientResource\RelationManagers;
+use App\Forms\Components\SelectStatus;
 use App\Models\Client;
 use Filament\Forms;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
@@ -24,19 +25,19 @@ class ClientResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->required()
-                    ->maxLength(255),
                 SpatieMediaLibraryFileUpload::make('logo')
                     ->required()
                     ->collection('clients'),
+                Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->columnSpanFull()
+                    ->maxLength(255),
                 Forms\Components\TextInput::make('website')
                     ->maxLength(255)
                     ->default(null),
+                SelectStatus::make('status')
+                    ->required(),
                 Forms\Components\Toggle::make('featured'),
-                Forms\Components\TextInput::make('status')
-                    ->required()
-                    ->maxLength(255),
             ]);
     }
 

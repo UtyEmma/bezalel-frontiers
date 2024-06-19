@@ -10,7 +10,7 @@
                         <div class="wraper">
                             <div class="relative h-[900px] lg:h-[680px]  md:h-[600px] sm:h-[500px]">
                                 <div
-                                    class="max-w-[720px] lg:w-[600px] md:w-full  absolute top-1/2 left-0 transform  -translate-y-1/2">
+                                    class="max-w-[720px] lg:w-3/5 md:w-full  absolute top-1/2 left-0 transform  -translate-y-1/2">
 
                                     <div data-swiper-parallax="200" class="wpo-hero-title-top">
                                         <span class="text-[19px] col:text-[16px] text-white font-base-font uppercase
