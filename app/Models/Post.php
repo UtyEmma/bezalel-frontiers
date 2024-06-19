@@ -35,7 +35,7 @@ class Post extends Model implements HasMedia {
         return route('posts.details', ['post' => $this->slug]);
     }
 
-    function getPublishingDateFormat(){
+    function getPublishingDateAttribute(){
         return Date::parse($this->published_at)->format('jS F Y');
     }
 

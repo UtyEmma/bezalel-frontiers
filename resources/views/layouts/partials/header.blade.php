@@ -1,6 +1,5 @@
 <header>
-    <div class="px-[130px] xl:px-[30px] lg:px-[10px] col:px-0
-         z-[11] bg-white border-b-[1px] border-b-[#e9e9e9]">
+    <div class="px-[130px] xl:px-[30px] lg:px-[10px] col:px-0 z-[11] bg-white border-b-[1px] border-b-[#e9e9e9]">
         <div class="flex justify-between flex-wrap">
             <div>
                 <ul class="h-full">
@@ -64,7 +63,6 @@
             </div>
         </div>
     </div>
-    <h1 class="hidden">section heading hidden</h1>
     <div class="px-[130px] xl:px-[30px] lg:px-[10px] col:px-0 md:py-[20px]
          z-[11] bg-white">
         <div class="flex items-center justify-between">
@@ -92,8 +90,9 @@
 
             <div class="w-[195px] md:w-[280px] sm:w-[200px] col:w-[150px] col:ml-[50px]">
                 <a class="flex items-center md:justify-center text-white" href="index.html">
-                    <img class="" src="assets/images/logo-2.png" alt=""></a>
+                    <img class="" src="/assets/images/logo-2.png" alt=""></a>
             </div>
+
             <ul class="md:hidden">
                 <li class="relative inline-block group">
                     <a href="{{route('home')}}" class="relative text-[16px] lg:text-[17px] py-[35px]

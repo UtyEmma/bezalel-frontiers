@@ -25,14 +25,14 @@
                 <div class="col-span-6 md:col-span-12 sm:col-span-12">
                     <div class="max-w-[600px] sm:w-full relative pl-[40px] md:pl-0 md:pt-[70px]">
                         <h4
-                            class="text-[21px] text-main font-base-font font-bold lg:text-[18px] col:text-[14px]">
+                            class="text-[21px] text-[#ff4a17] font-base-font font-bold lg:text-[18px] col:text-[14px]">
                             Welcome to {{$settings->company_name}}</h4>
                         <h2 class="text-[60px] leading-[70px] my-[30px] text-[#0a272c] font-normal font-heading-font
                             xl:text-[55px] lg:text-[36px] lg:leading-[50px] lg:my-[20px] col:text-[26px]
                             col:leading-[36px] col:my-[15px]">
-                            Driving Decisions with Data, Shaping Success with <span class="text-main">Integrity</span>
+                            Driving Decisions with Data, Shaping Success with <span class="text-[#ff4a17]">Integrity</span>
                         </h2>
-                        <p class="text-[18px] mb-[35px] col:text-[16px] col:mb-[20px]">At <span class="text-main font-semibold">{{$settings->company_name}}</span>, we provide actionable insights that inform, inspire, and empower minds and organizations for success. Discover how our data-driven and research-based management consulting can transform your business.</p>
+                        <p class="text-[18px] mb-[35px] col:text-[16px] col:mb-[20px]">At <span class="text-[#ff4a17] font-semibold">{{$settings->company_name}}</span>, we provide actionable insights that inform, inspire, and empower minds and organizations for success. Discover how our data-driven and research-based management consulting can transform your business.</p>
                         <a class="theme-btn" href="{{route('about')}}">Learn More</a>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
             before:bg-[url(../images/service/shape-1.png)] before:bg-no-repeat before:bg-cover before:bg-center">
             <div class="wraper">
                 <div class="mb-[75px] sm:mb-[40px] text-center">
-                    <span class="uppercase text-[16px] font-bold tracking-[3px] text-main
+                    <span class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17]
                         font-base-font">Our Services</span>
                     <h2 class="text-[55px] md:text-[35px] sm:text-[32px] col:text-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px]
                         mt-[10px] relative capitalize font-heading-font font-bold
@@ -72,7 +72,7 @@
                                     before:content-['\f103'] before:font-['Flaticon'] before:translate-y-[-50%]">Details</a>
 
                                 </div>
-                                <div class="absolute left-0 bottom-0 p-[50px] w-full h-full bg-main
+                                <div class="absolute left-0 bottom-0 p-[50px] w-full h-full bg-[#ff4a17]
                             flex justify-center flex-col rounded-[6px] translate-y-[100%]
                                 transition-all duration-300 ease-in-out
                             overflow-hidden z-[20] md:p-[30px] group-hover:translate-y-[0]">
@@ -85,7 +85,7 @@
                                     relative rounded-[6px] mt-[10px] max-w-[150px] before:absolute
                                     before:right-[20px] before:top-[51%]
                                     before:content-['\f103'] before:font-['Flaticon'] before:translate-y-[-50%]
-                                    hover:bg-white hover:text-main">Details</a>
+                                    hover:bg-white hover:text-[#ff4a17]">Details</a>
                                     <div class="t">
                                         <div class="absolute left-[-180px] top-[-180px] w-[360px] h-[360px]
                                             bg-[rgba(255,255,255,.09)] rounded-[50%]">
@@ -122,13 +122,13 @@
             <div class="grid grid-cols-12 items-center ">
                 <div class="col-span-5 md:col-span-12 ">
                     <div class="md:mb-[30px]">
-                        <h5 class="text-[21px] text-main font-heading-font font-semibold sm:text-[18px]">Our
+                        <h5 class="text-[21px] text-[#ff4a17] font-heading-font font-semibold sm:text-[18px]">Our
                             Professional
                             Skill’s</h5>
                         <h2 class="text-[60px] leading-[70px] mb-[30px] mt-[15px] text-[#0a272c] font-heading-font font-semibold
                         xl:text-[50px] xl:leading-[60px] xl:mb-[20px] xl:mt-[10px] lg:text-[45px] lg:leading-[50px]
                         sm:text-[35px] sm:leading-[50px]">
-                        Strategic Insights for Sustainable <span class="text-main">Growth.</span></h2>
+                        Strategic Insights for Sustainable <span class="text-[#ff4a17]">Growth.</span></h2>
                         <p class="text-[#687693] text-[16px] leading-[25px]">We data-driven and research-based with the goal of providing essential intelligence for organizations and their people for informed ideation, and business & management decisions. Our commitment to integrity, knowledge, and excellence sets us apart in the consulting industry.</p>
                     </div>
                 </div>
@@ -140,7 +140,7 @@
                                 class="text-[22px] sm:text-[18px] mb-[10px] font-heading-font text-[#0a272c] font-semibold">
                                 Financial Investment</h5>
                             <div class="h-[6px] w-full bg-[#f3f4f4] relative rounded-[10px] overflow-hidden">
-                                <div class="wow fadeInLeft h-[6px]  bg-main" style="width: 75%"
+                                <div class="wow fadeInLeft h-[6px]  bg-[#ff4a17]" style="width: 75%"
                                     data-wow-duration="0.5s" data-wow-delay=".3s" role="progressbar"
                                     aria-valuenow="75" aria-valuemin="0" aria-valuemax="90">
                                 </div>
@@ -153,7 +153,7 @@
                                 class="text-[22px] sm:text-[18px] mb-[10px] font-heading-font text-[#0a272c] font-semibold">
                                 Business Analysis</h5>
                             <div class="h-[6px] w-full bg-[#f3f4f4] relative rounded-[10px] overflow-hidden">
-                                <div class="wow fadeInLeft h-[6px]  bg-main" style="width: 80%"
+                                <div class="wow fadeInLeft h-[6px]  bg-[#ff4a17]" style="width: 80%"
                                     data-wow-duration="0.7s" data-wow-delay=".3s" role="progressbar"
                                     aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                                 </div>
@@ -166,7 +166,7 @@
                                 class="text-[22px] sm:text-[18px] mb-[10px] font-heading-font text-[#0a272c] font-semibold">
                                 Tax Management</h5>
                             <div class="h-[6px] w-full bg-[#f3f4f4] relative rounded-[10px] overflow-hidden">
-                                <div class="wow fadeInLeft h-[6px]  bg-main" style="width: 85%"
+                                <div class="wow fadeInLeft h-[6px]  bg-[#ff4a17]" style="width: 85%"
                                     data-wow-duration="0.9s" data-wow-delay=".3s" role="progressbar"
                                     aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
                                 </div>
@@ -179,7 +179,7 @@
                                 class="text-[22px] sm:text-[18px] mb-[10px] font-heading-font text-[#0a272c] font-semibold">
                                 Financial Advices</h5>
                             <div class="h-[6px] w-full bg-[#f3f4f4] relative rounded-[10px] overflow-hidden">
-                                <div class="wow fadeInLeft h-[6px]  bg-main" style="width: 95%"
+                                <div class="wow fadeInLeft h-[6px]  bg-[#ff4a17]" style="width: 95%"
                                     data-wow-duration="1.1s" data-wow-delay=".3s" role="progressbar"
                                     aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
                                 </div>
@@ -197,7 +197,7 @@
         <section class="section-wrap">
             <div class="wraper">
                 <div class="mb-[75px] sm:mb-[40px] text-center">
-                    <span class="uppercase text-[16px] font-bold tracking-[3px] text-main font-base-font">Our Clients</span>
+                    <span class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17] font-base-font">Our Clients</span>
                     <h2 class="text-[55px] md:text-[35px] sm:text-[32px] col:text-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px] mt-[10px] relative capitalize font-heading-font font-bold text-[#14212b]">We help </h2>
                 </div>
                 <div class="flex flex-wrap">
@@ -219,7 +219,7 @@
         <section class="section-wrap bg-[#18252f]">
             <div class="wraper">
                 <div class="mb-[75px] sm:mb-[40px] text-center">
-                    <span class="uppercase text-[16px] font-bold tracking-[3px] text-main
+                    <span class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17]
                     font-base-font">CLIENT TESTIMONIAL</span>
                     <h2 class="text-[55px] md:text-[35px] sm:text-[32px] text-white col:text-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px]
                     mt-[10px] relative capitalize font-heading-font font-bold
@@ -228,7 +228,7 @@
                 <div class="max-w-[1000px] mx-auto text-center relative z-[1]">
                     <div class="w-[100px] h-[100px] leading-[100px] bg-white
                         shadow-[0px_0px_35px_0px_rgba(20,33,43,0.1)] mx-auto rounded-[50%] mb-[-50px] relative z-[11] ">
-                        <i class="fi flaticon-left-quote text-[50px] text-main"></i>
+                        <i class="fi flaticon-left-quote text-[50px] text-[#ff4a17]"></i>
                     </div>
                     <div class="wpo-testimonial-slide bg-white shadow-[0px_0px_35px_0px_rgba(20,33,43,0.1)]">
                         @forelse ($testimonials as $testimonial)
@@ -238,7 +238,7 @@
                                     <p class="text-[18px] col:text-[15px] mb-[20px]">{{$testimonial->message}}</p>
                                     <div class="wpo-testimonial-text-btm">
                                         <h3 class="text-[32px] font-semibold mt-[5px] col:text-[25px] mb-[15px]">{{$testimonial->name}}</h3>
-                                        <span class="uppercase text-[16px] font-bold tracking-[3px] text-main col:text-[14px]">
+                                        <span class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17] col:text-[14px]">
                                             <span class="text-gray-500">{{$testimonial->role}} -</span> {{$testimonial->company}}
                                         </span>
                                     </div>
@@ -272,13 +272,11 @@
 
     <section class="section-wrap">
         <div class="wraper">
-            <div class="p-[80px_85px] bg-[url(../images/cta-bg.jpg)] bg-no-repeat bg-center rounded-[6px]
-            md:p-[40px_35px] col:p-[10px]">
-                <div
-                    class="p-[100px_80px] bg-[rgba(20,33,43,0.9)] flex items-center relative z-[1] rounded-[6px] overflow-hidden lg:flex-wrap lg:justify-center lg:text-center col:p-[20px_15px]">
+            <div class="p-[80px_85px] bg-[url(../images/cta-bg.jpg)] bg-no-repeat bg-center rounded-[6px] md:p-[40px_35px] col:p-[10px]">
+                <div class="p-[100px_80px] bg-[rgba(20,33,43,0.9)] flex items-center relative z-[1] rounded-[6px] overflow-hidden lg:flex-wrap lg:justify-center lg:text-center col:p-[20px_15px]">
                     <div class="mr-[80px] basis-[80%] lg:basis-full lg:mr-0">
                         <span
-                            class="uppercase text-[16px] font-base-font font-bold tracking-[3px] text-main">WE
+                            class="uppercase text-[16px] font-base-font font-bold tracking-[3px] text-[#ff4a17]">WE
                             ARE
                             HERE</span>
                         <h2 class="text-[45px] text-white mt-[20px]
@@ -300,22 +298,22 @@
             <div class="grid grid-cols-12 mx-[-40px] xl:mx-[-20px] lg:mx-[-15px]">
                 <div class="col-span-4 lg:col-span-6 md:col-span-6 sm:col-span-12
                      px-[40px] xl:px-[20px] lg:px-[15px]">
-                    <div class="lg:mb-[30px] text-center p-[60px_40px] border-[1px] border-main
+                    <div class="lg:mb-[30px] text-center p-[60px_40px] border-[1px] border-[#ff4a17]
                     rounded-[15px] bg-[#18252f] md:p-[40px] col:p-[30px]">
                         <div class="mb-[30px] col:mb-[20px]">
-                            <i class="fi flaticon-place text-main text-[55px] col:text-[40px]"></i>
+                            <i class="fi flaticon-place text-[#ff4a17] text-[55px] col:text-[40px]"></i>
                         </div>
                         <p class="text-[22px] leading-[32px] font-medium text-white font-heading-font">1489 Langley
                             Ave <br>
                             Grand Forks Afb, North.</p>
-                        <span class="text-[14px] text-main uppercase block mt-[30px] tracking-[3px]">USA,
+                        <span class="text-[14px] text-[#ff4a17] uppercase block mt-[30px] tracking-[3px]">USA,
                             Office AddRESS</span>
                     </div>
                 </div>
                 <div class="col-span-4 lg:col-span-6 md:col-span-6 sm:col-span-12
                      px-[40px] xl:px-[20px] lg:px-[15px]">
-                    <div class="lg:mb-[30px] text-center p-[60px_40px] border-[1px] border-main
-                    rounded-[15px] bg-main md:p-[40px] col:p-[30px]">
+                    <div class="lg:mb-[30px] text-center p-[60px_40px] border-[1px] border-[#ff4a17]
+                    rounded-[15px] bg-[#ff4a17] md:p-[40px] col:p-[30px]">
                         <div class="mb-[30px] col:mb-[20px]">
                             <i class="fi flaticon-phone-call text-white text-[55px] col:text-[40px]"></i>
                         </div>
@@ -329,16 +327,16 @@
                 </div>
                 <div class="col-span-4 lg:col-span-6 md:col-span-6 sm:col-span-12
                      px-[40px] xl:px-[20px] lg:px-[15px]">
-                    <div class=" text-center p-[60px_40px] border-[1px] border-main
+                    <div class=" text-center p-[60px_40px] border-[1px] border-[#ff4a17]
                     rounded-[15px] bg-[#18252f] md:p-[40px] col:p-[30px]">
                         <div class="mb-[30px] col:mb-[20px]">
-                            <i class="fi flaticon-email text-main text-[55px] col:text-[40px]"></i>
+                            <i class="fi flaticon-email text-[#ff4a17] text-[55px] col:text-[40px]"></i>
                         </div>
                         <p class="text-[22px] leading-[32px] font-medium text-white font-heading-font">
                             consoel@gmail.com</p>
                         <p class="text-[22px] leading-[32px] font-medium text-white font-heading-font">
                             info724@gmail.com</p>
-                        <span class="text-[14px] text-main uppercase block mt-[30px] tracking-[3px]">EMAIL
+                        <span class="text-[14px] text-[#ff4a17] uppercase block mt-[30px] tracking-[3px]">EMAIL
                             ADDRESS</span>
                     </div>
                 </div>
@@ -353,14 +351,14 @@
         <section class="bg-[#f3f4f4] section-wrap">
             <div class="wraper">
                 <div class="mb-[75px] sm:mb-[40px] text-center">
-                    <span class="uppercase text-[16px] font-bold tracking-[3px] text-main
+                    <span class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17]
                     font-base-font">BLOG POST</span>
                     <h2 class="text-[55px] md:text-[35px] sm:text-[32px] col:text-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px]
                     mt-[10px] relative capitalize font-heading-font font-bold
                     text-[#14212b]">Latest News From Blog</h2>
                 </div>
                 <div>
-                    <div class="grid grid-cols-12 gap-x-4">
+                    <div class="grid grid-cols-12 gap-y-4 md:gap-x-4">
                         <div class="col-span-6 lg:col-span-12">
                             <div class="relative group">
                                 <div class="relative overflow-hidden rounded-[8px]
@@ -374,11 +372,11 @@
                                     duration-500  lg:p-[20px] lg:pb-[0]">
                                     <h2
                                         class="text-[30px] leading-[32px] mt-[10px] mb-[30px] col:text-[22px] col:mb-[15px] col:leading-[30px]">
-                                        <a href="{{$posts[0]->route}}" class="text-white transition-all duration-500 hover:text-main">{{$posts[0]->title}}</a>
+                                        <a href="{{$posts[0]->route}}" class="text-white transition-all duration-500 hover:text-[#ff4a17]">{{$posts[0]->title}}</a>
                                     </h2>
                                     <ul class="flex col:block">
                                         <li class="text-white text-[14px] uppercase">
-                                            <p class="text-main">{{$posts[0]->publishing_date}}</p>
+                                            <p class="text-[#ff4a17]">{{$posts[0]->publishing_date}}</p>
                                         </li>
                                         <li class="pl-[20px] relative col:pl-0 col:mt-[5px] text-white text-[14px] uppercase before:absolute before:left-[10px] before:top-[50%]
                                         before:-translate-y-1/2 before:content-['-'] col:before:hidden">by: {{$posts[0]->author->name}}</li>
@@ -391,25 +389,21 @@
                             <div class="pl-[40px] lg:pl-0">
                                 @forelse ($posts as $key => $post)
                                     @if ($key > 0)
-                                        <div class="mb-[15px] lg:mb-[30px] overflow-hidden lg:flex lg:items-center col:flex-wrap col:justify-center col:text-center group transition-all duration-500">
-                                            <div class="relative overflow-hidden rounded-[8px] float-left mr-[20px] transition-all duration-500">
+                                        <div class="mb-[15px] lg:mb-[30px] overflow-hidden lg:flex lg:items-center col:flex-wrap col:justify-center group transition-all duration-500">
+                                            <div class="relative overflow-hidden rounded-[8px] md:w-1/2 float-left md:mr-[20px] transition-all duration-500">
                                                 <img class="scale-[1] rounded-[8px] col:mb-[20px] transition-all duration-500 group-hover:scale-[1.2]" src="{{$post->image}}" alt="{{$post->title}}">
                                             </div>
                                             <div class="z-[11] overflow-hidden">
-                                                <h2
-                                                    class="text-[23px] mb-[15px] leading-[30px] xl:text-[20px] xl:mb-[10px] xl:leading-[28px] transition-all duration-500 font-semibold">
+                                                <h2 class="text-[23px] mb-[15px] leading-[30px] xl:text-[20px] xl:mb-[10px] xl:leading-[28px] transition-all duration-500 font-semibold">
                                                     <a href="{{$post->route}}" class="text-[#0a272c] transition-all duration-500
-                                                        hover:text-main">{{$post->title}}</a>
+                                                        hover:text-[#ff4a17]">{{$post->title}}</a>
                                                 </h2>
-                                                <ul class="flex col:block col:text-center">
+                                                <ul class="flex col:block">
                                                     <li class="text-[14px] uppercase text-[#6e6e6e] ">
-                                                        <a href="{{$post->route}}" class="text-main">{{$post->publishing_date}}</a>
+                                                        <a href="{{$post->route}}" class="text-[#ff4a17]">{{$post->publishing_date}}</a>
+                                                    </li>
 
-                                                    </li>
-                                                    <li
-                                                        class="text-[14px] uppercase text-[#6e6e6e] pl-[20px] relative col:pl-0 col:mt-[5px]">
-                                                        by: {{$post->author->name}}
-                                                    </li>
+                                                    <li class="text-[14px] uppercase text-[#6e6e6e] relative col:pl-0 col:mt-[5px]">by: {{$post->author->name}}</li>
                                                 </ul>
                                             </div>
                                         </div>
