@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Enums\Status;
 use App\Models\Client;
+use App\Models\Faq;
 use App\Models\Post;
 use App\Models\Service;
 use App\Models\Slider;
@@ -31,7 +32,8 @@ class PageController extends Controller {
     }
 
     function faqs(){
-        return view('faqs');
+        $faqs = Faq::whereStatus(Status::ACTIVE)->latest()->get();
+        return view('faqs', compact('faqs'));
     }
 
 }

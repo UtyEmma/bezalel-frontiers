@@ -6,43 +6,31 @@
                     <div class="max-w-[180px] mb-[30px]">
                         <img src="assets/images/logo.png" alt="blog">
                     </div>
-                    <p class="mb-[10px] text-[#cbcbcb] text-[16px] leading-[30px]">Many desktop publishing
-                        packages
-                        web page editors now is use model search for many
-                        web sites.</p>
+                    <p class="mb-[10px] text-[#cbcbcb] text-[16px] leading-[30px]">{{$settings->site_description}}</p>
                     <ul class="pt-[10px]">
-                        <li class="float-left text-[22px] text-white">
-                            <a class="text-white w-[36px] h-[36px] leading-[40px]
-                             bg-[rgba(255,255,255,0.1)] block text-center rounded-[50%]
-                              text-[18px] transition-all
-                              hover:bg-[#ff4a17]" href="#">
-                                <i class="ti-facebook"></i>
-                            </a>
-                        </li>
-                        <li class="float-left text-[22px] text-white ml-[30px] lg:ml-[20px]">
-                            <a class="text-white w-[36px] h-[36px] leading-[40px]
-                             bg-[rgba(255,255,255,0.1)] block text-center rounded-[50%]
-                              text-[18px] transition-all
-                              hover:bg-[#ff4a17]" href="#">
-                                <i class="ti-twitter-alt"></i>
-                            </a>
-                        </li>
-                        <li class="float-left text-[22px] text-white ml-[30px] lg:ml-[20px]">
-                            <a class="text-white w-[36px] h-[36px] leading-[40px]
-                             bg-[rgba(255,255,255,0.1)] block text-center rounded-[50%]
-                              text-[18px] transition-all
-                              hover:bg-[#ff4a17]" href="#">
-                                <i class="ti-instagram"></i>
-                            </a>
-                        </li>
-                        <li class="float-left text-[22px] text-white ml-[30px] lg:ml-[20px]">
-                            <a class="text-white w-[36px] h-[36px] leading-[40px]
-                             bg-[rgba(255,255,255,0.1)] block text-center rounded-[50%]
-                              text-[18px] transition-all
-                              hover:bg-[#ff4a17]" href="#">
-                                <i class="ti-google"></i>
-                            </a>
-                        </li>
+                        @if ($settings->facebook_link)
+                            <li class="float-left text-[22px] text-white">
+                                <a class="text-white w-[36px] h-[36px] leading-[40px] bg-[rgba(255,255,255,0.1)] block text-center rounded-[50%] text-[18px] transition-all hover:bg-[#ff4a17]" target="__blank" href="{{$settings->facebook_link}}">
+                                    <i class="ti-facebook"></i>
+                                </a>
+                            </li>
+                        @endif
+
+                        @if ($settings->twitter_link)
+                            <li class="float-left text-[22px] text-white ml-[30px] lg:ml-[20px]">
+                                <a class="text-white w-[36px] h-[36px] leading-[40px] bg-[rgba(255,255,255,0.1)] block text-center rounded-[50%] text-[18px] transition-all hover:bg-[#ff4a17]" target="__blank" href="{{$settings->twitter_link}}">
+                                    <i class="ti-twitter-alt"></i>
+                                </a>
+                            </li>
+                        @endif
+
+                        @if ($settings->instagram_link)
+                            <li class="float-left text-[22px] text-white ml-[30px] lg:ml-[20px]">
+                                <a class="text-white w-[36px] h-[36px] leading-[40px] bg-[rgba(255,255,255,0.1)] block text-center rounded-[50%] text-[18px] transition-all hover:bg-[#ff4a17]" target="__blank" href="{{$settings->instagram_link}}">
+                                    <i class="ti-instagram"></i>
+                                </a>
+                            </li>
+                        @endif
                     </ul>
                 </div>
                 <div class="col-span-3 lg:col-span-3 md:col-span-6 sm:col-span-6 col:col-span-12 md:mb-[30px]">

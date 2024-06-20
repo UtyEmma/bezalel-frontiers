@@ -26,6 +26,11 @@ return [
         'value' => 'info@bezalelfrontiers.com'
     ],
 
+    'site_description' => [
+        'name' => 'Site Description',
+        'value' => 'We are a construction company dedicated to your success'
+    ],
+
     'contact_address' => [
         'name' => 'Contact Address',
         'value' => '19 Umunaga Street, Mayland Enugu'

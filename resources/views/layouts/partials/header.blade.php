@@ -29,48 +29,36 @@
             <div class="">
                 <div class="flex items-center justify-end md:justify-center md:flex-wrap">
                     <ul class="ml-[20px] col:ml-0">
-                        <li class="text-[16px] float-left p-[10px] pl-0 text-[#5d5d5d]">
-                            <a href="#"
-                                class="block w-[40px]
-                                 h-[40px] leading-[40px] border-[1px] border-[#5d5d5d] hover:border-transparent
-                                 rounded-[50%] text-center transition-all duration-300 hover:text-white hover:bg-[#ff4a17]">
-                                <i class="ti-facebook"></i>
-                            </a>
-                        </li>
-                        <li
-                            class="text-[16px] xl:text-[14px] lg:text-[12px] float-left p-[10px] text-[#5d5d5d]">
-                            <a href="#"
-                                class="block w-[40px]
-                                 h-[40px] leading-[40px] border-[1px] border-[#5d5d5d] hover:border-transparent
-                                 rounded-[50%] text-center transition-all duration-300 hover:text-white hover:bg-[#ff4a17]">
-                                <i class="ti-twitter-alt"></i>
-                            </a>
-                        </li>
-                        <li
-                            class="text-[16px] xl:text-[14px] lg:text-[12px] float-left p-[10px] text-[#5d5d5d]">
-                            <a href="#"
-                                class="block w-[40px]
-                                 h-[40px] leading-[40px] border-[1px] border-[#5d5d5d] hover:border-transparent
-                                 rounded-[50%] text-center transition-all duration-300 hover:text-white hover:bg-[#ff4a17]">
-                                <i class="ti-instagram"></i>
-                            </a>
-                        </li>
-                        <li
-                            class="text-[16px] xl:text-[14px] lg:text-[12px] float-left p-[10px] text-[#5d5d5d]">
-                            <a href="#"
-                                class="block w-[40px]
-                                 h-[40px] leading-[40px] border-[1px] border-[#5d5d5d] hover:border-transparent
-                                 rounded-[50%] text-center transition-all duration-300 hover:text-white hover:bg-[#ff4a17]">
-                                <i class="ti-google"></i>
-                            </a>
-                        </li>
+                        @if ($settings->facebook_link)
+                            <li class="text-[16px] float-left p-[10px] pl-0 text-[#5d5d5d]">
+                                <a href="{{$settings->facebook_link}}" target="__blank" class="block w-[40px] h-[40px] leading-[40px] border-[1px] border-[#5d5d5d] hover:border-transparent rounded-[50%] text-center transition-all duration-300 hover:text-white hover:bg-[#ff4a17]">
+                                    <i class="ti-facebook"></i>
+                                </a>
+                            </li>
+                        @endif
+
+                        @if ($settings->twitter_link)
+                            <li class="text-[16px] xl:text-[14px] lg:text-[12px] float-left p-[10px] text-[#5d5d5d]">
+                                <a href="{{$settings->twitter_link}}" class="block w-[40px] h-[40px] leading-[40px] border-[1px] border-[#5d5d5d] hover:border-transparent rounded-[50%] text-center transition-all duration-300 hover:text-white hover:bg-[#ff4a17]">
+                                    <i class="ti-twitter-alt"></i>
+                                </a>
+                            </li>
+                        @endif 
+
+                        @if ($settings->instagram_link)
+                            <li class="text-[16px] xl:text-[14px] lg:text-[12px] float-left p-[10px] text-[#5d5d5d]">
+                                <a href="{{$settings->instagram_link}}" class="block w-[40px] h-[40px] leading-[40px] border-[1px] border-[#5d5d5d] hover:border-transparent rounded-[50%] text-center transition-all duration-300 hover:text-white hover:bg-[#ff4a17]">
+                                    <i class="ti-instagram"></i>
+                                </a>
+                            </li>
+                        @endif
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    <div class="px-[130px] xl:px-[30px] lg:px-[10px] col:px-0 md:py-[20px]
-         z-[11] bg-white">
+
+    <div class="px-[130px] xl:px-[30px] lg:px-[10px] col:px-0 bg-white sticky top-0 z-50">
         <div class="flex items-center justify-between">
             <div id="dl-menu" class="dl-menuwrapper hidden md:block">
                 <button class="dl-trigger">Open Menu</button>
@@ -95,32 +83,25 @@
             </div><!-- /dl-menuwrapper -->
 
             <div class="w-[195px] md:w-[280px] sm:w-[200px] col:w-[150px] col:ml-[50px]">
-                <a class="flex items-center md:justify-center text-white" href="index.html">
-                    <img class="" src="/assets/images/logo-2.png" alt=""></a>
+                <a class="flex items-center md:justify-center text-white" href="{{route('home')}}">
+                    <img class="" src="/assets/images/logo.png" alt=""></a>
             </div>
 
-            <ul class="md:hidden">
+            <ul class="hidden md:!block">
                 <li class="relative inline-block group">
                     <a href="{{route('home')}}" class="relative text-[16px] lg:text-[17px] py-[35px]
-                     xl:py-[30px] px-[20px] xl:px-[6px]
-                        text-[#ff4a17] block capitalize
-                        font-base-font font-bold transition-all
-                        hover:text-[#ff4a17]
-                        before:absolute before:left-0 before:top-0 before:w-full
-                        before:h-[4px] before:bg-[#ff4a17] before:content
-                    before:opacity-1 before:visible before:transition-all
-                        before:rounded-[3px]">Home</a>
+                     xl:py-[30px] px-[20px] xl:px-[6px]  block capitalize font-base-font font-bold transition-all
+                        hover:text-[#ff4a17] before:absolute before:left-0 before:top-0 before:w-full before:h-[4px] before:bg-[#ff4a17] before:content before:opacity-1 {{request()->routeIs('home') ? 'before:visible text-[#ff4a17]' : 'before:invisible hover:before:visible text-[#14212b]'}} before:transition-all before:rounded-[3px]">Home</a>
                 </li>
                 <li class="relative inline-block">
                     <a href="{{route('about')}}" class="relative text-[16px] lg:text-[17px] py-[35px]
-                     xl:py-[30px] px-[20px] xl:px-[6px]
-                        text-[#14212b] block capitalize
+                     xl:py-[30px] px-[20px] xl:px-[6px] -[#14212b] block capitalize
                         font-base-font font-bold transition-all
                        hover:text-[#ff4a17]
                        before:absolute before:left-0 before:top-0 before:w-full before:h-[4px]
                        before:bg-[#ff4a17] before:content
-                       before:opacity-0 before:invisible before:transition-all before:rounded-[3px]
-                       hover:before:opacity-100 hover:before:visible
+                       before:opacity-1 before:transition-all before:rounded-[3px]
+                       hover:before:opacity-100 {{request()->routeIs('about') ? 'before:!visible text-[#ff4a17]' : 'before:invisible hover:before:visible text-[#14212b]'}}
                     ">About Us</a>
                 </li>
                 <li class="relative inline-block group">
@@ -131,8 +112,8 @@
                        hover:text-[#ff4a17]
                        before:absolute before:left-0 before:top-0 before:w-full before:h-[4px]
                        before:bg-[#ff4a17] before:content
-                       before:opacity-0 before:invisible before:transition-all before:rounded-[3px]
-                       hover:before:opacity-100 hover:before:visible">What We do</a>
+                       before:opacity-1 before:transition-all before:rounded-[3px]
+                       hover:before:opacity-100 {{request()->routeIs('services*') ? 'before:visible text-[#ff4a17]' : 'before:invisible hover:before:visible text-[#14212b]'}}">What We do</a>
                        <ul class="absolute w-[240px]  left-0 top-[110%] pt-[20px] pb-[15px] px-[7px] z-[111]  bg-[#fff] shadow-[0px_2px_20px_0px_rgba(62,65,159,0.09);]  transition-all  opacity-0 invisible
                                     group-hover:opacity-100 group-hover:top-full group-hover:visible ">
                                 @forelse ($services_menu as $service)
@@ -150,13 +131,13 @@
                 <li class="relative inline-block group">
                     <a href="{{route('faqs')}}" class="relative text-[16px] lg:text-[17px] py-[35px]
                      xl:py-[30px] px-[20px] xl:px-[6px]
-                        text-[#14212b] block capitalize
+                         block capitalize
                         font-base-font font-bold transition-all
                        hover:text-[#ff4a17]
                        before:absolute before:left-0 before:top-0 before:w-full before:h-[4px]
                        before:bg-[#ff4a17] before:content
-                       before:opacity-0 before:invisible before:transition-all before:rounded-[3px]
-                       hover:before:opacity-100 hover:before:visible">FAQs</a>
+                       before:opacity-1  before:transition-all before:rounded-[3px]
+                       hover:before:opacity-100 {{request()->routeIs('faqs') ? 'before:visible text-[#ff4a17]' : 'before:invisible hover:before:visible text-[#14212b]'}}">FAQs</a>
                 </li>
                 <li class="relative inline-block group">
                     <a href="{{route('posts')}}" class="relative text-[16px] lg:text-[17px] py-[35px]
@@ -166,8 +147,8 @@
                        hover:text-[#ff4a17]
                        before:absolute before:left-0 before:top-0 before:w-full before:h-[4px]
                        before:bg-[#ff4a17] before:content
-                       before:opacity-0 before:invisible before:transition-all before:rounded-[3px]
-                       hover:before:opacity-100 hover:before:visible">Blog</a>
+                       before:opacity-1 before:transition-all before:rounded-[3px]
+                       hover:before:opacity-100 {{request()->routeIs('blog*') ? 'before:visible text-[#ff4a17]' : 'before:invisible hover:before:visible text-[#14212b]'}}">Blog</a>
                 </li>
                 <li class="relative inline-block">
                     <a href="{{route('contact')}}" class="relative text-[16px] lg:text-[17px] py-[35px]
@@ -177,8 +158,8 @@
                        hover:text-[#ff4a17]
                        before:absolute before:left-0 before:top-0 before:w-full before:h-[4px]
                        before:bg-[#ff4a17] before:content
-                       before:opacity-0 before:invisible before:transition-all before:rounded-[3px]
-                       hover:before:opacity-100 hover:before:visible
+                       before:opacity-1 before:transition-all before:rounded-[3px]
+                       hover:before:opacity-100 {{request()->routeIs('contact') ? 'before:visible text-[#ff4a17]' : 'before:invisible hover:before:visible text-[#14212b]'}}
                     ">Contact</a>
                 </li>
             </ul>
@@ -206,7 +187,7 @@
                         </div>
                     </div>
                 </div>
-                <a class="theme-btn py-[10px] px-[25px] pr-[50px] md:hidden" href="contact.html">Get in touch</a>
+                <a class="theme-btn py-[10px] px-[25px] pr-[50px] md:hidden" href="{{route('contact')}}">Get in touch</a>
             </div>
         </div>
     </div>

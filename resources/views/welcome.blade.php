@@ -275,14 +275,8 @@
             <div class="p-[80px_85px] bg-[url(../images/cta-bg.jpg)] bg-no-repeat bg-center rounded-[6px] md:p-[40px_35px] col:p-[10px]">
                 <div class="p-[100px_80px] bg-[rgba(20,33,43,0.9)] flex items-center relative z-[1] rounded-[6px] overflow-hidden lg:flex-wrap lg:justify-center lg:text-center col:p-[20px_15px]">
                     <div class="mr-[80px] basis-[80%] lg:basis-full lg:mr-0">
-                        <span
-                            class="uppercase text-[16px] font-base-font font-bold tracking-[3px] text-[#ff4a17]">WE
-                            ARE
-                            HERE</span>
-                        <h2 class="text-[45px] text-white mt-[20px]
-                             lg:text-[40px] lg:mb-[20px] font-heading-font font-semibold leading-[1.2]
-                             sm:text-[30px]">Tell us about your business,
-                            we are ready to solve.</h2>
+                        <span class="uppercase text-[16px] font-base-font font-bold tracking-[3px] text-[#ff4a17]">WE ARE HERE</span>
+                        <h2 class="text-[45px] text-white mt-[20px] lg:text-[40px] lg:mb-[20px] font-heading-font font-semibold leading-[1.2] sm:text-[30px]">Tell us about your business, we are ready to solve.</h2>
                     </div>
                     <div class="">
                         <a href="{{route('contact')}}" class="theme-btn">Book a Consultation</a>
