@@ -93,7 +93,7 @@
                      xl:py-[30px] px-[20px] xl:px-[6px]  block capitalize font-base-font font-bold transition-all
                         hover:text-[#ff4a17] before:absolute before:left-0 before:top-0 before:w-full before:h-[4px] before:bg-[#ff4a17] before:content before:opacity-1 {{request()->routeIs('home') ? 'before:visible text-[#ff4a17]' : 'before:invisible hover:before:visible text-[#14212b]'}} before:transition-all before:rounded-[3px]">Home</a>
                 </li>
-                <li class="relative inline-block">
+                <li class="relative inline-block group">
                     <a href="{{route('about')}}" class="relative text-[16px] lg:text-[17px] py-[35px]
                      xl:py-[30px] px-[20px] xl:px-[6px] -[#14212b] block capitalize
                         font-base-font font-bold transition-all
@@ -103,6 +103,30 @@
                        before:opacity-1 before:transition-all before:rounded-[3px]
                        hover:before:opacity-100 {{request()->routeIs('about') ? 'before:!visible text-[#ff4a17]' : 'before:invisible hover:before:visible text-[#14212b]'}}
                     ">About Us</a>
+
+                    <ul class="absolute w-[240px]  left-0 top-[110%] pt-[20px] pb-[15px] px-[7px] z-[111]  bg-[#fff] shadow-[0px_2px_20px_0px_rgba(62,65,159,0.09);]  transition-all  opacity-0 invisible group-hover:opacity-100 group-hover:top-full group-hover:visible ">
+                        <li>
+                            <a href="{{route('about')}}" class="text-[16px] lg:text-[16px] inline-block  px-[15px] capitalize
+                                text-[#0a272c] group relative overflow-hidden font-bold transition-all
+                                after:absolute after:left-[15px] after:bottom-0 after:w-0 after:h-[2px]
+                                after:content after:bg-[#ff4a17] after:transition-all font-base-font
+                                hover:after:w-[50%]">Who We Are</a>
+                        </li>
+                        <li>
+                            <a href="{{route('teams')}}" class="text-[16px] lg:text-[16px] inline-block  px-[15px] capitalize
+                                text-[#0a272c] group relative overflow-hidden font-bold transition-all
+                                after:absolute after:left-[15px] after:bottom-0 after:w-0 after:h-[2px]
+                                after:content after:bg-[#ff4a17] after:transition-all font-base-font
+                                hover:after:w-[50%]">Our Team Members</a>
+                        </li>
+                        <li>
+                            <a href="{{route('faqs')}}" class="text-[16px] lg:text-[16px] inline-block  px-[15px] capitalize
+                                text-[#0a272c] group relative overflow-hidden font-bold transition-all
+                                after:absolute after:left-[15px] after:bottom-0 after:w-0 after:h-[2px]
+                                after:content after:bg-[#ff4a17] after:transition-all font-base-font
+                                hover:after:w-[50%]">Frequently Asked Questions</a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="relative inline-block group">
                     <a href="{{route('services')}}" class="relative text-[16px] lg:text-[17px] py-[35px]

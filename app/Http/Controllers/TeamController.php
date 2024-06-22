@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\Status;
 use App\Models\Team;
 use Illuminate\Http\Request;
 
 class TeamController extends Controller {
     
     function index(){
-        return view();
+        $teams = Team::whereStatus(Status::ACTIVE)->paginate();
+        return view('teams.index', compact('teams'));
     }
 
     function show(Team $team){
-        return view();
+        return view('teams.show', compact('team'));
     }
 
 }

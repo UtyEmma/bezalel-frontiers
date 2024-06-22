@@ -27,7 +27,7 @@ Route::prefix('services')->group(function(){
 
 Route::prefix('teams')->group(function(){
     Route::get('', [TeamController::class, 'index'])->name('teams');
-    Route::prefix('{team:slug}')->group(function(){
+    Route::prefix('{team}')->group(function(){
         Route::get('', [TeamController::class, 'show'])->name('teams.single');
     });
 });
