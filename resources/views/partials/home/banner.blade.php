@@ -9,7 +9,7 @@
                         <!-- <div class="gradient-overlay"></div> -->
                         <div class="wraper">
                             <div class="relative h-[900px] lg:h-[600px]  md:h-[600px] sm:h-[500px]">
-                                <div class="lg:w-4/5 md:w-full  absolute top-1/2 left-0 transform  -translate-y-1/2">
+                                <div class="lg:w-4/6 md:w-full  absolute top-1/2 left-0 transform  -translate-y-1/2">
 
                                     <div data-swiper-parallax="200" class="wpo-hero-title-top">
                                         <span class="text-[19px] col:text-[16px] text-white font-base-font uppercase mb-[30px] font-normal tracking-[2px]">{{$slider->title}}</span>

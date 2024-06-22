@@ -7,6 +7,7 @@ use App\Filament\Resources\SliderResource\RelationManagers;
 use App\Forms\Components\SelectRoute;
 use App\Forms\Components\SelectStatus;
 use App\Models\Slider;
+use App\Tables\Columns\StatusColumn;
 use Filament\Forms;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Form;
@@ -58,16 +59,10 @@ class SliderResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('heading')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('action')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('link')
-                    ->searchable(),
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('image'),
-                Tables\Columns\TextColumn::make('status')
+                StatusColumn::make('status')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -84,6 +79,7 @@ class SliderResource extends Resource
             ->actions([
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
