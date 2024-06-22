@@ -3,6 +3,7 @@
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'index'])->name('home');
@@ -21,5 +22,12 @@ Route::prefix('services')->group(function(){
     Route::get('', [ServiceController::class, 'index'])->name('services');
     Route::prefix('{service:slug}')->group(function(){
         Route::get('', [ServiceController::class, 'show'])->name('services.details');
+    });
+});
+
+Route::prefix('teams')->group(function(){
+    Route::get('', [TeamController::class, 'index'])->name('teams');
+    Route::prefix('{team:slug}')->group(function(){
+        Route::get('', [TeamController::class, 'show'])->name('teams.single');
     });
 });

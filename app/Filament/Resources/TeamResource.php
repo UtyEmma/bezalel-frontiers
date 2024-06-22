@@ -33,25 +33,30 @@ class TeamResource extends Resource
                     ->required()
                     ->maxLength(255),
                 SpatieMediaLibraryFileUpload::make('image')
+                    ->collection('teams')
                     ->image()
                     ->required(),
                 Forms\Components\RichEditor::make('bio')
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('instagram')
                     ->required()
+                    ->url()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('facebook')
                     ->required()
+                    ->url()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('linkedin')
                     ->required()
+                    ->url()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('twitter')
                     ->required()
+                    ->url()
                     ->maxLength(255),
                 SelectStatus::make('status')
-                    ->required()
-                    ->maxLength(255),
+                    ->native(false)
+                    ->required(),
             ]);
     }
 
@@ -62,15 +67,6 @@ class TeamResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('role')
-                    ->searchable(),
-                Tables\Columns\ImageColumn::make('image'),
-                Tables\Columns\TextColumn::make('instagram')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('facebook')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('linkedin')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('twitter')
                     ->searchable(),
                 StatusColumn::make('status')
                     ->searchable(),
@@ -89,6 +85,7 @@ class TeamResource extends Resource
             ->actions([
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make()
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

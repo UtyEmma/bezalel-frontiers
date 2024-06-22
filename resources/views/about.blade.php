@@ -1,22 +1,16 @@
 <x-guest-layout title="About Us">
-    <!-- start page-title -->
     <section class="bg-[url(../images/page-title.jpg)] bg-center bg-cover bg-no-repeat w-full h-[480px] text-center relative z-[1] flex justify-center flex-col md:h-[400px] before:w-full before:h-full before:absolute before:left-0 before:top-0 before:bg-[#14212b] before:opacity-[0.5] before:-[-1]">
         <div class="overflow-hidden relative w-full h-full">
             <div class="wraper">
                 <div class="flex items-center justify-center h-[480px] md:h-[400px]">
                     <div class="col-span-12">
-                        <h2
-                            class="text-[60px] text-white mb-[40px] sm:mb-[25px] font-bold capitalize md:text-[50px] mt-[40px] md:mt-[40px] col:mt-[80px] sm:text-[40px]">
-                            About Us</h2>
+                        <h2 class="text-[60px] text-white mb-[40px] sm:mb-[25px] font-bold capitalize md:text-[50px] mt-[40px] md:mt-[40px] col:mt-[80px] sm:text-[40px]">About Us</h2>
                         <ol class="flex justify-center">
                             <li class="text-[16px] text-white mr-[5px] sm:text-[14px]">
-                                <a href="index.html"
-                                    class="text-white transition-all duration-300 hover:text-[#e33200]">Home</a>
+                                <a href="{{route('home')}}" class="text-white transition-all duration-300 hover:text-[#e33200]">Home</a>
                             </li>
-                            <li class="relative text-[16px] text-white sm:text-[14px] pl-[20px] ml-[6px]
-                                before:mr-[5px] before:w-[8px] before:h-[4px] before:bg-white before:absolute
-                                before:left-0 before:top-1/2 before:-translate-y-1/2 before:rounded-[2px]">
-                                About</li>
+
+                            <li class="relative text-[16px] text-white sm:text-[14px] pl-[20px] ml-[6px] before:mr-[5px] before:w-[8px] before:h-[4px] before:bg-white before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:rounded-[2px]">About</li>
                         </ol>
                     </div>
                 </div>
@@ -34,7 +28,6 @@
         </div>
     </section>
 
-    <!-- start mission-vission-section -->
     <section class="section-wrap">
         <div class="wraper">
             <div class="grid grid-cols-12 gap-4">
@@ -82,8 +75,21 @@
                 </div>
 
                 <div class="col-span-6 md:col-span-12">
-                    <div class="text-center m-[0px_auto]">
-                        <img src="assets/images/about/ab2.png" alt="" class="text-center m-[0px_auto]">
+                    <div class="relative z-[1] text-center max-w-[570px] sm:w-full rounded-[6px]
+                     before:absolute before:left-0 before:top-0 before:w-full before:h-full
+                     before:bg-[rgba(20,33,43,.25)] before:rounded-[6px] ">
+                        <img class="w-full rounded-[6px]" src="assets/images/about/3.jpg" alt="">
+                        <div class="absolute left-[-70px] bottom-[100px] z-[1]
+                             animate-[bounceTop_3s_linear_infinite] col:left-0">
+                            <img src="assets/images/ab-shape-1.png" alt="">
+                        </div>
+                        <div class="absolute right-[35px] top-[35px] animate-[bounceTop_3s_linear_infinite]">
+                            <img src="assets/images/ab-shape-2.png" alt="">
+                        </div>
+                        <div class="absolute right-[50px] bottom-[50px] rounded-[50%] border-[5px]
+                            animate-[spineer_2s_infinite]">
+                            <img src="assets/images/about/4.jpg" alt="" class="rounded-[50%] col:max-w-[100px]">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -165,211 +171,79 @@
     </section>
 
     <!-- start team -->
-    <section
-        class="pt-[120px] pb-[90px] md:pt-[90px] md:pb-[60px] sm:pt-[80px] sm:pb-[50px] bg-[#f5f5f5] overflow-hidden relative">
-        <div class="wraper">
-            <div class="mb-[75px] sm:mb-[40px] text-center">
-                <span class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17] font-base-font">TEAM
-                    MEMBERS</span>
-                <h2 class="text-[55px] md:text-[35px] sm:text-[32px] col:text-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px]
-                mt-[10px] relative capitalize font-heading-font font-bold
-                text-[#14212b]">We Have Skilled People</h2>
-            </div>
-            <div class="relative z-[1]">
-                <div class="grid grid-cols-12 gap-x-3">
-                    <div class="col-span-4 md:col-span-6 col:col-span-12">
-                        <div class="group text-center p-[30px] border-[1px] border-transparent relative rounded-[5px]
-                        transition-all max-w-[100%] duration-300
-                            mx-auto mb-[30px] hover:border-[rgba(255,74,23,0.8)]">
-                            <div
-                                class="overflow-hidden rounded-[5px] border-[1px] border-[#fff] relative text-center">
-                                <img class="w-full rounded-[5px] scale-[1] transition-all duration-300 group-hover:scale-[1.2]"
-                                    src="assets/images/team/1.jpg" alt="">
-                                <div class="absolute left-0 top-0 w-full h-full flex justify-center
-                                flex-col rounded-[5px] transition-all duration-300  pt-[15px] translate-y-[100%]
-                                    bg-[rgba(255,74,23,0.8)] group-hover:translate-y-[0]">
-                                    <span
-                                        class="uppercase text-[16px] font-base-font font-bold tracking-[3px] text-[#14212b] ">FOUNDER</span>
-                                    <h2 class=" text-[32px] font-heading-font font-semibold mt-[10px] text-white
-                                        lg:text-[25px]">Harry
-                                        Abraham</h2>
-                                    <a href="team-single.html"
-                                        class="inline-block w-[50px] h-[50px] leading-[50px]
-                                        border-[1px] border-[#fff] mt-[20px] rounded-[5px] relative overflow-hidden
-                                        after:absolute after:left-0 after:top-0 after:w-full after:h-full
-                                        after:bg-[rgba(255,255,255,0.5)] after:-translate-x-full mx-auto
-                                        hover:after:translate-x-full after:transition-all after:duration-300 after:ease-in-out">
-                                        <i class="ti-plus text-white"></i>
-                                    </a>
+    @if ($teams->count() > 0)
+        <section class="pt-[120px] pb-[90px] md:pt-[90px] md:pb-[60px] sm:pt-[80px] sm:pb-[50px] bg-[#f5f5f5] overflow-hidden relative">
+            <div class="wraper">
+                <div class="mb-[75px] sm:mb-[40px] text-center">
+                    <span class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17] font-base-font">TEAM
+                        MEMBERS</span>
+                    <h2 class="text-[55px] md:text-[35px] sm:text-[32px] col:text-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px]
+                    mt-[10px] relative capitalize font-heading-font font-bold
+                    text-[#14212b]">We Have Skilled People</h2>
+                </div>
+                <div class="relative z-[1]">
+                    <div class="grid grid-cols-12 gap-x-3">
+                        @forelse ($teams as $team)
+                            <div class="col-span-4 md:col-span-6 col:col-span-12">
+                                <div class="group text-center p-[30px] border-[1px] border-transparent relative rounded-[5px] transition-all max-w-[100%] duration-300 mx-auto mb-[30px] hover:border-[rgba(255,74,23,0.8)]">
+                                    <div class="overflow-hidden rounded-[5px] border-[1px] border-[#fff] relative text-center">
+                                        <img class="w-full rounded-[5px] scale-[1] transition-all duration-300 h-96 object-cover group-hover:scale-[1.2]" src="{{$team->image}}" alt="{{$team->name}}">
+                                        <div class="absolute left-0 top-0 w-full h-full flex justify-center
+                                        flex-col rounded-[5px] transition-all duration-300  pt-[15px] translate-y-[100%]
+                                            bg-[rgba(255,74,23,0.8)] group-hover:translate-y-[0]">
+                                            <span class="uppercase text-[16px] font-base-font font-bold tracking-[3px] text-[#14212b] ">{{$team->role}}</span>
+                                            <h2 class=" text-[32px] font-heading-font font-semibold mt-[10px] text-white lg:text-[25px]">{{$team->name}}</h2>
+                                            <a href="{{route('teams.single', ['team' => $team->id])}}" class="inline-block w-[50px] h-[50px] leading-[50px] border-[1px] border-[#fff] mt-[20px] rounded-[5px] relative overflow-hidden after:absolute after:left-0 after:top-0 after:w-full after:h-full after:bg-[rgba(255,255,255,0.5)] after:-translate-x-full mx-auto hover:after:translate-x-full after:transition-all after:duration-300 after:ease-in-out">
+                                                <i class="ti-plus text-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-span-4 md:col-span-6 col:col-span-12">
-                        <div class="group text-center p-[30px] border-[1px] border-transparent relative rounded-[5px]
-                        transition-all max-w-[100%] duration-300
-                            mx-auto mb-[30px] hover:border-[rgba(255,74,23,0.8)]">
-                            <div
-                                class="overflow-hidden rounded-[5px] border-[1px] border-[#fff] relative text-center">
-                                <img class="w-full rounded-[5px] scale-[1] transition-all duration-300 group-hover:scale-[1.2]"
-                                    src="assets/images/team/2.jpg" alt="">
-                                <div class="absolute left-0 top-0 w-full h-full flex justify-center
-                                flex-col rounded-[5px] transition-all duration-200  pt-[15px] translate-y-[100%]
-                                    bg-[rgba(255,74,23,0.8)] group-hover:translate-y-[0]">
-                                    <span class="uppercase text-[16px] font-base-font font-bold tracking-[3px]
-                                        text-[#14212b]">ADMIN</span>
-                                    <h2 class=" text-[32px] font-heading-font font-semibold mt-[10px] text-white
-                                        lg:text-[25px]">Robert Johnson</h2>
-                                    <a href="team-single.html"
-                                        class="inline-block w-[50px] h-[50px] leading-[50px]
-                                        border-[1px] border-[#fff] mt-[20px] rounded-[5px] relative overflow-hidden
-                                        after:absolute after:left-0 after:top-0 after:w-full after:h-full
-                                        after:bg-[rgba(255,255,255,0.5)] after:-translate-x-full mx-auto
-                                        hover:after:translate-x-full after:transition-all after:duration-200 after:ease-in-out">
-                                        <i class="ti-plus text-white"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-4 md:col-span-6 col:col-span-12">
-                        <div class="group text-center p-[30px] border-[1px] border-transparent relative rounded-[5px]
-                        transition-all max-w-[100%] duration-300
-                            mx-auto mb-[30px] hover:border-[rgba(255,74,23,0.8)]">
-                            <div
-                                class="overflow-hidden rounded-[5px] border-[1px] border-[#fff] relative text-center">
-                                <img class="w-full rounded-[5px] scale-[1] transition-all duration-300 group-hover:scale-[1.2]"
-                                    src="assets/images/team/3.jpg" alt="">
-                                <div class="absolute left-0 top-0 w-full h-full flex justify-center
-                                flex-col rounded-[5px] transition-all duration-300  pt-[15px] translate-y-[100%]
-                                    bg-[rgba(255,74,23,0.8)] group-hover:translate-y-[0]">
-                                    <span class="uppercase text-[16px] font-base-font font-bold tracking-[3px]
-                                        text-[#14212b]">MERKETER</span>
-                                    <h2 class=" text-[32px] font-heading-font font-semibold mt-[10px] text-white
-                                        lg:text-[25px]">Robert Johnson</h2>
-                                    <a href="team-single.html"
-                                        class="inline-block w-[50px] h-[50px] leading-[50px]
-                                        border-[1px] border-[#fff] mt-[20px] rounded-[5px] relative overflow-hidden
-                                        after:absolute after:left-0 after:top-0 after:w-full after:h-full
-                                        after:bg-[rgba(255,255,255,0.5)] after:-translate-x-full mx-auto
-                                        hover:after:translate-x-full after:transition-all after:duration-300 after:ease-in-out">
-                                        <i class="ti-plus text-white"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        @empty
+                        @endforelse
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="absolute right-0 top-0 md:hidden">
-            <img src="assets/images/team/shape5.png" alt="">
-        </div>
-        <div class="absolute left-0 bottom-0 md:hidden">
-            <img src="assets/images/team/shape4.png" alt="">
-        </div>
-    </section>
+            <div class="absolute right-0 top-0 md:hidden">
+                <img src="assets/images/team/shape5.png" alt="">
+            </div>
+            <div class="absolute left-0 bottom-0 md:hidden">
+                <img src="assets/images/team/shape4.png" alt="">
+            </div>
+        </section>
+    @endif
 
     <!-- start testimonial -->
-    <section class="pt-[120px] md:pt-[90px] sm:pt-[80px]">
-        <div class="wraper">
-            <div class="mb-[75px] sm:mb-[40px] text-center">
-                <span class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17]
-                font-base-font">CLIENT TESTIMONIAL</span>
-                <h2 class="text-[55px] md:text-[35px] sm:text-[32px] col:text-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px]
-                mt-[10px] relative capitalize font-heading-font font-bold
-                text-[#14212b]">Best Word Our Clients</h2>
-            </div>
-            <div class="wpo-testimonial-slide-s3 owl-carousel mb-[80px] pb-[50px]">
-                <div class="p-[40px_25px] bg-white transition-all duration-300
-                    shadow-[0px_0px_20px_0px_rgba(20,33,43,0.1)]">
-                    <div class="relative z-[1]">
-                        <h2
-                            class="text-[23px] mb-[20px] text-[#0a272c] font-heading-font font-semibold leading-[34px]">
-                            Love the design, and it's
-                            very flexible to
-                            edit and design.</h2>
-                        <p class="text-[#687693] text-[16px] ">Lorem Ipsum is simply dummy text printing and
-                            typesetting industry
-                            has text ever since
-                            the 1500s, when an unknown printer took a galley of type and scrambled make
-                            survived not
-                            only five centuries.</p>
-                        <div class="flex items-center justify-start mt-[20px]">
-                            <div class="w-[50px] h-[50px] rounded-[50%]">
-                                <img src="assets/images/testimonial/img-1.jpg" alt=""
-                                    class="rounded-[50%] w-[50px] h-[50px]">
-                            </div>
-                            <div class="ml-[20px]">
-
-                                <h3 class="text-[20px] text-[#0a272c] font-heading-font font-semibold">Cathi
-                                    Falcon
-                                </h3>
-                                <span class="text-[#ff4a17]">Founder</span>
-                            </div>
-                        </div>
-                    </div>
+    @if ($testimonials->count() > 0)
+        <section class="pt-[120px] md:pt-[90px] sm:pt-[80px]">
+            <div class="wraper">
+                <div class="mb-[75px] sm:mb-[40px] text-center">
+                    <span class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17]
+                    font-base-font">CLIENT TESTIMONIAL</span>
+                    <h2 class="text-[55px] md:text-[35px] sm:text-[32px] col:text-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px]
+                    mt-[10px] relative capitalize font-heading-font font-bold
+                    text-[#14212b]">Best Word Our Clients</h2>
                 </div>
-                <div class="p-[40px_25px] bg-white transition-all duration-300
-                    shadow-[0px_0px_20px_0px_rgba(20,33,43,0.1)]">
-                    <div class="relative z-[1]">
-                        <h2
-                            class="text-[23px] mb-[20px] text-[#0a272c] font-heading-font font-semibold leading-[34px]">
-                            Love the design, and it's
-                            very flexible to
-                            edit and design.</h2>
-                        <p class="text-[#687693] text-[16px] ">Lorem Ipsum is simply dummy text printing and
-                            typesetting industry
-                            has text ever since
-                            the 1500s, when an unknown printer took a galley of type and scrambled make
-                            survived not
-                            only five centuries.</p>
-                        <div class="flex items-center justify-start mt-[20px]">
-                            <div class="w-[50px] h-[50px] rounded-[50%]">
-                                <img src="assets/images/testimonial/img-2.jpg" alt=""
-                                    class="rounded-[50%] w-[50px] h-[50px]">
-                            </div>
-                            <div class="ml-[20px]">
-
-                                <h3 class="text-[20px] text-[#0a272c] font-heading-font font-semibold">Harry
-                                    Abraham
-                                </h3>
-                                <span class="text-[#ff4a17]">SCG First Company</span>
+                <div class="wpo-testimonial-slide-s3 owl-carousel mb-[80px] pb-[50px]">
+                    @forelse ($testimonials as $testimonial)
+                        <div class="p-[40px_25px] bg-white transition-all duration-300 shadow-[0px_0px_20px_0px_rgba(20,33,43,0.1)]">
+                            <div class="relative z-[1]">
+                                {{-- <h2 class="text-[23px] mb-[20px] text-[#0a272c] font-heading-font font-semibold leading-[34px]">Love the design, and it's very flexible to edit and design.</h2> --}}
+                                <p class="text-[#687693] text-[16px] ">{{$testimonial->message}}</p>
+                                <div class="flex items-center justify-start mt-[20px]">
+                                    <div>
+                                        <h3 class="text-[20px] text-[#0a272c] font-heading-font font-semibold">{{$testimonial->name}}</h3>
+                                        <span class="text-[#ff4a17]">{{$testimonial->role}} - {{$testimonial->company}}</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="p-[40px_25px] bg-white transition-all duration-300
-                    shadow-[0px_0px_20px_0px_rgba(20,33,43,0.1)]">
-                    <div class="relative z-[1]">
-                        <h2
-                            class="text-[23px] mb-[20px] text-[#0a272c] font-heading-font font-semibold leading-[34px]">
-                            Love the design, and it's
-                            very flexible to
-                            edit and design.</h2>
-                        <p class="text-[#687693] text-[16px] ">Lorem Ipsum is simply dummy text printing and
-                            typesetting industry
-                            has text ever since
-                            the 1500s, when an unknown printer took a galley of type and scrambled make
-                            survived not
-                            only five centuries.</p>
-                        <div class="flex items-center justify-start mt-[20px]">
-                            <div class="w-[50px] h-[50px] rounded-[50%]">
-                                <img src="assets/images/testimonial/img-3.jpg" alt=""
-                                    class="rounded-[50%] w-[50px] h-[50px]">
-                            </div>
-                            <div class="ml-[20px]">
-
-                                <h3 class="text-[20px] text-[#0a272c] font-heading-font font-semibold">
-                                    Benjir Walton
-                                </h3>
-                                <span class="text-[#ff4a17]">Merketer</span>
-                            </div>
-                        </div>
-                    </div>
+                    @empty
+                    @endforelse
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    @endif
 
 </x-guest-layout>
