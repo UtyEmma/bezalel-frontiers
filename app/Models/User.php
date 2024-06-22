@@ -56,6 +56,10 @@ class User extends Authenticatable implements FilamentUser, HasName{
                 ->orWhere('role', Roles::EDITOR);
     }
 
+    function scopeIsAdmin(Builder $query) {
+        $query->where('role', Roles::ADMIN)->orWhere('role', Roles::SUPERADMIN);
+    }
+
     public function canAccessPanel(Panel $panel): bool {
         return in_array($this->role, [Roles::ADMIN, Roles::SUPERADMIN, Roles::EDITOR, Roles::AUTHOR]);
     }

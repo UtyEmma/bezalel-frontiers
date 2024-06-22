@@ -4,7 +4,7 @@
             <div class="grid grid-cols-12 gap-4">
                 <div class="col-span-3 lg:col-span-3 md:col-span-6 sm:col-span-6 col:col-span-12 md:mb-[30px]">
                     <div class="max-w-[180px] mb-[30px]">
-                        <img src="assets/images/logo.png" alt="blog">
+                        <img src="assets/images/logo.png" class="brightness-0 invert-[1]" alt="{{$settings->company_name}}">
                     </div>
                     <p class="mb-[10px] text-[#cbcbcb] text-[16px] leading-[30px]">{{$settings->site_description}}</p>
                     <ul class="pt-[10px]">
@@ -162,26 +162,24 @@
             <div class="grid grid-cols-12 gap-4">
                 <div class="col-span-6 md:col-span-12">
                     <p class="text-[15px] text-white text-left md:text-center">
-                        Copyright &copy; {{now()->format('Y')}} // All Right Reserved by
+                        Copyright &copy; {{now()->format('Y')}} - All Right Reserved by
                         <a href="{{route('home')}}" class="text-[#ff4a17]">{{$settings->company_name}}</a>
                     </p>
                 </div>
                 <div class="col-span-6 md:col-span-12">
                     <ul class="flex justify-end md:justify-center flex-wrap">
                         <li class="pl-[20px] ml-[10px] relative col:pl-[5px] col:ml-[5px]">
-                            <a href="about.html" class="text-white hover:text-[#ff4a17]">Vision & Values</a>
+                            <a href="{{route('about')}}" class="text-white hover:text-[#ff4a17]">About Us</a>
                         </li>
                         <li
                             class="pl-[20px] ml-[10px] relative col:pl-[5px] col:ml-[5px] after:absolute after:left-0 after:top-0 after:content-['//'] col:after:hidden">
-                            <a href="blog.html" class="text-white hover:text-[#ff4a17]">History</a>
+                            <a href="{{route('faqs')}}" class="text-white hover:text-[#ff4a17]">FAQs</a>
                         </li>
-                        <li
-                            class="pl-[20px] ml-[10px] relative col:pl-[5px] col:ml-[5px] after:absolute after:left-0 after:top-0 after:content-['//'] col:after:hidden">
-                            <a href="service.html" class="text-white hover:text-[#ff4a17]">Awards</a>
+                        <li class="pl-[20px] ml-[10px] relative col:pl-[5px] col:ml-[5px] after:absolute after:left-0 after:top-0 after:content-['//'] col:after:hidden">
+                            <a href="{{route('posts')}}" class="text-white hover:text-[#ff4a17]">Blog</a>
                         </li>
-                        <li
-                            class="pl-[20px] ml-[10px] relative col:pl-[5px] col:ml-[5px] after:absolute after:left-0 after:top-0 after:content-['//'] col:after:hidden">
-                            <a href="project-single.html" class="text-white hover:text-[#ff4a17]">Leadership</a>
+                        <li class="pl-[20px] ml-[10px] relative col:pl-[5px] col:ml-[5px] after:absolute after:left-0 after:top-0 after:content-['//'] col:after:hidden">
+                            <a href="{{route('contact')}}" class="text-white hover:text-[#ff4a17]">Contact Us</a>
                         </li>
                     </ul>
                 </div>
