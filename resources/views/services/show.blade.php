@@ -1,19 +1,15 @@
-<x-guest-layout>
+<x-guest-layout title="{{$service->name}}">
     <section class="bg-[url('{{$service->image}}')] bg-center bg-cover bg-no-repeat w-full h-[480px] text-center relative z-[1] flex justify-center flex-col md:h-[400px] before:w-full before:h-full before:absolute before:left-0 before:top-0 before:bg-[#14212b] before:opacity-[0.5] before:-[-1]">
         <div class="overflow-hidden relative w-full h-full">
             <div class="wraper">
                 <div class="flex items-center justify-center h-[480px] md:h-[400px]">
                     <div class="col-span-12">
-                        <h2 class="text-[60px] text-white mb-[40px] sm:mb-[25px] font-bold capitalize md:text-[50px] mt-[145px] md:mt-[140px] col:mt-[180px] sm:text-[40px]">Service Single</h2>
+                        <h2 class="text-[60px] text-white mb-[40px] sm:mb-[25px] font-bold capitalize md:text-[50px] mt-[145px] md:mt-[140px] col:mt-[180px] sm:text-[40px]">{{$service->name}}</h2>
                         <ol class="flex justify-center">
                             <li class="text-[16px] text-white mr-[5px] sm:text-[14px]">
-                                <a href="{{route('home')}}"
-                                    class="text-white transition-all duration-300 hover:text-[#e33200]">Home</a>
+                                <a href="{{route('home')}}" class="text-white transition-all duration-300 hover:text-[#e33200]">Home</a>
                             </li>
-                            <li class="relative text-[16px] text-white sm:text-[14px] pl-[20px] ml-[6px]
-                                before:mr-[5px] before:w-[8px] before:h-[4px] before:bg-white before:absolute
-                                before:left-0 before:top-1/2 before:-translate-y-1/2 before:rounded-[2px]">
-                                Service</li>
+                            <li class="relative text-[16px] text-white sm:text-[14px] pl-[20px] ml-[6px] before:mr-[5px] before:w-[8px] before:h-[4px] before:bg-white before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:rounded-[2px]">Service</li>
                         </ol>
                     </div>
                 </div>

@@ -30,6 +30,7 @@ class PostController extends Controller {
                     ->latest()
                     ->limit(5)
                     ->get();
+                    
         return view('posts.single', compact('post', 'posts'));
     }
 

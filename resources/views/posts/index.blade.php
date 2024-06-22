@@ -1,21 +1,17 @@
-<x-guest-layout>
-    <section class="bg-[url(../images/page-title.jpg)] bg-center bg-cover bg-no-repeat w-full h-[480px] text-center relative z-[1] flex justify-center flex-col md:h-[400px] before:w-full before:h-full before:absolute before:left-0 before:top-0 before:bg-[#14212b] before:opacity-[0.5] before:-[-1]">
+<x-guest-layout title="Blog">
+    <section class="bg-[url(../images/page-title.jpg)] bg-center bg-cover bg-no-repeat w-full h-[300px] text-center relative z-[1] flex justify-center flex-col md:h-[400px] before:w-full before:h-full before:absolute before:left-0 before:top-0 before:bg-[#14212b] before:opacity-[0.5] before:-[-1]">
         <div class="overflow-hidden relative w-full h-full">
             <div class="wraper">
-                <div class="flex items-center justify-center h-[480px] md:h-[400px]">
+                <div class="flex items-center justify-center h-[300px] md:h-[400px]">
                     <div class="col-span-12">
                         <h2
                             class="text-[60px] text-white mb-[40px] sm:mb-[25px] font-bold capitalize md:text-[50px] mt-[145px] md:mt-[140px] col:mt-[180px] sm:text-[40px]">
                             Latest News</h2>
                         <ol class="flex justify-center">
                             <li class="text-[16px] text-white mr-[5px] sm:text-[14px]">
-                                <a href="index.html"
-                                    class="text-white transition-all duration-300 hover:text-[#e33200]">Home</a>
+                                <a href="{{route('home')}}" class="text-white transition-all duration-300 hover:text-[#e33200]">Home</a>
                             </li>
-                            <li class="relative text-[16px] text-white sm:text-[14px] pl-[20px] ml-[6px]
-                                before:mr-[5px] before:w-[8px] before:h-[4px] before:bg-white before:absolute
-                                before:left-0 before:top-1/2 before:-translate-y-1/2 before:rounded-[2px]">
-                                Blog</li>
+                            <li class="relative text-[16px] text-white sm:text-[14px] pl-[20px] ml-[6px] before:mr-[5px] before:w-[8px] before:h-[4px] before:bg-white before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:rounded-[2px]">Blog</li>
                         </ol>
                     </div>
                 </div>
@@ -41,8 +37,8 @@
                     @forelse ($posts as $post)
                         <div>
                             <div class="mb-[70px]">
-                                <img class="w-full h-[500px] object-cover" src="{{$post->image}}" alt>
-                                <div class="overflow-hidden my-[35px]">
+                                <img class="w-full h-[200px] md:!h-[400px] object-cover" src="{{$post->image}}" alt>
+                                <div class="overflow-hidden my-[20px]">
                                     <ul>
                                         <li
                                             class="text-[14px] font-medium uppercase float-left col:float-none col:block col:ml-[0px] col:mb-[5px] text-[#666]">

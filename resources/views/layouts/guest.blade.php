@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ $title }} {{$title ? '-' : ''}} {{ $settings->company_name }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -34,6 +34,8 @@
         <link href="/assets/css/odometer-theme-default.css" rel="stylesheet">
         <link href="/assets/css/global.css" rel="stylesheet">
         <link href="/assets/css/style.css" rel="stylesheet">
+
+        {!! $settings->header_scripts !!}
 
     </head>
     <body class="font-sans antialiased">
@@ -69,5 +71,7 @@
         <script src="/assets/js/moving-animation.js"></script>
         <!-- Custom script for this template -->
         <script src="/assets/js/script.js"></script>
+
+        {!! $settings->footer_scripts !!}
     </body>
 </html>

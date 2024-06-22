@@ -1,6 +1,6 @@
 <header>
     <div class="px-[130px] xl:px-[30px] lg:px-[10px] col:px-0 z-[11] bg-white border-b-[1px] border-b-[#e9e9e9]">
-        <div class="flex justify-between flex-wrap">
+        <div class="flex justify-center md:!justify-between flex-wrap pb-3">
             <div>
                 <ul class="h-full">
                     @if ($settings->contact_phone)
@@ -148,7 +148,7 @@
                        before:absolute before:left-0 before:top-0 before:w-full before:h-[4px]
                        before:bg-[#ff4a17] before:content
                        before:opacity-1 before:transition-all before:rounded-[3px]
-                       hover:before:opacity-100 {{request()->routeIs('blog*') ? 'before:visible text-[#ff4a17]' : 'before:invisible hover:before:visible text-[#14212b]'}}">Blog</a>
+                       hover:before:opacity-100 {{request()->routeIs('posts*') ? 'before:visible text-[#ff4a17]' : 'before:invisible hover:before:visible text-[#14212b]'}}">Blog</a>
                 </li>
                 <li class="relative inline-block">
                     <a href="{{route('contact')}}" class="relative text-[16px] lg:text-[17px] py-[35px]

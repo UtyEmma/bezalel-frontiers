@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-guest-layout title="Contact Us">
     <section
             class="bg-[url(../images/page-title.jpg)] bg-center bg-cover bg-no-repeat w-full h-[480px] text-center relative z-[1] flex justify-center flex-col md:h-[400px] before:w-full before:h-full before:absolute before:left-0 before:top-0 before:bg-[#14212b] before:opacity-[0.5] before:-[-1]">
             <div class="overflow-hidden relative w-full h-full">
@@ -10,7 +10,7 @@
                                 Contact Us</h2>
                             <ol class="flex justify-center">
                                 <li class="text-[16px] text-white mr-[5px] sm:text-[14px]">
-                                    <a href="{{route('contact')}}" class="text-white transition-all duration-300 hover:text-[#e33200]">Home</a>
+                                    <a href="{{route('home')}}" class="text-white transition-all duration-300 hover:text-[#e33200]">Home</a>
                                 </li>
                                 <li class="relative text-[16px] text-white sm:text-[14px] pl-[20px] ml-[6px] before:mr-[5px] before:w-[8px] before:h-[4px] before:bg-white before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:rounded-[2px]">Contact</li>
                             </ol>
@@ -87,6 +87,7 @@
                                 @endif
                             </div>
                         </div>
+
                         <div class="max-w-[440px] mx-auto text-center mb-[50px]">
                             <h2 class="text-[35px] col:text-[25px] text-[#0a272c] font-heading-font font-bold
                                 mb-[20px]">
@@ -96,7 +97,7 @@
                                 reader will be distracted
                                 content of a page when looking.</p>
                         </div>
-                        <div class="p-[50px] bg-white mb-[-125px] relative z-10 shadow-[0px_1px_15px_0px_rgba(62,65,159,0.1)] sm:p-7 sm:pt-[50px]">
+                        <div class="p-[50px] bg-white relative z-10 shadow-[0px_1px_15px_0px_rgba(62,65,159,0.1)] sm:p-7 sm:py-[50px] mb-20">
                             <livewire:contact-form />
                         </div>
                     </div>
@@ -106,12 +107,12 @@
         </section>
 
         <!--  start contact-map -->
-        <section class="wpo-contact-map-section">
+        {{-- <section class="wpo-contact-map-section">
             <h2 class="hidden">Contact map</h2>
             <div class="h-[550px]">
                 <iframe class="w-full h-full border-0 outline-0 grayscale"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.9147703055!2d-74.11976314309273!3d40.69740344223377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbd!4v1547528325671"
                     allowfullscreen></iframe>
             </div>
-        </section>
+        </section> --}}
 </x-guest-layout>

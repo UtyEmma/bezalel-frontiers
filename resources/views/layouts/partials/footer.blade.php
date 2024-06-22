@@ -2,9 +2,11 @@
     <div class="py-[80px] md:pb-[60px] relative overflow-hidden">
         <div class="wraper">
             <div class="grid grid-cols-12 gap-4">
-                <div class="col-span-3 lg:col-span-3 md:col-span-6 sm:col-span-6 col:col-span-12 md:mb-[30px]">
+                <div class="col-span-4 lg:col-span-4 md:col-span-6 sm:col-span-6 col:col-span-12 md:mb-[30px]">
                     <div class="max-w-[180px] mb-[30px]">
-                        <img src="assets/images/logo.png" class="brightness-0 invert-[1]" alt="{{$settings->company_name}}">
+                        <a href="{{route('home')}}">
+                            <img src="assets/images/logo.png" class="brightness-0 invert-[1]" alt="{{$settings->company_name}}">
+                        </a>
                     </div>
                     <p class="mb-[10px] text-[#cbcbcb] text-[16px] leading-[30px]">{{$settings->site_description}}</p>
                     <ul class="pt-[10px]">
@@ -33,7 +35,7 @@
                         @endif
                     </ul>
                 </div>
-                <div class="col-span-3 lg:col-span-3 md:col-span-6 sm:col-span-6 col:col-span-12 md:mb-[30px]">
+                <div class="col-span-4 lg:col-span-4 md:col-span-6 sm:col-span-6 col:col-span-12 md:mb-[30px]">
                     <div class="pl-[50px] lg:pl-0 md:pl-0">
                         <div class="mb-[30px]">
                             <h3 class="text-[25px] text-white capitalize relative font-heading-font font-bold
@@ -79,7 +81,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-span-3 lg:col-span-3 md:col-span-6 sm:col-span-6 col:col-span-12 md:mb-[30px]">
+                {{-- <div class="col-span-3 lg:col-span-3 md:col-span-6 sm:col-span-6 col:col-span-12 md:mb-[30px]">
                     <div class="px-[20px] lg:px-0 ">
                         <div class="mb-[30px]">
                             <h3 class="text-[25px] text-white capitalize relative font-heading-font font-bold
@@ -113,25 +115,39 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                <div class="col-span-3 lg:col-span-3 md:col-span-6 sm:col-span-6 col:col-span-12 md:mb-[30px]">
+                </div> --}}
+                <div class="col-span-4 lg:col-span-4 md:col-span-6 sm:col-span-6 col:col-span-12 md:mb-[30px]">
                     <div class="mb-[30px]">
-                        <h3 class="text-[25px] text-white capitalize relative font-heading-font font-bold
-                             ">Newsletter</h3>
+                        <h3 class="text-[25px] text-white capitalize relative font-heading-font font-bold">Get in touch</h3>
                     </div>
-                    <p class="mb-[10px] text-white text-[16px] leading-[30px]">Many desktop publi’s shing
-                        packages web page editors now is use sites.</p>
-                    <form class="mt-[25px] relative">
-                        <input type="email" class="bg-[#28343e] h-[55px] text-white p-[6px_15px]
-                        border-[1px] border-[#28343e] w-full focus:outline-0 rounded-[5px] "
-                            placeholder="Email Address *" required="">
-                        <div class="absolute right-[5px] top-[-17px] translate-y-1/2">
-                            <button type="submit" class="bg-[#ff4a17] border-0 outline-0
-                             text-white w-[40px] h-[45px] leading-[45px] rounded-[5px] ">
-                                <i class="fi flaticon-send"></i>
-                            </button>
+                    
+                    <div class="space-y-3">
+                        <div class="text-[#cbcbcb] flex space-x-2 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                            </svg>
+                                
+                            <span>{{$settings->site_email}}</span>
                         </div>
-                    </form>
+    
+                        <div class="text-[#cbcbcb] flex space-x-2 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                            </svg>
+                              
+                                
+                            <span>{{$settings->contact_phone}}</span>
+                        </div>
+    
+                        <div class="text-[#cbcbcb] flex space-x-2 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                            </svg>
+                                
+                            <span class="leading-tight">{{$settings->contact_address}}</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

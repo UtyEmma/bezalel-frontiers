@@ -36,6 +36,7 @@ class ContactMessageResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\Select::make('service_id')
+                    ->label('Service')
                     ->options(Service::pluck('name', 'id'))
                     ->required(),
                 Forms\Components\Textarea::make('message')
@@ -54,7 +55,8 @@ class ContactMessageResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('phone')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('service_id')
+                Tables\Columns\TextColumn::make('service.name')
+                    ->label('Service')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('deleted_at')
                     ->dateTime()

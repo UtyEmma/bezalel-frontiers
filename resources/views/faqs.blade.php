@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-guest-layout title="Frequently Asked Questions">
     <section class="bg-[url(../images/page-title.jpg)] bg-center bg-cover bg-no-repeat w-full h-[480px] text-center relative z-[1] flex justify-center flex-col md:h-[400px] before:w-full before:h-full before:absolute before:left-0 before:top-0 before:bg-[#14212b] before:opacity-[0.5] before:-[-1]">
         <div class="overflow-hidden relative w-full h-full">
             <div class="wraper">

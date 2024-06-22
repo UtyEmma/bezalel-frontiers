@@ -8,6 +8,7 @@ use App\Models\Faq;
 use App\Models\Post;
 use App\Models\Service;
 use App\Models\Slider;
+use App\Models\Team;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
@@ -24,7 +25,9 @@ class PageController extends Controller {
     }
 
     function about(){
-        return view('about');
+        $team = Team::whereStatus(Status::ACTIVE)->get();
+        $testimonials = Testimonial::status(Status::ACTIVE)->latest()->get();
+        return view('about', compact('team', 'testimonials'));
     }
 
     function contact(){

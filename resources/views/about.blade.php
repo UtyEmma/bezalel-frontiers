@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-guest-layout title="About Us">
     <!-- start page-title -->
     <section class="bg-[url(../images/page-title.jpg)] bg-center bg-cover bg-no-repeat w-full h-[480px] text-center relative z-[1] flex justify-center flex-col md:h-[400px] before:w-full before:h-full before:absolute before:left-0 before:top-0 before:bg-[#14212b] before:opacity-[0.5] before:-[-1]">
         <div class="overflow-hidden relative w-full h-full">
@@ -42,18 +42,7 @@
                     <div class="p-[50px] bg-[#14212b] relative z-[1] rounded-[10px] overflow-hidden col:p-[20px]">
                         <div>
                             <h2 class="text-[#ff4a17] text-[34px] mb-[20px] font-semibold">Our Mission</h2>
-                            <p class="text-[#cbcbcb] text-[15px] mb-[20px]">Lorem Ipsum is simply dummy text of the
-                                printing and
-                                typesetting
-                                has been the industry's standard dummy text ever since the 1500 when
-                                unknown printer took a galley of type and scrambled it to make a type
-                                specimen book. It has survived not only five centuries, but also
-                                the leap into electronic typesetting.</p>
-                            <h5 class="text-white text-[18px] leading-[27px] font-semibold">Lorem Ipsum is simply
-                                dummy
-                                text of the printing
-                                has been the industry standard dummy text ever since
-                                unknown printer took galley.</h5>
+                            <h5 class="text-white text-[18px] leading-[27px] font-semibold">Lorem Ipsum is simply dummy text of the printing has been the industry standard dummy text ever since unknown printer took galley.</h5>
                         </div>
 
                         <div class="absolute left-[-70px] bottom-[-70px] w-[200px] h-[200px] bg-[#ff4a17] rounded-[50%]
@@ -65,18 +54,7 @@
                     <div class="p-[50px] bg-[#f5f5f5] relative z-[1] rounded-[10px] overflow-hidden col:p-[20px]">
                         <div class="wpo-vission-text">
                             <h2 class="text-[#ff4a17] text-[34px] mb-[20px] font-semibold">Our Vission</h2>
-                            <h5 class="text-[#14212b] text-[18px] leading-[27px] font-semibold mb-[20px]">Lorem
-                                Ipsum is
-                                simply
-                                dummy text of the printing
-                                has been the industry standard dummy text ever since
-                                unknown printer took galley.</h5>
-                            <p class="text-[#61616] text-[15px]">Lorem Ipsum is simply dummy text of the
-                                printing and typesetting
-                                has been the industry's standard dummy text ever since the 1500 when
-                                unknown printer took a galley of type and scrambled it to make a type
-                                specimen book. It has survived not only five centuries, but also
-                                the leap into electronic typesetting.</p>
+                            <h5 class="text-[#14212b] text-[18px] leading-[27px] font-semibold">Lorem Ipsum is simply dummy text of the printing has been the industry standard dummy text ever since unknown printer took galley.</h5>
                         </div>
                     </div>
                 </div>
@@ -90,31 +68,19 @@
             <div class="grid grid-cols-12 items-center justify-center">
                 <div class="col-span-6 md:col-span-12">
                     <div class="max-w-[500px] mr-[30px] md:mb-[70px] sm:mr-0">
-                        <h4 class="text-[21px] text-[#ff4a17] font-base-font font-semibold">Welcome To Consoel
-                        </h4>
-                        <h2
-                            class="text-[45px] text-[#0a272c] leading-[65px] font-heading-font font-bold mt-[30px] mb-[20px] xl:text-[40px] xl:leading-[50px] col:text-[25px] col:leading-[30px]">
-                            We are trusted
-                            consulting company.</h2>
-                        <p class="text-[#687693] text-[18px] mb-[25px]">Lorem Ipsum is simply dummy text of the
-                            printing and
-                            type setting’s
-                            the industrey's standard dummy text ever since the 1500 when printed
-                            galley of type and scrambled type specimen book.</p>
+                        <h4 class="text-[21px] text-[#ff4a17] font-base-font font-semibold">Welcome To Consoel</h4>
+                        <h2 class="text-[45px] text-[#0a272c] leading-[65px] font-heading-font font-bold mt-[30px] mb-[20px] xl:text-[40px] xl:leading-[50px] col:text-[25px] col:leading-[30px]">We are trusted consulting company.</h2>
+                        <p class="text-[#687693] text-[18px] mb-[25px]">Lorem Ipsum is simply dummy text of the printing and type setting’s the industrey's standard dummy text ever since the 1500 when printed galley of type and scrambled type specimen book.</p>
                         <div class="mb-[30px]">
                             <div class="flex items-center">
                                 <i class="fi flaticon-tax mr-[20px] text-[50px] text-[#ff4a17]"></i>
-                                <h5
-                                    class="text-[25px] xl:text-[22px] lg:text-[15px] lg:leading-[25px]  leading-[30px] text-[#14212b] font-semibold">
-                                    Perfect
-                                    solution of
-                                    business
-                                    and financial planning.</h5>
+                                <h5 class="text-[25px] xl:text-[22px] lg:text-[15px] lg:leading-[25px]  leading-[30px] text-[#14212b] font-semibold">Perfect solution of business and financial planning.</h5>
                             </div>
                         </div>
-                        <a class="theme-btn" href="service.html">Our Services</a>
+                        <a class="theme-btn" href="{{route('services')}}">Our Services</a>
                     </div>
                 </div>
+
                 <div class="col-span-6 md:col-span-12">
                     <div class="text-center m-[0px_auto]">
                         <img src="assets/images/about/ab2.png" alt="" class="text-center m-[0px_auto]">
@@ -122,6 +88,7 @@
                 </div>
             </div>
         </div>
+
         <div class="absolute z-[-1] right-[-150px] bottom-[-180px] w-[330px] h-[330px] bg-[#ff4a17] rounded-[40px] rotate-[20deg] sm:right-[-50px] sm:bottom-[-80px] sm:w-[200px] sm:h-[200px] col:right-[-50px] col:bottom-[-80px] col:w-[160px] col:h-[200px]
             before:absolute before:left-[-30px] before:top-[30px] before:w-full before:h-full
             before:border-[1px] before:border-[#14212b] before:rounded-[40px]">
@@ -405,59 +372,4 @@
         </div>
     </section>
 
-    <!-- start fun-fact -->
-    <section class="section-wrap text-center relative z-[1] overflow-hidden">
-        <div class="wraper">
-            <div class="grid grid-cols-12 gap-x-4">
-                <div class="col-span-3 md:col-span-6 col:col-span-12">
-                    <div
-                        class="md:mb-[50px] relative after:absolute after:right-0 after:top-[50%] after:w-[10px] after:h-[10px] after:rounded-[50%] after:bg-[#ff4a17] sm:after:hidden">
-                        <h3
-                            class="text-[65px] font-heading-font font-bold text-[#14212b] flex items-center justify-center lg:text-[50px] md:text-[40px]  sm:text-[35px]">
-                            <span class="odometer" data-count="8,567">00</span>
-                        </h3>
-                        <p
-                            class="text-[15px] font-base-font text-[#ff4a17] tracking-[3px] md:text-[14px] col:tracking-[0px]">
-                            Completed Cases</p>
-                    </div>
-                </div>
-                <div class="col-span-3 md:col-span-6 col:col-span-12">
-                    <div
-                        class="md:mb-[50px] relative after:absolute after:right-0 after:top-[50%] after:w-[10px] after:h-[10px] after:rounded-[50%] after:bg-[#ff4a17] sm:after:hidden">
-                        <h3
-                            class="text-[65px] font-heading-font font-bold text-[#14212b] flex items-center justify-center lg:text-[50px] md:text-[40px]  sm:text-[35px]">
-                            <span class="odometer" data-count="357">00</span>+
-                        </h3>
-                        <p
-                            class="text-[15px] font-base-font text-[#ff4a17] tracking-[3px] md:text-[14px] col:tracking-[0px]">
-                            Happy Clients</p>
-                    </div>
-                </div>
-                <div class="col-span-3 md:col-span-6 col:col-span-12">
-                    <div
-                        class="md:mb-[50px] relative after:absolute after:right-0 after:top-[50%] after:w-[10px] after:h-[10px] after:rounded-[50%] after:bg-[#ff4a17] sm:after:hidden">
-                        <h3
-                            class="text-[65px] font-heading-font font-bold text-[#14212b] flex items-center justify-center lg:text-[50px] md:text-[40px]  sm:text-[35px]">
-                            <span class="odometer" data-count="28">00</span>+
-                        </h3>
-                        <p
-                            class="text-[15px] font-base-font text-[#ff4a17] tracking-[3px] md:text-[14px] col:tracking-[0px]">
-                            Our Office</p>
-                    </div>
-                </div>
-                <div class="col-span-3 md:col-span-6 col:col-span-12">
-                    <div
-                        class="md:mb-[50px] relative after:absolute after:right-0 after:top-[50%] after:w-[10px] after:h-[10px] after:rounded-[50%] after:bg-[#ff4a17] sm:after:hidden">
-                        <h3
-                            class="text-[65px] font-heading-font font-bold text-[#14212b] flex items-center justify-center lg:text-[50px] md:text-[40px]  sm:text-[35px]">
-                            <span class="odometer" data-count="785">00</span>
-                        </h3>
-                        <p
-                            class="text-[15px] font-base-font text-[#ff4a17] tracking-[3px] md:text-[14px] col:tracking-[0px]">
-                            Skilled People</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 </x-guest-layout>

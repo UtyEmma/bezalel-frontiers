@@ -75,4 +75,14 @@ return [
         'name' => 'Youtube URL',
         'value' => "https://youtube.com/leadaa"
     ],
+
+    'header_scripts' => [
+        'name' => 'Header Scripts',
+        'value' => ""
+    ],
+
+    'footer_scripts' => [
+        'name' => 'Footer Scripts',
+        'value' => "https://youtube.com/leadaa"
+    ],
 ];

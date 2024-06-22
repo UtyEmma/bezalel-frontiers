@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-guest-layout title="{{$settings->site_title}}">
     @include('partials.home.banner')
 
     <section class="section-wrap">
@@ -279,7 +279,7 @@
                         <h2 class="text-[45px] text-white mt-[20px] lg:text-[40px] lg:mb-[20px] font-heading-font font-semibold leading-[1.2] sm:text-[30px]">Tell us about your business, we are ready to solve.</h2>
                     </div>
                     <div class="">
-                        <a href="{{route('contact')}}" class="theme-btn">Book a Consultation</a>
+                        <a href="{{route('contact')}}" class="theme-btn">Get in Touch</a>
                     </div>
                 </div>
             </div>
