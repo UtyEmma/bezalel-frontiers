@@ -31,4 +31,8 @@ class Service extends Model implements HasMedia {
         return $this->getFirstMediaUrl('services');
     }
 
+    function getRouteAttribute(){
+        return route('services.details', ['service' => $this->slug]);
+    }
+
 }

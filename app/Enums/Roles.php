@@ -20,4 +20,12 @@ enum Roles:string {
         };
     }
 
+    function isAdmin(){
+        return in_array($this, [static::ADMIN, static::SUPERADMIN]);
+    }
+
+    function isSuperAdmin(){
+        return $this == static::SUPERADMIN;
+    }
+
 }

@@ -66,7 +66,20 @@
                     <li>
                         <a href="{{route('home')}}">Home</a>
                     </li>
-                    <li><a href="{{route('about')}}">About US</a></li>
+                    <li>
+                        <a href="{{route('about')}}">About US</a>
+                        <ul class="dl-submenu">
+                                <li>
+                                    <a href="{{route('about')}}">Who We Are</a>
+                                </li>
+                                <li>
+                                    <a href="{{route('teams')}}">Our Team Members</a>
+                                </li>
+                                <li>
+                                    <a href="{{route('faqs')}}">Frequently Asked Questions</a>
+                                </li>
+                        </ul>
+                    </li>
                     <li><a href="{{route('services')}}">Services</a>
                         <ul class="dl-submenu">
                             @forelse ($services_menu as $service)
@@ -101,7 +114,7 @@
                        before:absolute before:left-0 before:top-0 before:w-full before:h-[4px]
                        before:bg-[#ff4a17] before:content
                        before:opacity-1 before:transition-all before:rounded-[3px]
-                       hover:before:opacity-100 {{request()->routeIs('about') ? 'before:!visible text-[#ff4a17]' : 'before:invisible hover:before:visible text-[#14212b]'}}
+                       hover:before:opacity-100 {{request()->routeIs(['about', 'teams*']) ? 'before:!visible text-[#ff4a17]' : 'before:invisible hover:before:visible text-[#14212b]'}}
                     ">About Us</a>
 
                     <ul class="absolute w-[240px]  left-0 top-[110%] pt-[20px] pb-[15px] px-[7px] z-[111]  bg-[#fff] shadow-[0px_2px_20px_0px_rgba(62,65,159,0.09);]  transition-all  opacity-0 invisible group-hover:opacity-100 group-hover:top-full group-hover:visible ">
@@ -120,11 +133,7 @@
                                 hover:after:w-[50%]">Our Team Members</a>
                         </li>
                         <li>
-                            <a href="{{route('faqs')}}" class="text-[16px] lg:text-[16px] inline-block  px-[15px] capitalize
-                                text-[#0a272c] group relative overflow-hidden font-bold transition-all
-                                after:absolute after:left-[15px] after:bottom-0 after:w-0 after:h-[2px]
-                                after:content after:bg-[#ff4a17] after:transition-all font-base-font
-                                hover:after:w-[50%]">Frequently Asked Questions</a>
+                            <a href="{{route('faqs')}}" class="text-[16px] lg:text-[16px] inline-block  px-[15px] capitalize text-[#0a272c] group relative overflow-hidden font-bold transition-all after:absolute after:left-[15px] after:bottom-0 after:w-0 after:h-[2px] after:content after:bg-[#ff4a17] after:transition-all font-base-font hover:after:w-[50%]">Frequently Asked Questions</a>
                         </li>
                     </ul>
                 </li>
@@ -153,17 +162,6 @@
                         </ul>
                 </li>
                 <li class="relative inline-block group">
-                    <a href="{{route('faqs')}}" class="relative text-[16px] lg:text-[17px] py-[35px]
-                     xl:py-[30px] px-[20px] xl:px-[6px]
-                         block capitalize
-                        font-base-font font-bold transition-all
-                       hover:text-[#ff4a17]
-                       before:absolute before:left-0 before:top-0 before:w-full before:h-[4px]
-                       before:bg-[#ff4a17] before:content
-                       before:opacity-1  before:transition-all before:rounded-[3px]
-                       hover:before:opacity-100 {{request()->routeIs('faqs') ? 'before:visible text-[#ff4a17]' : 'before:invisible hover:before:visible text-[#14212b]'}}">FAQs</a>
-                </li>
-                <li class="relative inline-block group">
                     <a href="{{route('posts')}}" class="relative text-[16px] lg:text-[17px] py-[35px]
                      xl:py-[30px] px-[20px] xl:px-[6px]
                         text-[#14212b] block capitalize
@@ -189,7 +187,7 @@
             </ul>
 
             <div class="flex items-center">
-                <div class="relative header-search-form-wrapper">
+                {{-- <div class="relative header-search-form-wrapper">
                     <div class="cart-search-contact mr-[20px] md:mr-0 text-center cursor-pointer">
                         <div class="search-toggle-btn bg-[rgba(0,0,0,0.05)] text-[#6e6e6e]
                          w-[50px] h-[50px] rounded-[50%] leading-[55px]">
@@ -210,7 +208,7 @@
                             </form>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <a class="theme-btn py-[10px] px-[25px] pr-[50px] md:hidden" href="{{route('contact')}}">Get in touch</a>
             </div>
         </div>

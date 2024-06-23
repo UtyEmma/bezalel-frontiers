@@ -3,12 +3,12 @@
 
     <section class="section-wrap">
         <div class="wraper">
-            <div class="grid grid-cols-12 gap-x-3  items-center">
+            <div class="grid grid-cols-12 gap-x-3 items-center">
                 <div class="col-span-6 md:col-span-12 sm:col-span-12 ">
-                    <div class="relative z-[1] text-center max-w-[570px] sm:w-full rounded-[6px]
-                     before:absolute before:left-0 before:top-0 before:w-full before:h-full
+                    <div class="relative z-[1] text-center max-w-[570px] sm:w-full h-[650px] rounded-[6px]
+                     before:absolute before:left-0 before:top-0 before:w-full  before:h-full
                      before:bg-[rgba(20,33,43,.25)] before:rounded-[6px] ">
-                        <img class="w-full rounded-[6px]" src="assets/images/about/3.jpg" alt="">
+                        <img class="w-full h-full rounded-[6px] object-cover" src="{{asset('assets/imgs/bezalel-frontiers-writing-for-business.jpg')}}" alt="">
                         <div class="absolute left-[-70px] bottom-[100px] z-[1]
                              animate-[bounceTop_3s_linear_infinite] col:left-0">
                             <img src="assets/images/ab-shape-1.png" alt="">
@@ -18,12 +18,12 @@
                         </div>
                         <div class="absolute right-[50px] bottom-[50px] rounded-[50%] border-[5px]
                             animate-[spineer_2s_infinite]">
-                            <img src="assets/images/about/4.jpg" alt="" class="rounded-[50%] col:max-w-[100px]">
+                            <img src="{{asset('assets/imgs/bezalel-frontiers-growth-chart.jpg')}}" alt="" class="rounded-[50%] col:max-w-[100px] max-w-[200px]">
                         </div>
                     </div>
                 </div>
                 <div class="col-span-6 md:col-span-12 sm:col-span-12">
-                    <div class="max-w-[600px] sm:w-full relative pl-[40px] md:pl-0 md:pt-[70px]">
+                    <div class="max-w-[600px] sm:w-full relative pl-[40px] md:pl-0 ">
                         <h4
                             class="text-[21px] text-[#ff4a17] font-base-font font-bold lg:text-[18px] col:text-[14px]">
                             Welcome to {{$settings->company_name}}</h4>
@@ -272,7 +272,9 @@
 
     <section class="section-wrap">
         <div class="wraper">
-            <div class="p-[80px_85px] bg-[url(../images/cta-bg.jpg)] bg-no-repeat bg-center rounded-[6px] md:p-[40px_35px] col:p-[10px]">
+            <div class="p-[80px_85px] bg-no-repeat bg-center rounded-[6px] md:p-[40px_35px] col:p-[10px] bg-cover"
+                style="background-image: url('{{asset('assets/imgs/bezalel-frontiers-business-handshake.jpg')}}')"
+            >
                 <div class="p-[100px_80px] bg-[rgba(20,33,43,0.9)] flex items-center relative z-[1] rounded-[6px] overflow-hidden lg:flex-wrap lg:justify-center lg:text-center col:p-[20px_15px]">
                     <div class="mr-[80px] basis-[80%] lg:basis-full lg:mr-0">
                         <span class="uppercase text-[16px] font-base-font font-bold tracking-[3px] text-[#ff4a17]">WE ARE HERE</span>

@@ -1,41 +1,22 @@
 <x-guest-layout title="About Us">
-    <section class="bg-[url(../images/page-title.jpg)] bg-center bg-cover bg-no-repeat w-full h-[480px] text-center relative z-[1] flex justify-center flex-col md:h-[400px] before:w-full before:h-full before:absolute before:left-0 before:top-0 before:bg-[#14212b] before:opacity-[0.5] before:-[-1]">
-        <div class="overflow-hidden relative w-full h-full">
-            <div class="wraper">
-                <div class="flex items-center justify-center h-[480px] md:h-[400px]">
-                    <div class="col-span-12">
-                        <h2 class="text-[60px] text-white mb-[40px] sm:mb-[25px] font-bold capitalize md:text-[50px] mt-[40px] md:mt-[40px] col:mt-[80px] sm:text-[40px]">About Us</h2>
-                        <ol class="flex justify-center">
-                            <li class="text-[16px] text-white mr-[5px] sm:text-[14px]">
-                                <a href="{{route('home')}}" class="text-white transition-all duration-300 hover:text-[#e33200]">Home</a>
-                            </li>
-
-                            <li class="relative text-[16px] text-white sm:text-[14px] pl-[20px] ml-[6px] before:mr-[5px] before:w-[8px] before:h-[4px] before:bg-white before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:rounded-[2px]">About</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-            <div class="wow fadeInDown absolute right-[-70px] top-[-70px] w-[300px] h-[300px] bg-[#ff4a17] rounded-[50%] -z[-1]  col:hidden "
-                data-wow-duration="0.9s" data-wow-delay=".3s"></div>
-            <div class="wow fadeInDown absolute left-0 top-0  sm:left-[-100px] sm:top-[-100px] col:hidden"
-                data-wow-duration="0.9s" data-wow-delay=".3s">
-                <img src="assets/images/page-title-shape-1.png" alt="">
-            </div>
-            <div class="wow fadeInUp absolute right-0 bottom-0  sm:right-[-100px] sm:bottom-[-30px] col:hidden"
-                data-wow-duration="0.9s" data-wow-delay=".3s">
-                <img src="assets/images/page-title-shape-2.png" alt="">
-            </div>
-        </div>
-    </section>
+    @include('layouts.partials.breadcrumbs', [
+        'image' => asset('assets/imgs/bezalel-frontiers-business-strategy.jpg'),
+        'title' => 'About us',
+        'breadcrumbs' => [
+            [
+                'name' =>  'About us',
+            ]
+        ]
+    ])
 
     <section class="section-wrap">
         <div class="wraper">
             <div class="grid grid-cols-12 gap-4">
                 <div class="col-span-6 md:col-span-12 col:col-span-12">
-                    <div class="p-[50px] bg-[#14212b] relative z-[1] rounded-[10px] overflow-hidden col:p-[20px]">
+                    <div class="p-[50px] bg-[#14212b] relative z-[1] rounded-[10px] overflow-hidden col:p-[20px] h-full">
                         <div>
                             <h2 class="text-[#ff4a17] text-[34px] mb-[20px] font-semibold">Our Mission</h2>
-                            <h5 class="text-white text-[18px] leading-[27px] font-semibold">Lorem Ipsum is simply dummy text of the printing has been the industry standard dummy text ever since unknown printer took galley.</h5>
+                            <h5 class="text-white text-[18px] leading-[27px] font-semibold">Providing actionable insights that inform, inspire, and empower minds and organizations for success</h5>
                         </div>
 
                         <div class="absolute left-[-70px] bottom-[-70px] w-[200px] h-[200px] bg-[#ff4a17] rounded-[50%]
@@ -44,10 +25,10 @@
                     </div>
                 </div>
                 <div class="col-span-6 md:col-span-12 col:col-span-12">
-                    <div class="p-[50px] bg-[#f5f5f5] relative z-[1] rounded-[10px] overflow-hidden col:p-[20px]">
+                    <div class="p-[50px] bg-[#f5f5f5] relative z-[1] rounded-[10px] overflow-hidden col:p-[20px] h-full">
                         <div class="wpo-vission-text">
-                            <h2 class="text-[#ff4a17] text-[34px] mb-[20px] font-semibold">Our Vission</h2>
-                            <h5 class="text-[#14212b] text-[18px] leading-[27px] font-semibold">Lorem Ipsum is simply dummy text of the printing has been the industry standard dummy text ever since unknown printer took galley.</h5>
+                            <h2 class="text-[#ff4a17] text-[34px] mb-[20px] font-semibold">Our Vision</h2>
+                            <h5 class="text-[#14212b] text-[18px] leading-[27px] font-semibold">...the preferred choice for research driven insights.</h5>
                         </div>
                     </div>
                 </div>
@@ -60,14 +41,26 @@
         <div class="wraper">
             <div class="grid grid-cols-12 items-center justify-center">
                 <div class="col-span-6 md:col-span-12">
-                    <div class="max-w-[500px] mr-[30px] md:mb-[70px] sm:mr-0">
-                        <h4 class="text-[21px] text-[#ff4a17] font-base-font font-semibold">Welcome To Consoel</h4>
-                        <h2 class="text-[45px] text-[#0a272c] leading-[65px] font-heading-font font-bold mt-[30px] mb-[20px] xl:text-[40px] xl:leading-[50px] col:text-[25px] col:leading-[30px]">We are trusted consulting company.</h2>
-                        <p class="text-[#687693] text-[18px] mb-[25px]">Lorem Ipsum is simply dummy text of the printing and type setting’s the industrey's standard dummy text ever since the 1500 when printed galley of type and scrambled type specimen book.</p>
-                        <div class="mb-[30px]">
+                    <div class="max-w-[500px] mr-[30px] sm:mr-0">
+                        <h4 class="text-[21px] text-[#ff4a17] font-base-font font-semibold">We are {{$settings->company_name}}</h4>
+                        <h2 class="text-[45px] text-[#0a272c] leading-[65px] font-heading-font font-bold mt-[10px] mb-[20px] xl:text-[40px] xl:leading-[50px] col:text-[25px] col:leading-[30px]">Your Data-Driven Path to Success.</h2>
+                        <p class="text-[#687693] text-[18px] mb-[25px]">{{$settings->company_name}} is a data driven and research-based management consulting firm. We provide essential intelligence for organizations and their people for informed ideation, and business & management decisions.</p>
+
+                        <div class="mb-[30px] space-y-3">
+                            <div>
+                                <h5 class="text-[#14212b] font-semibold text-xl">Our Core Values:</h5>
+                            </div>
                             <div class="flex items-center">
-                                <i class="fi flaticon-tax mr-[20px] text-[50px] text-[#ff4a17]"></i>
-                                <h5 class="text-[25px] xl:text-[22px] lg:text-[15px] lg:leading-[25px]  leading-[30px] text-[#14212b] font-semibold">Perfect solution of business and financial planning.</h5>
+                                <i class="fi flaticon-right mr-[10px] text-3xl text-[#ff4a17]"></i>
+                                <h5 class="text-lg lg:leading-[25px]  leading-[30px] text-[#14212b] font-semibold">Integrity</h5>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fi flaticon-right mr-[10px] text-3xl text-[#ff4a17]"></i>
+                                <h5 class="text-lg lg:leading-[25px]  leading-[30px] text-[#14212b] font-semibold">Knowledge</h5>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fi flaticon-right mr-[10px] text-3xl text-[#ff4a17]"></i>
+                                <h5 class="text-lg lg:leading-[25px]  leading-[30px] text-[#14212b] font-semibold">Excellence</h5>
                             </div>
                         </div>
                         <a class="theme-btn" href="{{route('services')}}">Our Services</a>
@@ -75,10 +68,10 @@
                 </div>
 
                 <div class="col-span-6 md:col-span-12">
-                    <div class="relative z-[1] text-center max-w-[570px] sm:w-full rounded-[6px]
-                     before:absolute before:left-0 before:top-0 before:w-full before:h-full
+                    <div class="relative z-[1] text-center max-w-[570px] sm:w-full h-[650px] rounded-[6px]
+                     before:absolute before:left-0 before:top-0 before:w-full  before:h-full
                      before:bg-[rgba(20,33,43,.25)] before:rounded-[6px] ">
-                        <img class="w-full rounded-[6px]" src="assets/images/about/3.jpg" alt="">
+                        <img class="w-full h-full rounded-[6px] object-cover" src="{{asset('assets/imgs/bezalel-frontiers-business-strategy.jpg')}}" alt="">
                         <div class="absolute left-[-70px] bottom-[100px] z-[1]
                              animate-[bounceTop_3s_linear_infinite] col:left-0">
                             <img src="assets/images/ab-shape-1.png" alt="">
@@ -88,7 +81,7 @@
                         </div>
                         <div class="absolute right-[50px] bottom-[50px] rounded-[50%] border-[5px]
                             animate-[spineer_2s_infinite]">
-                            <img src="assets/images/about/4.jpg" alt="" class="rounded-[50%] col:max-w-[100px]">
+                            <img src="{{asset('assets/imgs/bezalel-frontiers-growth-chart.jpg')}}" alt="" class="rounded-[50%] col:max-w-[100px] max-w-[200px]">
                         </div>
                     </div>
                 </div>

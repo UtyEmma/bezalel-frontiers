@@ -1,37 +1,14 @@
 <x-guest-layout title="Our Team">
-    <section
-            class="bg-[url(../images/page-title.jpg)] bg-center bg-cover bg-no-repeat w-full h-[480px] text-center relative z-[1] flex justify-center flex-col md:h-[400px] before:w-full before:h-full before:absolute before:left-0 before:top-0 before:bg-[#14212b] before:opacity-[0.5] before:-[-1]">
-            <div class="overflow-hidden relative w-full h-full">
-                <div class="wraper">
-                    <div class="flex items-center justify-center h-[480px] md:h-[400px]">
-                        <div class="col-span-12">
-                            <h2 class="text-[60px] text-white mb-[40px] sm:mb-[25px] font-bold capitalize md:text-[50px] mt-[145px] md:mt-[140px] col:mt-[180px] sm:text-[40px]">Team</h2>
-                            <ol class="flex justify-center">
-                                <li class="text-[16px] text-white mr-[5px] sm:text-[14px]">
-                                    <a href="{{route('home')}}" class="text-white transition-all duration-300 hover:text-[#e33200]">Home</a>
-                                </li>
-                                <li class="relative text-[16px] text-white sm:text-[14px] pl-[20px] ml-[6px]
-                                    before:mr-[5px] before:w-[8px] before:h-[4px] before:bg-white before:absolute
-                                    before:left-0 before:top-1/2 before:-translate-y-1/2 before:rounded-[2px]">Team
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-                <div class="wow fadeInDown absolute right-[-70px] top-[-70px] w-[300px] h-[300px] bg-[#ff4a17] rounded-[50%] -z[-1]  col:hidden "
-                    data-wow-duration="0.9s" data-wow-delay=".3s"></div>
-                <div class="wow fadeInDown absolute left-0 top-0  sm:left-[-100px] sm:top-[-100px] col:hidden"
-                    data-wow-duration="0.9s" data-wow-delay=".3s">
-                    <img src="assets/images/page-title-shape-1.png" alt="">
-                </div>
-                <div class="wow fadeInUp absolute right-0 bottom-0  sm:right-[-100px] sm:bottom-[-30px] col:hidden"
-                    data-wow-duration="0.9s" data-wow-delay=".3s">
-                    <img src="assets/images/page-title-shape-2.png" alt="">
-                </div>
-            </div>
-        </section>
+        @include('layouts.partials.breadcrumbs', [
+            'image' => asset('assets/imgs/bezalel-frontiers-business-meeting.jpg'),
+            'title' => 'Our Team',
+            'breadcrumbs' => [
+                [
+                    'name' =>  'Our Team',
+                ]
+            ]
+        ])
 
-        <!-- start team -->
         <section
             class="pt-[120px] pb-[90px] md:pt-[90px] md:pb-[60px] sm:pt-[80px] sm:pb-[50px] bg-[#f5f5f5] overflow-hidden relative">
             <div class="wraper">

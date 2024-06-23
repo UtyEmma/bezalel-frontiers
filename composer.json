@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "bezhansalleh/filament-google-analytics": "^2.0",
         "filament/filament": "^3.2",
         "filament/spatie-laravel-media-library-plugin": "^3.2",
         "laravel/breeze": "^2.0",
@@ -13,6 +14,7 @@
         "laravel/tinker": "^2.9",
         "livewire/livewire": "^3.4",
         "livewire/volt": "^1.0",
+        "spatie/laravel-analytics": "^5.3",
         "spatie/laravel-medialibrary": "^11.6",
         "utyemma/laranotice": "^1.0"
     },

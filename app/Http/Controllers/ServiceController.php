@@ -9,8 +9,10 @@ use Illuminate\Http\Request;
 class ServiceController extends Controller {
 
 
-    function index() {
-        $services = Service::status(Status::ACTIVE)->paginate();
+    function index(Request $request) {
+        $services = Service::status(Status::ACTIVE)
+                        ->when($request->search, fn($query, $keyword) => $query->where('name', 'LIKE', "%{$keyword}%"))
+                        ->paginate();
         return view('services.index', compact(['services']));
     }
 
