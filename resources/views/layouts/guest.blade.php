@@ -14,8 +14,12 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="wpOceans">
-        <link rel="shortcut icon" type="image/jpeg" href="assets/favicon.png">
+        <meta name="author" content="{{$settings->company_name}}">
+        <link rel="shortcut icon" type="image/jpeg" href="/assets/favicon.png">
+        <meta name="description" content="{{$settings->seo_description}}">
+        <meta name="keywords" content="{{$settings->seo_tags}}" >
+        
+        <link rel="canonical" href="{{request()->url()}}" >
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])

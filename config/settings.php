@@ -71,11 +71,6 @@ return [
         'value' => "https://facebook.com/leadaa"
     ],
 
-    'youtube_link' => [
-        'name' => 'Youtube URL',
-        'value' => "https://youtube.com/leadaa"
-    ],
-
     'header_scripts' => [
         'name' => 'Header Scripts',
         'value' => ""

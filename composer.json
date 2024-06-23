@@ -7,6 +7,7 @@
     "require": {
         "php": "^8.2",
         "bezhansalleh/filament-google-analytics": "^2.0",
+        "dotswan/filament-code-editor": "^1.1",
         "filament/filament": "^3.2",
         "filament/spatie-laravel-media-library-plugin": "^3.2",
         "laravel/breeze": "^2.0",
