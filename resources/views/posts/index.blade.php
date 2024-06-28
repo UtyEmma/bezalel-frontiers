@@ -1,7 +1,7 @@
 <x-guest-layout title="Blog">
     @include('layouts.partials.breadcrumbs', [
         'image' => asset('assets/imgs/bezalel-frontiers-business-strategy.jpg'),
-        'title' => 'Blog',
+        'title' => 'Our Blog',
         'breadcrumbs' => [
             [
                 'name' =>  'Blog',

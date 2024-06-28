@@ -6,7 +6,9 @@ use App\Enums\Status;
 use App\Models\ContactMessage;
 use App\Models\Service;
 use App\Models\User;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Validation\Rule;
+use Illuminate\Validation\ValidationException;
 use Livewire\Component;
 
 class ContactForm extends Component {
@@ -14,6 +16,8 @@ class ContactForm extends Component {
     public $services = [];
 
     public $name, $email, $phone, $service, $message; 
+
+    public $captcha;
 
     public $error, $success;
 
@@ -31,7 +35,26 @@ class ContactForm extends Component {
         ];
     }
 
+    public function updatedCaptcha($token) {
+        $response = Http::post('https://www.google.com/recaptcha/api/siteverify', [
+            'secret' => env('RECAPTCHA_V3_SECRET_KEY'),
+            'response' => $token,
+            'remoteip' => request()->ip()
+        ]);
+    
+        $success = $response->json()['success'];
+    
+        if (! $success) {
+            throw ValidationException::withMessages([
+                'captcha' => __('Google thinks, you are a bot, please refresh and try again!'),
+            ]);
+        } else {
+            $this->captcha = true;
+        }
+    }
+
     function send(){
+
         $this->validate();
 
         try {
@@ -63,7 +86,7 @@ class ContactForm extends Component {
             ->line("Message: {$contactMessage->message}")
             ->line("Please click the link below to view messages.")
             ->action('View Messages', route('filament.manager.resources.contact-messages.index'))
-            ->send(User::isAdmin()->get());
+            ->send(User::isAdmin()->get(), ['mail']);
     }
 
     public function render()

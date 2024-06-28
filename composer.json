@@ -17,6 +17,7 @@
         "livewire/volt": "^1.0",
         "spatie/laravel-analytics": "^5.3",
         "spatie/laravel-medialibrary": "^11.6",
+        "timehunter/laravel-google-recaptcha-v3": "^2.5",
         "utyemma/laranotice": "^1.0"
     },
     "require-dev": {

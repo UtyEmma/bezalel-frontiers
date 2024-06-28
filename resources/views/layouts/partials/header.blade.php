@@ -114,7 +114,7 @@
                        before:absolute before:left-0 before:top-0 before:w-full before:h-[4px]
                        before:bg-[#ff4a17] before:content
                        before:opacity-1 before:transition-all before:rounded-[3px]
-                       hover:before:opacity-100 {{request()->routeIs(['about', 'teams*']) ? 'before:!visible text-[#ff4a17]' : 'before:invisible hover:before:visible text-[#14212b]'}}
+                       hover:before:opacity-100 {{request()->routeIs(['about', 'teams*', 'faqs']) ? 'before:!visible text-[#ff4a17]' : 'before:invisible hover:before:visible text-[#14212b]'}}
                     ">About Us</a>
 
                     <ul class="absolute w-[240px]  left-0 top-[110%] pt-[20px] pb-[15px] px-[7px] z-[111]  bg-[#fff] shadow-[0px_2px_20px_0px_rgba(62,65,159,0.09);]  transition-all  opacity-0 invisible group-hover:opacity-100 group-hover:top-full group-hover:visible ">

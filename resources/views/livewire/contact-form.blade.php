@@ -1,4 +1,4 @@
-<form wire:submit="send" class="contact-validation-active mx-[-15px] overflow-hidden">
+<form x-data wire:submit="send" class="contact-validation-active mx-[-15px] overflow-hidden">
     <div
         class="w-[calc(50%-30px)] float-left mx-[15px] mb-[25px] col:float-none col:w-[calc(100%-25px)]">
         <input type="text" class="form-control w-full bg-transparent border-[1px] border-[#ebebeb] h-[50px] text-[#212529] transition-all pl-[25px] focus:outline-0 focus:shadow-none focus:border-[#ff4a17] focus:bg-transparent" wire:model="name" placeholder="Your Name*">
@@ -36,6 +36,7 @@
             </svg>
         </button>
     </div>
+
     <div class="clearfix error-handling-messages">
         @if ($success)        
             <div id="success" class="text-green-700">{{$success}}</div>
@@ -45,4 +46,18 @@
             <div id="error">{{$error}}</div>
         @endif
     </div>
+
+    <script>
+        var  handle = function(e) {
+            widget = grecaptcha.render('captcha', {
+                'sitekey': "{{ env('RECAPTCHA_V3_SITE_KEY') }}",
+                'theme': 'light', // you could switch between dark and light mode.
+                'callback': verify
+            });
+     
+        }
+        var verify = function (response) {
+            @this.set('captcha', response)
+        }
+    </script>
 </form>

@@ -14,7 +14,7 @@
         <div class="wraper">
             <div class="mb-[75px] sm:mb-[40px] text-center">
                 <span class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17]
-                    font-base-font">Our Services</span>
+                    font-base-font">Explore Our Services</span>
                 <h2 class="text-[55px] md:text-[35px] sm:text-[32px] col:text-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px]
                     mt-[10px] relative capitalize font-heading-font font-bold text-[#14212b]">Amazing Solutions that grow your business</h2>
             </div>

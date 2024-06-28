@@ -120,19 +120,18 @@
     <section class="pt-[120px] md:pt-[90px] sm:pt-[80px]">
         <div class="wraper">
             <div class="grid grid-cols-12 items-center ">
-                <div class="col-span-5 md:col-span-12 ">
+                <div class="col-span-6 md:col-span-12 ">
                     <div class="md:mb-[30px]">
                         <h5 class="text-[21px] text-[#ff4a17] font-heading-font font-semibold sm:text-[18px]">Our
                             Professional
                             Skill’s</h5>
                         <h2 class="text-[60px] leading-[70px] mb-[30px] mt-[15px] text-[#0a272c] font-heading-font font-semibold
                         xl:text-[50px] xl:leading-[60px] xl:mb-[20px] xl:mt-[10px] lg:text-[45px] lg:leading-[50px]
-                        sm:text-[35px] sm:leading-[50px]">
-                        Strategic Insights for Sustainable <span class="text-[#ff4a17]">Growth.</span></h2>
+                        sm:text-[35px] sm:leading-[50px]"> We provide Strategic Insights for Sustainable <span class="text-[#ff4a17]">Growth.</span></h2>
                         <p class="text-[#687693] text-[16px] leading-[25px]">We data-driven and research-based with the goal of providing essential intelligence for organizations and their people for informed ideation, and business & management decisions. Our commitment to integrity, knowledge, and excellence sets us apart in the consulting industry.</p>
                     </div>
                 </div>
-                <div class="col-span-7 md:col-span-12">
+                <div class="col-span-6 md:col-span-12">
                     <div
                         class="ml-[70px] xl:ml-[50px] lg:ml-[30px] md:ml-0 p-[80px_70px] shadow-[0px_0px_35px_0px_rgba(20,33,43,0.1)] xl:p-[60px_50px] lg:p-[40px_30px]">
                         <div class="mb-[30px] relative">
@@ -288,62 +287,16 @@
         </div>
     </section>
 
-    <section class="section-wrap bg-[#18252f] overflow-hidden">
-        <h2 class="hidden">contact</h2>
-        <div class="wraper">
-            <div class="grid grid-cols-12 mx-[-40px] xl:mx-[-20px] lg:mx-[-15px]">
-                @if ($settings->contact_address)
-                    <div class="col-span-4 lg:col-span-6 md:col-span-6 sm:col-span-12 px-[40px] xl:px-[20px] lg:px-[15px]">
-                        <div class="h-full lg:mb-[30px] text-center p-[60px_40px] border-[1px] border-[#ff4a17] rounded-[15px] bg-[#18252f] md:p-[40px] col:p-[30px]">
-                            <div class="mb-[30px] col:mb-[20px]">
-                                <i class="fi flaticon-place text-[#ff4a17] text-[55px] col:text-[40px]"></i>
-                            </div>
-                            <p class="text-[22px] leading-[32px] font-medium text-white font-heading-font">{{$settings->contact_address}}</p>
-                            <span class="text-[14px] text-[#ff4a17] uppercase block mt-[30px] tracking-[3px]">Visit our office</span>
-                        </div>
-                    </div>
-                @endif
-
-                @if ($settings->contact_phone)
-                    <div class="col-span-4 lg:col-span-6 md:col-span-6 sm:col-span-12 px-[40px] xl:px-[20px] lg:px-[15px]">
-                        <div class="h-full lg:mb-[30px] text-center p-[60px_40px] border-[1px] border-[#ff4a17] rounded-[15px] bg-[#ff4a17] md:p-[40px] col:p-[30px]">
-                            <div class="mb-[30px] col:mb-[20px]">
-                                <i class="fi flaticon-phone-call text-white text-[55px] col:text-[40px]"></i>
-                            </div>
-                            <p class="text-[22px] leading-[32px] font-medium text-white font-heading-font">{{$settings->contact_phone}}</p>
-                            <span class="text-[14px] text-white uppercase block mt-[30px] tracking-[3px]">CALL US
-                                TODAY</span>
-                        </div>
-                    </div>
-                @endif
-
-                @if ($settings->site_email)
-                    <div class="col-span-4  lg:col-span-6 md:col-span-6 sm:col-span-12 px-[40px] xl:px-[20px] lg:px-[15px]">
-                        <div class="h-full text-center p-[60px_40px] border-[1px] border-[#ff4a17] rounded-[15px] bg-[#18252f] md:p-[40px] col:p-[30px]">
-                            <div class="mb-[30px] col:mb-[20px]">
-                                <i class="fi flaticon-email text-[#ff4a17] text-[55px] col:text-[40px]"></i>
-                            </div>
-                            <p class="text-[22px] leading-[32px] font-medium text-white font-heading-font">{{$settings->site_email}}</p>
-                            <span class="text-[14px] text-[#ff4a17] uppercase block mt-[30px] tracking-[3px]">Send an Email</span>
-                        </div>
-                    </div>
-                @endif
-            </div>
-        </div>
-        <div class="absolute left-[-3%] top-[-20%] z-[-1]">
-            <img src="assets/images/ct-shape.png" alt="shape">
-        </div>
-    </section>
+    @include('partials.contact.section')
 
     @if ($posts->count() > 0)
         <section class="bg-[#f3f4f4] section-wrap">
             <div class="wraper">
                 <div class="mb-[75px] sm:mb-[40px] text-center">
                     <span class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17]
-                    font-base-font">BLOG POST</span>
+                    font-base-font">OUR BLOG</span>
                     <h2 class="text-[55px] md:text-[35px] sm:text-[32px] col:text-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px]
-                    mt-[10px] relative capitalize font-heading-font font-bold
-                    text-[#14212b]">Latest News From Blog</h2>
+                    mt-[10px] relative capitalize font-heading-font font-bold text-[#14212b] md:px-10">Stay updated with our latest research and insights.</h2>
                 </div>
                 <div>
                     <div class="grid grid-cols-12 gap-y-4 md:gap-x-4">
@@ -386,7 +339,7 @@
                                                     <a href="{{$post->route}}" class="text-[#0a272c] transition-all duration-500
                                                         hover:text-[#ff4a17]">{{$post->title}}</a>
                                                 </h2>
-                                                <ul class="flex col:block">
+                                                <ul class="flex col:block space-x-3">
                                                     <li class="text-[14px] uppercase text-[#6e6e6e] ">
                                                         <a href="{{$post->route}}" class="text-[#ff4a17]">{{$post->publishing_date}}</a>
                                                     </li>

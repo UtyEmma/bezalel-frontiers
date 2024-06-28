@@ -39,6 +39,8 @@
         <link href="/assets/css/global.css" rel="stylesheet">
         <link href="/assets/css/style.css" rel="stylesheet">
 
+        <script src="https://www.google.com/recaptcha/api.js?render={{env('RECAPTCHA_V3_SITE_KEY')}}"></script>
+
         {!! $settings->header_scripts !!}
 
     </head>
