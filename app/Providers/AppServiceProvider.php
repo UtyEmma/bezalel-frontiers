@@ -21,9 +21,12 @@ class AppServiceProvider extends ServiceProvider
      * Bootstrap any application services.
      */
     public function boot(): void {
-        View::share([
-            'settings' => new Setting(),
-            'services_menu' => Service::status(Status::ACTIVE)->get()
-        ]);
+
+        if(!app()->runningInConsole()) {
+            View::share([
+                'settings' => new Setting(),
+                'services_menu' => Service::status(Status::ACTIVE)->get()
+            ]);
+        }
     }
 }
