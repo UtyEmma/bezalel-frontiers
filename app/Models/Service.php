@@ -4,13 +4,14 @@ namespace App\Models;
 
 use App\Enums\Status;
 use App\Traits\HasStatus;
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
 class Service extends Model implements HasMedia {
-    use HasFactory, InteractsWithMedia, HasStatus;
+    use HasFactory, InteractsWithMedia, HasStatus, HasUuids;
 
     protected $fillable = ['name', 'content', 'slug', 'description', 'status', 'featured'];
 
