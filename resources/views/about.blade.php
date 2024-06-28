@@ -63,6 +63,7 @@
                         <h4 class="text-[21px] text-[#ff4a17] font-base-font font-semibold">We are {{$settings->company_name}}</h4>
                         <h2 class="text-[45px] text-[#0a272c] leading-[65px] font-heading-font font-bold mt-[10px] mb-[20px] xl:text-[40px] xl:leading-[50px] col:text-[25px] col:leading-[30px]">Your Data-Driven Path to Success.</h2>
                         <p class="text-[#687693] text-[18px] mb-[25px]">{{$settings->company_name}} is a data driven and research-based management consulting firm. We provide essential intelligence for organizations and their people for informed ideation, and business & management decisions.</p>
+                        <p class="text-[#687693] text-[18px] mb-[25px]">Our team of experts is dedicated to providing the best consulting services tailored to your needs. With extensive experience and a commitment to our core values, we are here to help you navigate the complexities of the modern business landscape.</p>
 
                         <div class="mb-[30px] space-y-3">
                             <div>

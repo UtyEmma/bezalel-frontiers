@@ -129,7 +129,6 @@
                         <div class="space-y-4">
                             <p class="text-[#687693] text-[18px] leading-[25px]">Since our inception, {{$settings->company_name}} has been dedicated to delivering high-quality, research-driven insights that empower organizations to make informed decisions.</p>
                             <p class="text-[#687693] text-[18px] leading-[25px]">We data-driven and research-based with the goal of providing essential intelligence for organizations and their people for informed ideation, and business & management decisions. Our commitment to integrity, knowledge, and excellence sets us apart in the consulting industry.</p>
-
                             <div>
                                 <div class="mt-10">
                                     <a class="theme-btn me-0" href="{{route('about')}}">Get in touch</a>
