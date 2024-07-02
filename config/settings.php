@@ -78,6 +78,6 @@ return [
 
     'footer_scripts' => [
         'name' => 'Footer Scripts',
-        'value' => "https://youtube.com/leadaa"
+        'value' => ""
     ],
 ];

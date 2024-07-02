@@ -77,7 +77,7 @@
         <script src="/assets/js/moving-animation.js"></script>
         <!-- Custom script for this template -->
         <script src="/assets/js/script.js"></script>
-
+        
         {!! $settings->footer_scripts !!}
 
         @livewireScriptConfig 
