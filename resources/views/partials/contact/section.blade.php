@@ -1,7 +1,7 @@
 <section class="section-wrap bg-[#18252f] overflow-hidden">
     <h2 class="hidden">contact</h2>
     <div class="wraper">
-        <div class="grid grid-cols-12 mx-[-40px] xl:mx-[-20px] lg:mx-[-15px]">
+        <div class="grid grid-cols-12 mx-[-40px] xl:mx-[-20px] gap-y-10 lg:mx-[-15px]">
             @if ($settings->contact_address)
                 <div class="col-span-4 lg:col-span-6 md:col-span-6 sm:col-span-12 px-[40px] xl:px-[20px] lg:px-[15px]">
                     <div class="h-full lg:mb-[30px] text-center p-[60px_40px] border-[1px] border-[#ff4a17] rounded-[15px] bg-[#18252f] md:p-[40px] col:p-[30px]">

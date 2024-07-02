@@ -9,9 +9,9 @@
         ]
     ])
 
-    <section class="section-wrap">
+    <section class="section-wrap !py-10 md:!py-20">
         <div class="wraper">
-            <div class="grid grid-cols-12 gap-4">
+            <div class="grid grid-cols-12 md:!gap-x-10 gap-y-10">
                 <div class="col-span-6 md:col-span-12 col:col-span-12">
                     <div class="p-[50px] bg-[#14212b] relative z-[1] rounded-[10px] overflow-hidden col:p-[20px] h-full">
                         <div>
@@ -37,13 +37,12 @@
     </section>
 
     <!-- start  about -->
-    <section class="relative z-[1] pb-[120px] md:pb-[90px] sm:pn-[80px]">
+    <section class="relative z-[1] md:pb-[90px]">
         <div class="wraper">
-            <div class="grid grid-cols-12 items-center justify-center">
+            <div class="grid grid-cols-12 md:!gap-x-10 gap-y-10 items-center justify-center">
                 <div class="col-span-6 md:col-span-12">
-                    <div class="relative z-[1] text-center max-w-[570px] sm:w-full h-[650px] rounded-[6px]
-                     before:absolute before:left-0 before:top-0 before:w-full  before:h-full
-                     before:bg-[rgba(20,33,43,.25)] before:rounded-[6px] ">
+                    <div class="relative z-[1] text-center max-w-[570px] sm:w-full aspect-square md:aspect-auto md:!h-[650px] rounded-[6px]
+                     before:absolute before:left-0 before:top-0 before:w-full  before:h-full before:bg-[rgba(20,33,43,.25)] before:rounded-[6px] ">
                         <img class="w-full h-full rounded-[6px] object-cover" src="{{asset('assets/imgs/bezalel-frontiers-business-strategy.jpg')}}" alt="">
                         <div class="absolute left-[-70px] bottom-[100px] z-[1]
                              animate-[bounceTop_3s_linear_infinite] col:left-0">
@@ -88,10 +87,10 @@
             </div>
         </div>
 
-        <div class="absolute z-[-1] right-[-150px] bottom-[-180px] w-[330px] h-[330px] bg-[#ff4a17] rounded-[40px] rotate-[20deg] sm:right-[-50px] sm:bottom-[-80px] sm:w-[200px] sm:h-[200px] col:right-[-50px] col:bottom-[-80px] col:w-[160px] col:h-[200px]
+        {{-- <div class="absolute z-[-1] right-[-150px] bottom-[-180px] w-[330px] h-[330px] bg-[#ff4a17] rounded-[40px] rotate-[20deg] sm:right-[-50px] sm:bottom-[-80px] sm:w-[200px] sm:h-[200px] col:right-[-50px] col:bottom-[-80px] col:w-[160px] col:h-[200px]
             before:absolute before:left-[-30px] before:top-[30px] before:w-full before:h-full
             before:border-[1px] before:border-[#14212b] before:rounded-[40px]">
-        </div>
+        </div> --}}
     </section>
 
     <!-- start skill -->
@@ -163,34 +162,23 @@
         </div>
     </section> --}}
 
-    <section class="section-wrap wpo-testimonial-wrap">
+    <section class="section-wrap !py-0">
         <div class="wraper">
-            <div class="grid grid-cols-12 gap-x-8 items-center">
-                <div class="col-span-12 md:col-span-12 sm:col-span-12">
-                    <div class="mb-[75px] lg:mb-[20px] text-left">
-                        <h2 class="text-[50px] lg:text-[40px] md:text-[35px] sm:text-[32px] col:col-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px] mt-[10px] relative capitalize font-heading-font font-bold text-[#14212b]">A Word from our Managing Consultant</h2>
-                    </div>
-                    <div class="p-[70px_60px] bg-[#f3f4f4] rounded-[6px] xl:p-[35px] lg:p-[25px] col:p-[15px_20px] md:mb-[80px]">
-                        <div class="space-y-5">
-                            <p class="text-[22px] leading-[35px] xl:text-[20px] xl:leading-[30px] lg:text-[18px]">Thank you and welcome to Bezalel Frontiers. At Bezalel Frontiers, we aim to partner with clients, and provide them with the intelligence and knowledge they need to make more effective decisions.</p>
-                            <p class="text-[22px] leading-[35px] xl:text-[20px] xl:leading-[30px] lg:text-[18px]">Our approach to management consulting is driven by data and research. We are passionate about integrity, knowledge, and excellence – our core values; and our top priority is to exceed your expectations.</p>
-                            <p class="text-[22px] leading-[35px] xl:text-[20px] xl:leading-[30px] lg:text-[18px]">Over the past few years, we are thrilled to have worked in different capacities with diverse firms from within Africa and beyond. We look forward to working with you to explore new frontiers of value and growth for you and your organization. </p>
-                        </div>
-                        
-                        <div class="mt-[30px] col:mt-[20px]">
-                            <h3 class="text-[32px] font-semibold mt-[5px] col:text-[25px]">Dr. Ebes Esho</h3>
-                            <span class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17] col:text-[14px]">Management Consultant</span>
-                        </div>
-                    </div>            
-                </div>
-                {{-- <div class="col-span-5 md:col-span-10 sm:col-span-12">
-                    <div class="lg:pl-[0] h-full">
-                        <div class="relative rounded-[8px] before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-[rgba(10,39,44,0.3)] before:rounded-[8px]">
-                            <img src="assets/images/testimonial/img-1.jpg" alt="" class="rounded-[8px]">
-                        </div>
-                    </div>
-                </div> --}}
+            <div class="mb-[75px] lg:mb-[20px] text-left">
+                <h2 class="text-[50px] lg:text-[40px] md:text-[35px] sm:text-[32px] col:col-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px] mt-[10px] relative capitalize font-heading-font font-bold text-[#14212b]">A Word from our Managing Consultant</h2>
             </div>
+            <div class="p-[70px_60px] bg-[#f3f4f4] rounded-[6px] xl:p-[35px] lg:p-[25px] col:p-[15px_20px] md:mb-[80px]">
+                <div class="space-y-5">
+                    <p class="text-[22px] leading-[35px] xl:text-[20px] xl:leading-[30px] lg:text-[18px]">Thank you and welcome to Bezalel Frontiers. At Bezalel Frontiers, we aim to partner with clients, and provide them with the intelligence and knowledge they need to make more effective decisions.</p>
+                    <p class="text-[22px] leading-[35px] xl:text-[20px] xl:leading-[30px] lg:text-[18px]">Our approach to management consulting is driven by data and research. We are passionate about integrity, knowledge, and excellence – our core values; and our top priority is to exceed your expectations.</p>
+                    <p class="text-[22px] leading-[35px] xl:text-[20px] xl:leading-[30px] lg:text-[18px]">Over the past few years, we are thrilled to have worked in different capacities with diverse firms from within Africa and beyond. We look forward to working with you to explore new frontiers of value and growth for you and your organization. </p>
+                </div>
+                
+                <div class="mt-[30px] col:mt-[20px]">
+                    <h3 class="text-[32px] font-semibold mt-[5px] col:text-[25px]">Dr. Ebes Esho</h3>
+                    <span class="uppercase text-[16px] font-bold tracking-[3px] text-[#ff4a17] col:text-[14px]">Management Consultant</span>
+                </div>
+            </div>  
         </div>
     </section>
 

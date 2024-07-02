@@ -1,5 +1,5 @@
 <header>
-    <div class="px-[130px] xl:px-[30px] lg:px-[10px] col:px-0 z-[11] bg-white border-b-[1px] border-b-[#e9e9e9]">
+    <div class="px-[130px] xl:px-[30px] lg:px-[10px] col:px-0 z-[11] bg-white hidden md:!block border-b-[1px] border-b-[#e9e9e9]">
         <div class="flex justify-center md:!justify-between flex-wrap pb-3">
             <div>
                 <ul class="h-full">
@@ -58,46 +58,69 @@
         </div>
     </div>
 
-    <div class="px-[130px] xl:px-[30px] lg:px-[10px] col:px-0 bg-white sticky top-0 z-50">
-        <div class="flex items-center justify-between">
-            <div id="dl-menu" class="dl-menuwrapper hidden md:block">
-                <button class="dl-trigger">Open Menu</button>
-                <ul class="dl-menu">
-                    <li>
-                        <a href="{{route('home')}}">Home</a>
+    <div class="px-[130px] xl:px-[30px] lg:px-[10px] col:px-0 bg-white sticky top-0 z-50 py-3 md:!py-0"> 
+        <div class="flex items-center justify-between relative px-4">
+            <div class="w-[195px] md:w-[280px] sm:w-[200px] col:w-[150px]">
+                <a class="text-white" href="{{route('home')}}">
+                    <img class="" src="/assets/images/logo.png" alt="">
+                </a>
+            </div>
+
+            <div x-data="{show: false}" class="hidden md:block">
+                <button x-on:click="show = !show" class="bg-main rounded-sm w-[40px] h-[40px]">
+                    <x-heroicon-o-bars-3 class="w-9 h-9 text-white mx-auto" />
+                </button>
+
+                <ul x-cloak x-show="show" x-transition x-on:click.outside="show = false" class="absolute bg-white top-[125%] border-t left-0 p-3 right-0 px-4">
+                    <li class="relative" >
+                        <a href="{{route('home')}}" class="block before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[4px] before:bg-[#ff4a17] before:content before:opacity-1 before:transition-all before:rounded-[3px] py-1  {{request()->routeIs('home') ? 'ms-3 before:visible text-[#ff4a17]' : 'before:invisible'}} font-medium" >Home</a>
                     </li>
-                    <li>
-                        <a href="{{route('about')}}">About US</a>
-                        <ul class="dl-submenu">
-                                <li>
-                                    <a href="{{route('about')}}">Who We Are</a>
-                                </li>
-                                <li>
-                                    <a href="{{route('teams')}}">Our Team Members</a>
-                                </li>
-                                <li>
-                                    <a href="{{route('faqs')}}">Frequently Asked Questions</a>
-                                </li>
+                    <li x-data="{show: @js(request()->routeIs(['about', 'teams*', 'faqs']))}">
+                        <div class="py-1 relative" x-on:click.prevent="show = !show" role="button" >
+                            <div class="flex justify-between items-center before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[4px] before:bg-[#ff4a17] before:content before:opacity-1 before:transition-all before:rounded-[3px] {{request()->routeIs(['about', 'teams*', 'faqs']) ? 'ms-3 before:visible text-[#ff4a17]' : 'before:invisible'}} font-medium">
+                                <span>About Us</span>
+
+                                <div>
+                                    <x-heroicon-o-chevron-right class="w-4 h-4 duration-300" x-bind:class="show ? 'rotate-90' : ''" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul x-show="show" x-cloak x-transition
+                            class="ps-3" >
+                            <li class="relative">
+                                <a class="block before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[4px] before:bg-[#ff4a17] before:content before:opacity-1 before:transition-all before:rounded-[3px] py-1  {{request()->routeIs('about') ? 'ms-3 before:visible text-[#ff4a17]' : 'before:invisible '}} font-medium" href="{{route('about')}}">Who We Are</a>
+                            </li>
+                            <li class="relative">
+                                <a class="block before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[4px] before:bg-[#ff4a17] before:content before:opacity-1 before:transition-all before:rounded-[3px] py-1  {{request()->routeIs('teams') ? 'ms-3 before:visible text-[#ff4a17]' : 'before:invisible '}} font-medium" href="{{route('teams')}}">Our Team Members</a>
+                            </li>
+                            <li class="relative">
+                                <a class="block before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[4px] before:bg-[#ff4a17] before:content before:opacity-1 before:transition-all before:rounded-[3px] py-1  {{request()->routeIs('faqs') ? 'ms-3 before:visible text-[#ff4a17]' : 'before:invisible '}} font-medium" href="{{route('faqs')}}">Frequently Asked Questions</a>
+                            </li>
                         </ul>
                     </li>
-                    <li><a href="{{route('services')}}">Services</a>
-                        <ul class="dl-submenu">
+                    <li x-data="{show: @js(request()->routeIs(['services*'])) }"> 
+                        <div class="relative py-1" x-on:click.prevent="show = !show" role="button" >
+                            <div class="flex justify-between items-center before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[4px] before:bg-[#ff4a17] before:content before:opacity-1 before:transition-all before:rounded-[3px] {{request()->routeIs(['services*']) ? 'ms-3 before:visible text-[#ff4a17]' : 'before:invisible'}} font-medium">
+                                <span>Services</span>
+
+                                <div>
+                                    <x-heroicon-o-chevron-right class="w-4 h-4 duration-300" x-bind:class="show ? 'rotate-90' : ''" />
+                                </div>
+                            </div>
+                        </div>
+                        <ul x-show="show" x-cloak x-transition class="ps-2">
                             @forelse ($services_menu as $service)
-                                <li><a href="{{route('services.details', ['service' => $service->slug])}}">{{$service->name}}</a></li>
+                                <li class="relative"><a class="block text-ellipsis before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[4px] before:bg-[#ff4a17] before:content before:opacity-1 before:transition-all before:rounded-[3px] py-1  {{request()->url() == route('services.details', ['service' => $service->slug]) ? 'ms-3 before:visible text-[#ff4a17]' : 'before:invisible '}} font-medium" href="{{route('services.details', ['service' => $service->slug])}}">{{$service->name}}</a></li>
                             @empty
                             @endforelse
                         </ul>
                     </li>
-                    <li>
-                        <a href="{{route('posts')}}">Blog</a>
-                    </li>
-                    <li><a href="{{route('contact')}}">Contact</a></li>
+                    <li class="relative">
+                        <a class="block before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[4px] before:bg-[#ff4a17] before:content before:opacity-1 before:transition-all before:rounded-[3px] py-1  {{request()->routeIs('posts*') ? 'ms-3 before:visible text-[#ff4a17]' : 'before:invisible'}} font-medium" href="{{route('posts')}}">Blog</a>
+                    </li >
+                    <li class="relative"><a class="block before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[4px] before:bg-[#ff4a17] before:content before:opacity-1 before:transition-all before:rounded-[3px] py-1  {{request()->routeIs('contact') ? 'ms-3 before:visible text-[#ff4a17]' : 'before:invisible'}} font-medium" href="{{route('contact')}}">Contact</a></li>
                 </ul>
-            </div><!-- /dl-menuwrapper -->
-
-            <div class="w-[195px] md:w-[280px] sm:w-[200px] col:w-[150px] col:ml-[50px]">
-                <a class="flex items-center md:justify-center text-white" href="{{route('home')}}">
-                    <img class="" src="/assets/images/logo.png" alt=""></a>
             </div>
 
             <ul class="hidden md:!block">
@@ -186,29 +209,7 @@
                 </li>
             </ul>
 
-            <div class="flex items-center">
-                {{-- <div class="relative header-search-form-wrapper">
-                    <div class="cart-search-contact mr-[20px] md:mr-0 text-center cursor-pointer">
-                        <div class="search-toggle-btn bg-[rgba(0,0,0,0.05)] text-[#6e6e6e]
-                         w-[50px] h-[50px] rounded-[50%] leading-[55px]">
-                            <i class="fi flaticon-search-interface-symbol text-[22px]"></i>
-                        </div>
-                    </div>
-                    <div class="header-search-form absolute right-0 top-[210%] w-[263px] bg-white z-20 p-[15px]
-                        transform text-center transition-all opacity-0 invisible
-                         shadow-[0px_2px_20px_0px_rgba(62,65,159,0.09);]">
-                        <div>
-                            <form class="relative">
-                                <input class="bg-white w-full h-[40px] pl-[10px] pr-[40px] focus-visible:outline-0
-                                    border border-[rgba(64,59,59,0.07)] capitalize" type="text"
-                                    placeholder="search here..">
-                                <button
-                                    class="absolute right-0 top-0 w-[40px] h-[40px] leading-[40px] bg-[#272c3f] text-white border-0"><i
-                                        class="fi flaticon-search-interface-symbol"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div> --}}
+            <div class="items-center hidden md:flex">
                 <a class="theme-btn py-[10px] px-[25px] pr-[50px] md:hidden" href="{{route('contact')}}">Get in touch</a>
             </div>
         </div>

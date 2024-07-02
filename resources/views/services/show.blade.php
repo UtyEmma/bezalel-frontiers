@@ -43,7 +43,7 @@
                     @endif
 
                     <div
-                        class="p-[30px] lg:p-[30px_20px] rounded-[20px] shadow-[0px_2px_8px_2px_rgba(22,14,71,0.1)] mt-[40px]">
+                        class="p-[30px] lg:p-[30px_20px] rounded shadow-[0px_2px_8px_2px_rgba(22,14,71,0.1)] mt-[40px]">
                         <div class="mb-[30px]">
                             <h2
                                 class="font-semibold  font-heading-font text-[#0a272c] text-[35px] leading-[130.5%] md:text-[25px]">

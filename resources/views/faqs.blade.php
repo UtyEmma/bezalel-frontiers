@@ -10,15 +10,14 @@
     ])
 
 
-    <!-- start question accordion -->
-    <section class="section-wrap">
+    <section class="section-wrap !pt-0">
         <div class="wraper">
-            <div class="mb-[75px] sm:mb-[40px] text-center">
+            {{-- <div class="mb-[75px] sm:mb-[40px] text-center">
                 <h2 class="text-[55px] md:text-[35px] sm:text-[32px] col:text-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px]
                 relative capitalize font-heading-font font-bold
                     text-[#14212b]">Frequently Asked Question
                 </h2>
-            </div>
+            </div> --}}
 
             <div class="max-w-[860px] mx-auto">
                 <!-- acopdint -->
@@ -29,7 +28,7 @@
         </div>
     </section>
 
-    <section class="max-w-[70%] mx-auto">
+    <section class="md:!max-w-[70%] mx-auto px-4">
         <div class="text-center mb-[50px]">
             <h2 class="text-[35px] col:text-[25px] text-[#0a272c] font-heading-font font-bold mb-[20px]">Have Any Question?</h2>
             <p class="text-[#687693] text-[16px] leading-[22px]">We're Here to Help You Succeed, send us a quick message today.</p>

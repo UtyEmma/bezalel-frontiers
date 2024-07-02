@@ -21,7 +21,7 @@
         
         <link rel="canonical" href="{{request()->url()}}" >
 
-        <!-- Scripts -->
+
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         <link href="/assets/css/themify-icons.css" rel="stylesheet">
@@ -79,5 +79,7 @@
         <script src="/assets/js/script.js"></script>
 
         {!! $settings->footer_scripts !!}
+
+        @livewireScriptConfig 
     </body>
 </html>
