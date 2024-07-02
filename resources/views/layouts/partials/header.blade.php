@@ -209,7 +209,7 @@
                 </li>
             </ul>
 
-            <div class="items-center hidden md:flex">
+            <div class="items-center hidden md:!flex">
                 <a class="theme-btn py-[10px] px-[25px] pr-[50px] md:hidden" href="{{route('contact')}}">Get in touch</a>
             </div>
         </div>
