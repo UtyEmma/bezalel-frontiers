@@ -201,12 +201,12 @@
 
     <section class="section-wrap !pt-0">
         <div class="wraper">
-            {{-- <div class="mb-[75px] sm:mb-[40px] text-center">
+            <div class="mb-[75px] sm:mb-[40px] text-center">
                 <h2 class="text-[55px] md:text-[35px] sm:text-[32px] col:text-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px]
                 relative capitalize font-heading-font font-bold
-                    text-[#14212b]">Frequently Asked Question
+                    text-[#14212b]">Frequently Asked Questions
                 </h2>
-            </div> --}}
+            </div>
 
             <div class="max-w-[860px] mx-auto">
                 <!-- acopdint -->
