@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
 
         $user = new User([
             'name' => 'Bezalel Frontiers',
-            'email' => 'admin@localhost.com',
+            'email' => 'admin@'.env('APP_DOMAIN'),
             'password' => Hash::make('1234567890'),
             'status' => Status::ACTIVE,
             'role' => Roles::SUPERADMIN
