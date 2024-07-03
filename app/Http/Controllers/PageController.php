@@ -27,7 +27,7 @@ class PageController extends Controller {
     function about(){
         $teams = Team::whereStatus(Status::ACTIVE)->get();
         $testimonials = Testimonial::status(Status::ACTIVE)->latest()->get();
-        $faqs = Faq::whereStatus(Status::ACTIVE)->latest()->get();
+        $faqs = Faq::whereStatus(Status::ACTIVE)->latest()->limit(6)->get();
         return view('about', compact('teams', 'testimonials', 'faqs'));
     }
 
