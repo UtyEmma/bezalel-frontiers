@@ -7,6 +7,7 @@ use App\Filament\Resources\ClientResource\RelationManagers;
 use App\Forms\Components\SelectStatus;
 use App\Models\Client;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -25,9 +26,8 @@ class ClientResource extends Resource
     {
         return $form
             ->schema([
-                SpatieMediaLibraryFileUpload::make('logo')
-                    ->required()
-                    ->collection('clients'),
+                FileUpload::make('logo')
+                    ->required(),
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->columnSpanFull()

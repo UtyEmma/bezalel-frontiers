@@ -4,16 +4,15 @@ namespace App\Models;
 
 use App\Enums\Status;
 use App\Traits\HasStatus;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Service extends Model implements HasMedia {
-    use HasFactory, InteractsWithMedia, HasStatus, HasUuids;
+class Service extends Model {
+    use HasFactory, HasStatus, HasUuids;
 
-    protected $fillable = ['name', 'content', 'slug', 'description', 'status', 'featured'];
+    protected $fillable = ['name', 'content', 'slug', 'image', 'description', 'status', 'featured'];
 
     protected $cast = [
         'status' => Status::class,
@@ -24,12 +23,18 @@ class Service extends Model implements HasMedia {
         'status' => Status::ACTIVE,
     ];
 
-    function scopeIsFeatured($query){
-        $query->where('featured', true);
+    protected function image(): Attribute {
+        return Attribute::make(
+            get: function(string $value) {
+                if(file_exists('storage/'.$value)) return asset('storage/'.$value);
+                if(file_exists($value)) return asset($value);
+                return $value;
+            },
+        );
     }
 
-    function getImageAttribute(){
-        return $this->getFirstMediaUrl('services');
+    function scopeIsFeatured($query){
+        $query->where('featured', true);
     }
 
     function getRouteAttribute(){

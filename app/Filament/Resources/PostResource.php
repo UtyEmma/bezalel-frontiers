@@ -8,6 +8,7 @@ use App\Forms\Components\SelectStatus;
 use App\Models\Post;
 use App\Models\User;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -27,9 +28,8 @@ class PostResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\SpatieMediaLibraryFileUpload::make('image')
+                FileUpload::make('image')
                     ->label('Featured Image')
-                    ->collection('posts')
                     ->image()
                     ->required(),
                 Forms\Components\TextInput::make('title')

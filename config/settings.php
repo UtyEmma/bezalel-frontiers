@@ -3,7 +3,7 @@
 return [
     'site_title' => [
         'name' => 'Site Title',
-        'value' => 'Bezalel Frontiers'
+        'value' => 'Bezalel Frontiers - Top Management consultancy firm in Nigeria'
     ],
 
     'company_name' => [
@@ -28,47 +28,47 @@ return [
 
     'site_description' => [
         'name' => 'Site Description',
-        'value' => 'We are a construction company dedicated to your success'
+        'value' => 'We provide actionable insights that inform, inspire, and empower minds and organizations for success.'
     ],
 
     'contact_address' => [
         'name' => 'Contact Address',
-        'value' => '19 Umunaga Street, Mayland Enugu'
+        'value' => 'Lagos, Nigeria'
     ],
 
     'contact_phone' => [
         'name' => 'Contact Phone Number',
-        'value' => '+234 892 897 7290'
+        'value' => '0904 599 2141'
     ],
 
     'seo_description' => [
         'name' => 'Site Meta Description',
-        'value' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        'value' => "Bezalel Frontiers - Top Management consultancy firm in Nigeria"
     ],
 
     'seo_tags' => [
         'name' => 'Site Meta Tags',
-        'value' => ''
+        'value' => 'Bezalel Frontiers, Management Consultancy in Nigeria'
     ],
 
     'twitter_link' => [
         'name' => 'Twitter URL',
-        'value' => "https://twitter.com/leadaa"
+        'value' => ""
     ],
 
     'instagram_link' => [
         'name' => 'Instagram URL',
-        'value' => "https://instagram.com/leadaa"
+        'value' => ""
     ],
 
     'linkedin_link' => [
         'name' => 'LinkedIn URL',
-        'value' => "https://linkedin.com/in/leadaa"
+        'value' => ""
     ],
 
     'facebook_link' => [
         'name' => 'Facebook URL',
-        'value' => "https://facebook.com/leadaa"
+        'value' => ""
     ],
 
     'header_scripts' => [

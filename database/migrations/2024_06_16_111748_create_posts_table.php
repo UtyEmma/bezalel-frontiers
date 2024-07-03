@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug');
             $table->string('author_id');
+            $table->string('image');
             $table->longText('content');
             $table->string('published_at')->nullable();
             $table->text('excerpt')->nullable();

@@ -9,6 +9,7 @@ use App\Forms\Components\SelectStatus;
 use App\Models\Slider;
 use App\Tables\Columns\StatusColumn;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -28,9 +29,8 @@ class SliderResource extends Resource
     public static function form(Form $form): Form {
         return $form
             ->schema([
-                SpatieMediaLibraryFileUpload::make('image')
+                FileUpload::make('image')
                     ->image()
-                    ->collection('sliders')
                     ->required(),
                 Forms\Components\TextInput::make('title')
                     ->required()

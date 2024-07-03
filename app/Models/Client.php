@@ -10,17 +10,19 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Client extends Model implements HasMedia {
-    use HasFactory, HasStatus, SoftDeletes, InteractsWithMedia;
+class Client extends Model {
+    use HasFactory, HasStatus, SoftDeletes;
 
-    protected $fillable = ['name', 'website', 'status', 'featured'];
+    protected $fillable = ['name', 'website', 'image', 'status', 'featured'];
     protected $casts = [
         'status' => Status::class,
         'featured' => 'boolean'
     ];
 
     function getLogoAttribute(){
-        return $this->getFirstMediaUrl('clients');
+        if(file_exists('storage/'.$this->image)) return asset('storage/'.$this->image);
+        if(file_exists($this->image)) return asset($this->image);
+        return $this->image;
     }
 
 }

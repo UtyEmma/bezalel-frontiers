@@ -4,18 +4,17 @@ namespace App\Models;
 
 use App\Enums\Status;
 use App\Traits\HasStatus;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Date;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Post extends Model implements HasMedia {
-    use HasFactory, SoftDeletes, InteractsWithMedia, HasStatus, HasUuids;
+class Post extends Model {
+    use HasFactory, SoftDeletes, HasStatus, HasUuids;
 
-    protected $fillable = ['title', 'slug', 'author_id', 'content', 'published_at', 'excerpt', 'tags', 'description', 'status'];
+    protected $fillable = ['title', 'slug', 'author_id', 'image', 'content', 'published_at', 'excerpt', 'tags', 'description', 'status'];
 
     protected function casts() {
         return [
@@ -24,12 +23,18 @@ class Post extends Model implements HasMedia {
         ];
     }
 
-    function author(){
-        return $this->belongsTo(User::class, 'author_id');
+    protected function image(): Attribute {
+        return Attribute::make(
+            get: function(string $value) {
+                if(file_exists('storage/'.$value)) return asset('storage/'.$value);
+                if(file_exists($value)) return asset($value);
+                return $value;
+            },
+        );
     }
 
-    function getImageAttribute(){
-        return $this->getFirstMediaUrl('posts');
+    function author(){
+        return $this->belongsTo(User::class, 'author_id');
     }
 
     function getRouteAttribute(){
