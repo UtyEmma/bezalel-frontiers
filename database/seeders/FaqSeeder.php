@@ -13,6 +13,10 @@ class FaqSeeder extends Seeder
      */
     public function run(): void {
         $faqs = config('content.faqs');
-        foreach ($faqs as $faq) Faq::create($faq);
+        foreach ($faqs as $faq) {
+            if(!Faq::whereQuestion($faq['question'])->exists()){
+                Faq::create($faq);
+            }
+        };
     }
 }
