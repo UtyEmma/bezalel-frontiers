@@ -27,9 +27,9 @@
             <div class="wraper">
                 <div class="mb-[75px] sm:mb-[40px] text-center">
                     <span class="uppercase text-[16px] font-bold tracking-[3px] !text-main font-base-font">Our Clients</span>
-                    <h2 class="text-[55px] md:text-[35px] sm:text-[32px] col:text-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px] mt-[10px] relative capitalize font-heading-font font-bold text-[#14212b]">We help </h2>
+                    {{-- <h2 class="text-[55px] md:text-[35px] sm:text-[32px] col:text-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px] mt-[10px] relative capitalize font-heading-font font-bold text-[#14212b]">We help </h2> --}}
                 </div>
-                <div class="flex flex-wrap">
+                <div class="flex flex-wrap justify-center">
                     @forelse ($clients as $client)
                         <div class="basis-[25%] text-center border-[#eeeeee] border-[1px] mt-[-1px] ml-[-1px]
                         p-[35px] flex justify-center flex-col md:p-[20px] sm:basis-[50%] sm:p-[30px_40px] col:p-[20px]">
