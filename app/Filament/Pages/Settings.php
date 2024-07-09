@@ -4,7 +4,6 @@ namespace App\Filament\Pages;
 
 use App\Models\Setting;
 use Dotswan\FilamentCodeEditor\Fields\CodeEditor;
-use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\Tabs\Tab;
 use Filament\Forms\Components\Textarea;
@@ -14,7 +13,6 @@ use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Form;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
-use Illuminate\Contracts\View\View;
 
 class Settings extends Page implements HasForms {
     use InteractsWithForms;
@@ -22,6 +20,8 @@ class Settings extends Page implements HasForms {
     protected static ?string $navigationIcon = 'heroicon-o-cog-8-tooth';
     protected static ?string $slug = 'setting';
     protected static string $view = 'filament.pages.settings';
+
+    protected static ?string $navigationGroup = 'Site Information';
 
     public ?array $data = [];
 
@@ -46,7 +46,6 @@ class Settings extends Page implements HasForms {
                             ->schema([
                                 TextInput::make('company_name')
                                     ->columnSpanFull(),
-                                // TextInput::make('site_name'),
                                 TextInput::make('site_email')
                                     ->columnSpan([
                                         'md' => 6
@@ -96,8 +95,7 @@ class Settings extends Page implements HasForms {
             ->statePath('data');
     }
 
-    public function submit(): void
-    {
+    public function submit(): void {
         $state = $this->form->getState();
         
         foreach($state as $key => $item) {

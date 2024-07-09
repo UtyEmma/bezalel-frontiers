@@ -10,6 +10,8 @@ class Analytics extends Page
     protected static ?string $navigationIcon = 'heroicon-o-presentation-chart-line';
     protected static ?string $navigationLabel = 'Analytics';
 
+    protected static ?string $navigationGroup = 'Site Information';
+
     protected static string $view = 'filament.pages.analytics-page';
 
     protected function getHeaderWidgets(): array{

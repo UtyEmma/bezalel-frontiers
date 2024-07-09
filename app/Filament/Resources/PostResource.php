@@ -36,11 +36,8 @@ class PostResource extends Resource
                     ->required()
                     ->columnSpanFull()
                     ->maxLength(255)
-                    ->live()
-                    ->afterStateUpdated(function (Get $get, Set $set, ?string $old, ?string $state) {
-                         if (($get('slug') ?? '') !== str($old)->slug()) return;
-                        $set('slug', str($state)->slug());
-                    }),
+                    ->live(onBlur: true)
+                    ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', str($state)->slug())),
                 Forms\Components\TextInput::make('slug')
                     ->required()
                     ->columnSpanFull()
