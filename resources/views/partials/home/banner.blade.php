@@ -25,7 +25,7 @@
                                     </div>
 
                                     <div data-swiper-parallax="500" class="slide-btn">
-                                        <a href="{{route($slider->link)}}" class="btn theme-btn rounded-none">{{$slider->action}}</a>
+                                        <a href="{{$slider->link}}" class="btn theme-btn rounded-none">{{$slider->action}}</a>
                                     </div>
                                 </div>
                             </div>
