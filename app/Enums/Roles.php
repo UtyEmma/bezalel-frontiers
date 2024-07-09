@@ -16,7 +16,7 @@ enum Roles:string {
             static::SUPERADMIN => 'Super Administrator',
             static::AUTHOR => 'Author',
             static::EDITOR => 'Editor',
-            static::SUBSCRIBER => 'Subscriber',
+            // static::SUBSCRIBER => 'Subscriber',
         };
     }
 
@@ -26,6 +26,14 @@ enum Roles:string {
 
     function isSuperAdmin(){
         return $this == static::SUPERADMIN;
+    }
+
+    function isAuthor(){
+        return in_array($this, [static::ADMIN, static::SUPERADMIN, static::EDITOR, static::AUTHOR]);
+    }
+
+    function isEditor(){
+        return in_array($this, [static::ADMIN, static::SUPERADMIN, static::EDITOR]);
     }
 
 }
