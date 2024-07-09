@@ -163,7 +163,7 @@ return [
                             "title" => "Driving Decisions with Data, Shaping Success with **Integrity**",
                             "description" => "<p>At **<strong>Bezalel Frontiers**<\/strong>, we provide actionable insights that inform, inspire, and empower minds and organizations for success. Discover how our data-driven and research-based management consulting can transform your business.<\/p>",
                             "button_text" => "Learn More",
-                            "button_link" => route('about')
+                            "button_link" => "http://localhost:8000/about"
                         ]
                     ],
                     [
@@ -172,7 +172,7 @@ return [
                             "title" => "OUR SERVICES",
                             "caption" => "Comprehensive Solutions For Your Business Needs",
                             "button_text" => "View More Services",
-                            "button_link" => route('services')
+                            "button_link" => "http://localhost:8000/services"
                         ]
                     ],
                     [
@@ -182,7 +182,7 @@ return [
                             "caption" => "We provide Strategic Insights and deliver **Growth.**",
                             "description" => "<p>Since our inception, Bezalel Frontiers has been dedicated to delivering high-quality, research-driven insights that empower organizations to make informed decisions.<\/p><p>We data-driven and research-based with the goal of providing essential intelligence for organizations and their people for informed ideation, and business &amp; management decisions. Our commitment to integrity, knowledge, and excellence sets us apart in the consulting industry.<\/p>",
                             "button_text" => "Get in touch",
-                            "button_link" => route('contact')
+                            "button_link" => "http://localhost:8000/contact"
                         ]
                     ],
                     [
@@ -191,7 +191,7 @@ return [
                             "caption" => "READY TO TRANSFORM YOUR BUSINESS?",
                             "title" => "Take the first step towards innovative solutions and strategic growth.",
                             "button_text" => "Get in touch",
-                            "button_link" => route('contact')
+                            "button_link" => "http://localhost:8000/contact"
                         ]
                     ]
                 ]
@@ -222,7 +222,7 @@ return [
                             "description" => "<p>Bezalel Frontiers is a data driven and research-based management consulting firm. We provide essential intelligence for organizations and their people for informed ideation, and business &amp; management decisions.<\/p><p>Our team of experts is dedicated to providing the best consulting services tailored to your needs. With extensive experience and a commitment to our core values, we are here to help you navigate the complexities of the modern business landscape.<\/p>",
                             "corevalues" => ["Integrity", "Knowledge", "Excellence"],
                             "button_text" => "Our Services",
-                            "button_link" => route('services'),
+                            "button_link" => "http://localhost:8000/services",
                             "status" => true
                         ]
                     ],
