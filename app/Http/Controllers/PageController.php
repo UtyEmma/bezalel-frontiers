@@ -24,8 +24,6 @@ class PageController extends Controller {
         $clients = Client::status(Status::ACTIVE)->whereFeatured(true)->get();
         $page = Content::wherePage(Pages::HOME)->first();
 
-        dd($page->content);
-
         return view('welcome', compact('services', 'testimonials', 'posts', 'sliders', 'page', 'clients'));
     }
 
