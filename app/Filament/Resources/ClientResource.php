@@ -47,7 +47,7 @@ class ClientResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('logo')
+                Tables\Columns\ImageColumn::make('image')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('website')
                     ->searchable(),
