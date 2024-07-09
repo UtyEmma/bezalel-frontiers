@@ -8,7 +8,7 @@ use App\Forms\Components\SelectStatus;
 use App\Models\Team;
 use App\Tables\Columns\StatusColumn;
 use Filament\Forms;
-use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -32,26 +32,22 @@ class TeamResource extends Resource
                 Forms\Components\TextInput::make('role')
                     ->required()
                     ->maxLength(255),
-                SpatieMediaLibraryFileUpload::make('image')
+                FileUpload::make('image')
                     ->collection('teams')
                     ->image()
                     ->required(),
                 Forms\Components\RichEditor::make('bio')
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('instagram')
-                    ->required()
                     ->url()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('facebook')
-                    ->required()
                     ->url()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('linkedin')
-                    ->required()
                     ->url()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('twitter')
-                    ->required()
                     ->url()
                     ->maxLength(255),
                 SelectStatus::make('status')

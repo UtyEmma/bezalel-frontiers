@@ -41,8 +41,10 @@ class FaqResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('question')
+                    ->limit(100)
                     ->searchable(),
                 Tables\Columns\TextColumn::make('answer')
+                    ->limit(100)
                     ->searchable(),
                 StatusColumn::make('status')
                     ->searchable(),
