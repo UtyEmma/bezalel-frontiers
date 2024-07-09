@@ -139,12 +139,10 @@ class Home extends Page implements HasForms {
                             ]),
                         
                     ])
-                    ->addable(true)
-                    // ->reorderable(false)
-                    // ->deletable(false)
-                    
+                    ->addable(false)
+                    ->reorderable(false)
+                    ->deletable(false)
                     ->collapsible()
-                    ->collapsed()
                     ->deleteAction(fn (Components\Actions\Action $action) => $action->requiresConfirmation(),)
             ])
             ->statePath('data');

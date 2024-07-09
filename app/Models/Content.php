@@ -7,6 +7,7 @@ use App\Enums\Status;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\HtmlString;
 
 class Content extends Model {
     use HasFactory, HasUuids;
@@ -33,8 +34,10 @@ class Content extends Model {
             // dd($content);
             // return $default;
             if(isset($content['data']['status']) && $content['data']['status'] && $content['data'][$item]) {
-                $content = preg_replace('/\*\*(.*?)\*\*/', '<span>$1</span>', $content['data'][$item]);
-                return $content;
+                $content = $content['data'][$item];
+                if(is_array($content)) return $content;
+                $content = preg_replace('/\*\*(.*?)\*\*/', '<span>$1</span>', $content);
+                return new HtmlString($content);
             };
             return $default;
         };

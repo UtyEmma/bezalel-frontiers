@@ -3,16 +3,17 @@
         <div class="grid grid-cols-12 items-center ">
             <div class="col-span-6 md:col-span-12 ">
                 <div class="md:mb-[30px]">
-                    <h5 class="text-[21px] !text-main font-heading-font font-semibold sm:text-[18px]">We are fully equipped to serve your needs</h5>
+                    <h5 class="text-[21px] !text-main span-primary font-heading-font font-semibold sm:text-[18px]">{{$page->render($group, 'We are fully equipped to serve your needs', $section, 'title')}}</h5>
                     <h2 class="text-[60px] leading-[70px] mb-[30px] mt-[15px] text-[#0a272c] font-heading-font font-semibold
-                    xl:text-[40px] xl:leading-[60px] xl:mb-[20px] xl:mt-[10px] lg:text-[35px] lg:leading-[50px]
-                    sm:text-[35px] sm:leading-[50px]">We provide Strategic Insights and deliver <span class="!text-main">Growth.</span></h2>
+                    xl:text-[40px] xl:leading-[60px] xl:mb-[20px] xl:mt-[10px] lg:text-[35px] lg:leading-[50px] span-primary
+                    sm:text-[35px] sm:leading-[50px]">{{$page->render($group, "We provide Strategic Insights and deliver <span>Growth.</span>", $section, 'caption')}}</h2>
                     <div class="space-y-4">
-                        <p class="text-[#687693] text-[18px] leading-[25px]">Since our inception, {{$settings->company_name}} has been dedicated to delivering high-quality, research-driven insights that empower organizations to make informed decisions.</p>
-                        <p class="text-[#687693] text-[18px] leading-[25px]">We data-driven and research-based with the goal of providing essential intelligence for organizations and their people for informed ideation, and business & management decisions. Our commitment to integrity, knowledge, and excellence sets us apart in the consulting industry.</p>
+                        <div class="text-[#687693] text-[18px] leading-[25px] span-primary">
+                            {{$page->render($group, "We provide Strategic Insights and deliver <span>Growth.</span>", $section, 'description')}}
+                        </div>
                         <div>
                             <div class="mt-10">
-                                <a class="theme-btn me-0" href="{{route('about')}}">Get in touch</a>
+                                <a class="theme-btn me-0" href="{{$page->render($group, route('about'), $section, 'button_link')}}">{{$page->render($group, 'Get in touch', $section, 'button_text')}}</a>
                             </div>
                         </div>
                     </div>
