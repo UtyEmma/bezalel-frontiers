@@ -8,7 +8,6 @@ enum Roles:string {
     case SUPERADMIN = 'super_admin';
     case EDITOR = 'editor';
     case AUTHOR = 'author';
-    case SUBSCRIBER = 'subscriber';
 
     function label(){
         return match($this) {
@@ -16,7 +15,6 @@ enum Roles:string {
             static::SUPERADMIN => 'Super Administrator',
             static::AUTHOR => 'Author',
             static::EDITOR => 'Editor',
-            // static::SUBSCRIBER => 'Subscriber',
         };
     }
 
