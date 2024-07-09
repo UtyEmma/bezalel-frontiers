@@ -37,7 +37,7 @@ class Content extends Model {
                 $content = $content['data'][$item];
                 if(is_array($content)) return $content;
                 $content = preg_replace('/\*\*(.*?)\*\*/', '<span>$1</span>', $content);
-                return new HtmlString($content);
+                return $content;
             };
             return $default;
         };

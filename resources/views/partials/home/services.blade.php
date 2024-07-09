@@ -3,10 +3,10 @@
         <div class="wraper">
             <div class="mb-[75px] sm:mb-[40px] text-center">
                 <span class="uppercase text-[16px] font-bold tracking-[3px] !text-main
-                    font-base-font">{{$page->render($group, 'Our Services', $section, 'title')}}</span>
+                    font-base-font">{!! $page->render($group, 'Our Services', $section, 'title') !!}</span>
                 <h2 class="text-[55px] md:text-[35px] sm:text-[32px] col:text-[28px] leading-[70px] md:leading-[55px] sm:leading-[40px]
                     mt-[10px] relative capitalize font-heading-font font-bold
-                    text-[#fff]">{{$page->render($group, 'Comprehensive Solutions for Your Business Needs', $section, 'caption')}}</h2>
+                    text-[#fff]">{!! $page->render($group, 'Comprehensive Solutions for Your Business Needs', $section, 'caption') !!}</h2>
             </div>
             <div class="wpo-service-slider owl-carousel">
                 @forelse ($services as $service)

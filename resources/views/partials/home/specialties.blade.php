@@ -3,13 +3,13 @@
         <div class="grid grid-cols-12 items-center ">
             <div class="col-span-6 md:col-span-12 ">
                 <div class="md:mb-[30px]">
-                    <h5 class="text-[21px] !text-main span-primary font-heading-font font-semibold sm:text-[18px]">{{$page->render($group, 'We are fully equipped to serve your needs', $section, 'title')}}</h5>
+                    <h5 class="text-[21px] !text-main span-primary font-heading-font font-semibold sm:text-[18px]">{!! $page->render($group, 'We are fully equipped to serve your needs', $section, 'title') !!}</h5>
                     <h2 class="text-[60px] leading-[70px] mb-[30px] mt-[15px] text-[#0a272c] font-heading-font font-semibold
                     xl:text-[40px] xl:leading-[60px] xl:mb-[20px] xl:mt-[10px] lg:text-[35px] lg:leading-[50px] span-primary
-                    sm:text-[35px] sm:leading-[50px]">{{$page->render($group, "We provide Strategic Insights and deliver <span>Growth.</span>", $section, 'caption')}}</h2>
+                    sm:text-[35px] sm:leading-[50px]">{!! $page->render($group, "We provide Strategic Insights and deliver <span>Growth.</span>", $section, 'caption') !!}</h2>
                     <div class="space-y-4">
                         <div class="text-[#687693] text-[18px] leading-[25px] span-primary">
-                            {{$page->render($group, "We provide Strategic Insights and deliver <span>Growth.</span>", $section, 'description')}}
+                            {!! $page->render($group, "We provide Strategic Insights and deliver <span>Growth.</span>", $section, 'description') !!}
                         </div>
                         <div>
                             <div class="mt-10">
