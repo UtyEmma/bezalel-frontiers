@@ -33,7 +33,6 @@ class TeamResource extends Resource
                     ->required()
                     ->maxLength(255),
                 FileUpload::make('image')
-                    ->collection('teams')
                     ->image()
                     ->required(),
                 Forms\Components\RichEditor::make('bio')
