@@ -4,7 +4,6 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-
         <title>{{ $title }} {{$title ? '-' : ''}} {{ $settings->company_name }}</title>
 
         <!-- Fonts -->
@@ -40,6 +39,8 @@
         <link href="/assets/css/style.css" rel="stylesheet">
 
         <script src="https://www.google.com/recaptcha/api.js?render={{env('RECAPTCHA_V3_SITE_KEY')}}"></script>
+
+        @stack('meta')
 
         {!! $settings->header_scripts !!}
 

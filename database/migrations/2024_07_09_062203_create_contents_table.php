@@ -13,10 +13,7 @@ return new class extends Migration
     {
         Schema::create('contents', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('title');
             $table->string('page');
-            $table->text('meta_description');
-            $table->text('meta_tags');
             $table->json('content')->nullable();
             $table->string('status');
             $table->timestamps();

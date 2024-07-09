@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\Pages;
 use App\Enums\Status;
 
 return [
@@ -144,4 +145,17 @@ return [
             'featured' => true 
         ],
     ],
+
+    'pages' => [
+        [
+            'page' => Pages::HOME,
+            'content' => '{"title":"Top management firm in Nigeria","meta_tags":"management,nigeria","meta_description":"Awesome Meta Description","sections":[{"type":"about_section","data":{"main_image":"01J2BAE6XMM2HWRX4MWD13FR0X.jpg","inner_image":"01J2BAE6YSCK9BGJVXM6KQKS82.jpg","caption":"Welcome to Bezalel Frontiers","title":"Driving Decisions with Data, Shaping Success with **Integrity**","description":"<p>At **<strong>Bezalel Frontiers**<\/strong>, we provide actionable insights that inform, inspire, and empower minds and organizations for success. Discover how our data-driven and research-based management consulting can transform your business.<\/p>","button_text":"Learn More","button_link":"http:\/\/localhost:8000\/about"}},{"type":"services_section","data":{"title":"OUR SERVICES","caption":"Comprehensive Solutions For Your Business Needs","button_text":"View More Services","button_link":"http:\/\/localhost:8000\/services"}},{"type":"specialties_section","data":{"title":"We are fully equipped to serve your needs","caption":"We provide Strategic Insights and deliver **Growth.**","description":"<p>Since our inception, Bezalel Frontiers has been dedicated to delivering high-quality, research-driven insights that empower organizations to make informed decisions.<\/p><p>We data-driven and research-based with the goal of providing essential intelligence for organizations and their people for informed ideation, and business &amp; management decisions. Our commitment to integrity, knowledge, and excellence sets us apart in the consulting industry.<\/p>","button_text":"Get in touch","button_link":"http:\/\/localhost:8000\/contact"}},{"type":"cta_section","data":{"caption":"READY TO TRANSFORM YOUR BUSINESS?","title":"Take the first step towards innovative solutions and strategic growth.","button_text":"Get in touch","button_link":"http:\/\/localhost:8000\/contact"}}]}',
+            'status' => Status::ACTIVE
+        ],
+        [
+            'page' => Pages::ABOUT,
+            'content' => '{"title":"Top management firm in Nigeria","meta_tags":"management,nigeria","meta_description":"Awesome Meta Description","sections":[{"type":"about_section","data":{"main_image":"01J2BAE6XMM2HWRX4MWD13FR0X.jpg","inner_image":"01J2BAE6YSCK9BGJVXM6KQKS82.jpg","caption":"Welcome to Bezalel Frontiers","title":"Driving Decisions with Data, Shaping Success with **Integrity**","description":"<p>At **<strong>Bezalel Frontiers**<\/strong>, we provide actionable insights that inform, inspire, and empower minds and organizations for success. Discover how our data-driven and research-based management consulting can transform your business.<\/p>","button_text":"Learn More","button_link":"http:\/\/localhost:8000\/about"}},{"type":"services_section","data":{"title":"OUR SERVICES","caption":"Comprehensive Solutions For Your Business Needs","button_text":"View More Services","button_link":"http:\/\/localhost:8000\/services"}},{"type":"specialties_section","data":{"title":"We are fully equipped to serve your needs","caption":"We provide Strategic Insights and deliver **Growth.**","description":"<p>Since our inception, Bezalel Frontiers has been dedicated to delivering high-quality, research-driven insights that empower organizations to make informed decisions.<\/p><p>We data-driven and research-based with the goal of providing essential intelligence for organizations and their people for informed ideation, and business &amp; management decisions. Our commitment to integrity, knowledge, and excellence sets us apart in the consulting industry.<\/p>","button_text":"Get in touch","button_link":"http:\/\/localhost:8000\/contact"}},{"type":"cta_section","data":{"caption":"READY TO TRANSFORM YOUR BUSINESS?","title":"Take the first step towards innovative solutions and strategic growth.","button_text":"Get in touch","button_link":"http:\/\/localhost:8000\/contact"}}]}',
+            'status' => Status::ACTIVE
+        ]
+    ]
 ];

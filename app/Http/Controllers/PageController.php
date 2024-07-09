@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\Pages;
 use App\Enums\Status;
 use App\Models\Client;
+use App\Models\Content;
 use App\Models\Faq;
 use App\Models\Post;
 use App\Models\Service;
@@ -20,8 +22,9 @@ class PageController extends Controller {
         $posts = Post::status(Status::ACTIVE)->latest()->get();
         $sliders = Slider::status(Status::ACTIVE)->get();
         $clients = Client::status(Status::ACTIVE)->whereFeatured(true)->get();
+        $page = Content::wherePage(Pages::HOME)->first();
 
-        return view('welcome', compact('services', 'testimonials', 'posts', 'sliders', 'clients'));
+        return view('welcome', compact('services', 'testimonials', 'posts', 'sliders', 'page', 'clients'));
     }
 
     function about(){
