@@ -28,7 +28,7 @@
                         
                     </h2>
                     <div class="text-[18px] mb-[35px] col:text-[16px] col:mb-[20px] span-primary">
-                        {!! $page->render('sections', "At <span class='font-semibold'>{$settings->company_name}</span>, we provide actionable insights that inform, inspire, and empower minds and organizations for success. Discover how our data-driven and research-based management consulting can transform your business.", $section, 'description') !!}
+                        {!! $page->render('sections', "At <span class='font-semibold'>{$settings->company_name}</span>, we provide actionable insights that inform, inspire, and empower minds and organizations for success. Discover how our data-driven and research-based management consulting can transform your business.", $section, 'description') !!} 
                     </div>
                     <a class="theme-btn" href="{{$page->render('sections', route('about'), $section, 'button_link')}}">
                         {{
