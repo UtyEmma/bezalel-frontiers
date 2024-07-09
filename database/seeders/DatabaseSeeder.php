@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             SettingSeeder::class,
             FaqSeeder::class,
-            ServiceSeeder::class
+            ServiceSeeder::class,
+            PageSeeder::class
         ]);
     }
 }
