@@ -26,7 +26,7 @@ class ClientResource extends Resource
     {
         return $form
             ->schema([
-                FileUpload::make('logo')
+                FileUpload::make('image')
                     ->required(),
                 Forms\Components\TextInput::make('name')
                     ->required()
