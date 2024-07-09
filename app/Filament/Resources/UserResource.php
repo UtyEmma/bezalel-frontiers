@@ -45,6 +45,7 @@ class UserResource extends Resource
                     ->revealable()
                     ->maxLength(255),
                 SelectRole::make('role')
+                    ->except([Roles::SUPERADMIN])
                     ->native(false),
                 SelectStatus::make('status')
                     ->native(false)
