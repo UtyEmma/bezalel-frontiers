@@ -25,6 +25,10 @@ class Settings extends Page implements HasForms {
 
     public ?array $data = [];
 
+    public static function canAccess(): bool {
+        return auth()->user()->role->isAdmin();
+    }
+
     function mount(){
         $settings = Setting::all();
         
