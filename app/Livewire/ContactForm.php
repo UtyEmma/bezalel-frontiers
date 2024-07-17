@@ -54,7 +54,7 @@ class ContactForm extends Component {
     }
 
     function send(){
-
+        $this->reset(['success', 'error']);
         $this->validate();
 
         try {
@@ -65,15 +65,18 @@ class ContactForm extends Component {
                 'service_id' => $this->service,
                 'message' => $this->message
             ]);
-    
+
+            
             $this->sendEmail($contactMessage);
         } catch (\Throwable $th) {
-            $this->error = 'There was a problem sending your email';
+            $this->error = 'There was a problem sending this message';
             if(app()->hasDebugModeEnabled()) throw $th;
             return;
         }
 
-        $this->success = 'Your message has been sent successfully!';
+        $this->reset(['name', 'email', 'phone', 'service', 'message']);
+
+        $this->success = 'Your message has been sent successfully! We will get in touch with you soon';
     }
 
     function sendEmail($contactMessage){

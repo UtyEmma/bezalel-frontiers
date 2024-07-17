@@ -81,6 +81,6 @@
         
         {!! $settings->footer_scripts !!}
 
-        @livewireScriptConfig 
+        {{-- @livewireScriptConfig  --}}
     </body>
 </html>

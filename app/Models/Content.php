@@ -29,15 +29,13 @@ class Content extends Model {
         if(!is_array($section)) return $section; 
 
         $section = collect($section);
+        
 
         if($content = $section->where('type', $key)->first()) {
-            // dd($content);
-            // return $default;
             if(isset($content['data']['status']) && $content['data']['status'] && $content['data'][$item]) {
                 $content = $content['data'][$item];
-                if(is_array($content)) return $content;
-                $content = preg_replace('/\*\*(.*?)\*\*/', '<span>$1</span>', $content);
-                return $content;
+                if(!is_array($content)) return preg_replace('/\*\*(.*?)\*\*/', '<span>$1</span>', $content);
+                if(count($content) > 0) return $content;
             };
             return $default;
         };
